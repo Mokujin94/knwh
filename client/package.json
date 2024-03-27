@@ -1,7 +1,7 @@
 {
   "name": "knwh",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@gumgum/react-script-tag": "^0.0.3",
     "@testing-library/jest-dom": "^5.16.5",
