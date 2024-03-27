@@ -1,0 +1,177 @@
+@import '../../ui/styles/reboot.scss';
+
+.rooms-black {
+    width: 100%;
+    min-height: 1191px;
+    padding-top: 200px;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 33px;
+        color: white;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-white-color;
+        margin-bottom: 15px;
+    }
+    &__descr {
+        max-width: 569px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-white-color;
+        // margin-bottom: 33px;
+    }
+}
+
+.rooms-balchug {
+    width: 100%;
+    min-height: 1080px;
+    padding-top: 89px;
+    background: $kw-soft-gold-color;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 33px;
+        color: $kw-black-color;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-black-color;
+        margin-bottom: 15px;
+    }
+    &__descr {
+        max-width: 643px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-black-color;
+        // margin-bottom: 33px;
+    }
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper {
+    border: 1px solid $kw-black-color;
+}
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__header .rooms__title {
+    color: $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__header .rooms__descr {
+    color: $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item {
+    border-bottom: 1px solid $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item .rooms__menu-title {
+    color: $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__price {
+    color: $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__btn {
+    color: $kw-black-color;
+}
+
+.rooms-balchug .carousel .carousel-control-prev .glyphicon img {
+    filter: invert(100%);
+}
+
+.rooms-balchug .carousel .carousel-control-next:last-child .glyphicon img {
+    filter: invert(100%);
+}
+
+.rooms-balchug .bulchug .filter-rooms {
+    background: $kw-soft-gold-color;
+}
+
+.footer__rooms {
+    background: $kw-soft-gold-color;
+}
+
+.footer__primary {
+    background: $kw-soft-gold-color;
+}
+
+
+
+
+@media (max-width: 1440px) {
+    .rooms-black {
+        min-height: 980px;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+    }
+    .rooms-balchug {
+        min-height: 860px;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 1016px) {
+    .rooms-black__header-right {
+        display: none;
+    }
+    .rooms-balchug__header-right {
+        display: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu {
+        border-top: 1px solid $kw-black-color;
+    }
+
+    .rooms-balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .rooms-black {
+        min-height: 1050px;
+        padding-top: 100px;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .rooms-balchug {
+        min-height: 1050px;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

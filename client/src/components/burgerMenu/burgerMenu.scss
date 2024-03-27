@@ -1,0 +1,22 @@
+@import '../../ui/styles/reboot.scss';
+
+.burgerMenu {
+    position: fixed;
+    top: 60px;
+    right: 40px;
+    z-index: 9999999;
+    display: none;
+    cursor: pointer;
+    div {
+        width: 30px;
+        height: 2px;
+        background: $kw-primary-color;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 920px) {
+    .burgerMenu {
+        display: block;
+    }
+}

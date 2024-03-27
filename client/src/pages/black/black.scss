@@ -1,0 +1,425 @@
+@import '../../ui/styles/reboot.scss';
+
+.logo-bg {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1;
+}
+
+.meeting-rooms {
+    min-height: 2000px;
+    background: $kw-black-color;
+    padding-top: 120px;
+    color: $kw-white-color;
+    overflow: hidden;
+    &__header {
+        margin-top: 100px;
+        width: 100%;
+        margin-bottom: 33px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &-left {
+            max-width: 472px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-white-color;
+        margin-bottom: 15px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-white-color;
+    }
+}
+
+.black {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 90px;
+        
+    }
+    &__left {
+        max-width: 683px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-white-color;
+        margin-bottom: 13px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-white-color;
+    }
+    &__right {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-white-color;
+        z-index: 2;
+        &__mobile {
+            display: none;
+        }
+    }
+}
+
+.services {
+    &__black {
+        min-height: 830px;
+        background: $kw-primary-color;
+    }
+    &__container {
+        margin-top: 800px !important;
+    }
+}
+.services__container .services__header .services__title {
+    color: $kw-white-color;
+}
+
+.services__container .services__header .services__descr {
+    color: $kw-white-color;
+}
+
+.services__wrapper__black .services__item {
+    background: $kw-black-color;
+}
+
+.services__wrapper__black .services__item .services__item-title {
+    color: $kw-primary-color;
+}
+
+.services__wrapper__black .services__item .services__item-title {
+    color: $kw-soft-gold-color;
+}
+
+.services__wrapper__black .services__item .services__item-top img {
+    filter: invert(92%) sepia(13%) saturate(308%) hue-rotate(355deg) brightness(89%) contrast(83%);
+}
+
+.images {
+    padding-top: 93px;
+    overflow: hidden;
+    min-height: 2000px;
+    &__header {
+        display: flex;
+        flex-direction: column;
+        max-width: 683px;
+        width: 100%;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-white-color;
+        margin-bottom: 15px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-white-color;
+        margin-bottom: 45px;
+    }
+    &__wrapper {
+        width: 100%;
+        // display: flex;
+        // justify-content: space-between;
+        // margin-bottom: 182px;
+        transition: transform 0.5s ease-out;
+    }
+
+}
+.images__wrapper .slick-slider .slick-list {
+    overflow: visible!important;
+}
+
+
+.footer {
+    &__black {
+        background: $kw-black-color;
+    }
+}
+
+.carousel__black-new .carousel-control-next .glyphicon img {
+    filter: invert(100%);
+}
+
+.carousel__black-new .carousel-control-prev .glyphicon img {
+    filter: invert(100%);
+}
+
+@media (max-width: 1830px) {
+    .carousel-rooms .carousel-control-next {
+        top: 670px;
+        right: 40%;
+        left: auto;
+        transform: translateX(50%);
+        height: 100px;
+    }
+
+    .carousel-rooms .carousel-control-prev {
+        top: 670px;
+        left: 40%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 100px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .carousel-rooms .carousel-control-prev {
+        top: 236.5px;
+        transform: none;
+        transform: translateY(-50%);
+        left: 0;
+        height: 473px;
+    }
+
+    .carousel-rooms .carousel-control-next {
+        top: 236.5px;
+        transform: none;
+        transform: translateY(-50%);
+        right: 0;
+        height: 473px;
+    }
+
+    .meeting-rooms {
+        min-height: 1680px;
+    }
+
+    .services__container {
+        margin-top: 720px !important;
+    }
+
+    .images {
+        min-height: 1780px;
+    }
+
+    .logo-bg {
+        width: 220px;
+        top: 105px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .rooms__right {
+        padding: 0 77px 0 77px;
+    }
+
+    .carousel-rooms .carousel-control-next {
+        top: 485px;
+        right: 40%;
+        left: auto;
+        transform: translateX(50%);
+        height: 100px;
+    }
+
+    .carousel-rooms .carousel-control-prev {
+        top: 485px;
+        left: 40%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 100px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .rooms {
+        &__left {
+            width: 622px;
+        }
+        &__right {
+            min-width: 597px;
+        }
+    }
+}
+
+@media (max-width: 1016px) {
+    .black {
+        &__right {
+            display: none;
+            &__mobile {
+                display: block;
+            }
+        }
+    }
+
+    .logo-bg {
+        display: none;
+    }
+
+    .carousel-black.carousel-fade .carousel-item {
+        height: 344px;
+    }
+
+    .carousel-black .carousel-control-prev {
+        top: 172px;
+        height: 344px;
+    }
+
+    .carousel-black .carousel-control-next {
+        top: 172px;
+        height: 344px;
+    }
+
+
+    // .meeting-rooms {
+    //     &__header {
+    //         margin-top: 520px;
+    //     }
+    // }
+
+    .carousel-black .carousel-indicators {
+        top: 300px;
+    }
+
+    .services__container {
+        margin-top: 510px !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .rooms {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__header {
+            margin-top: 0;
+            max-width: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        &__right {
+            min-width: auto;
+            width: 100%;
+            padding: 0 20px 20px 20px;
+        }
+        &__descr {
+            display: none;
+        }
+        &__menu {
+            margin-top: 20px;
+            border-top: 1px solid $kw-white-color;
+            padding-top: 25px;
+        }
+        &__item {
+            padding: 0;
+            border: none;
+        }
+        &__icon-block {
+            width: 19px;
+            img {
+                width: 19px;
+            }
+        }
+    }
+
+    .meeting-rooms {
+        min-height: 1650px;
+    }
+    
+    .images {
+        min-height: 1920px;
+    }
+
+    .carousel-rooms .carousel-control-next {
+        top: 600px;
+    }
+
+    .carousel-rooms .carousel-control-prev {
+        top: 600px;
+    }
+
+    .services__container {
+        margin-top: 490px !important;
+    }
+}
+
+
+
+@media (max-width: 560px) {
+
+    .meeting-rooms {
+        min-height: 1750px;
+        padding-top: 100px;
+        &__title {
+            font-size: 32px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .black {
+        &__title {
+            font-size: 32px;
+        }
+        &__right__mobile {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    .services__black {
+        min-height: auto;
+        padding: 50px 0 100px 0;
+        height: auto;
+    }
+    .services {
+        &__wrapper {
+            &__black {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .rates__header__black {
+        margin-top: 50px;
+        margin-bottom: 0;
+    }
+
+    .rates__header__black .rates__header-left .rates__header-title, .rates__header-descr {
+        color: $kw-white-color;
+    }
+
+    .slider__img {
+        background: none;
+    }
+
+    .images {
+        min-height: 1600px;
+        padding-top: 100px;
+        &__title {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        &__descr {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+}

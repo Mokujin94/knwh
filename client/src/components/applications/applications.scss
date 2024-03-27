@@ -1,0 +1,74 @@
+@import "../../ui/styles/reboot.scss";
+
+.applications {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    max-width: 400px;
+    &-top {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 38px;
+      text-transform: uppercase;
+      color: $kw-white-color;
+      margin-bottom: 6px;
+    }
+    &-bottom {
+      max-width: 710px;
+      width: 100%;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: $kw-white-color;
+      &__additionally {
+        max-width: 380px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.apliHome .applications__left .applications__left-top {
+  color: $kw-black-color;
+}
+
+.apliHome .applications__left .applications__left-bottom {
+  color: $kw-black-color;
+}
+
+.apliHome .applicationsButton {
+  border: 1px solid #222222;
+  &:hover {
+    background: $kw-black-color;
+  }
+  .applicationsButton__title {
+    color: $kw-black-color;
+  }
+}
+
+.apliHome .applicationsButton:hover .applicationsButton__title {
+  color: $kw-white-color;
+}
+
+@media (max-width: 560px) {
+  .apliHome .applications__left .applications__left-top {
+    color: $kw-white-color;
+  }
+  .apliHome .applications__left .applications__left-bottom {
+    color: $kw-white-color;
+  }
+
+  .apliHome .applicationsButton {
+    border: 1px solid $kw-primary-color;
+    &:hover {
+      background: $kw-black-color;
+    }
+    .applicationsButton__title {
+      color: $kw-white-color;
+    }
+  }
+}

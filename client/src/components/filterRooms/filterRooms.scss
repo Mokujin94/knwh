@@ -1,0 +1,81 @@
+@import '../../ui/styles/reboot.scss';
+
+.filter-rooms {
+    list-style: none;
+    padding: 0;
+    border: 1px solid #464646;
+    border-top: none;
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    background: $kw-black-color;
+    
+    &__item {
+        padding: 6px 13px;
+        cursor: pointer;
+        border-bottom: 1px solid #464646;
+        color: $kw-white-color;
+        &:last-child {
+            border: none;
+        }
+        &:hover {
+            background: #464646;
+        }
+    }
+    &__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #464646;
+        border-radius: 5px;
+        padding: 6px 13px;
+        cursor: pointer;
+    }
+    &__name {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        margin: 0;
+    }
+    &__img {
+        height: 9px;
+        transform: rotate(90deg);
+    }
+    &__wrapper {
+        width: 216px;
+        position: relative;
+    }
+}
+
+.bulchug .filter-rooms__header {
+    border: 1px solid $kw-primary-color;
+
+}
+.bulchug .filter-rooms__header .filter-rooms__name {
+    color: $kw-black-color;
+}
+
+.bulchug .filter-rooms__header .filter-rooms__img {
+    filter: invert(0.8);
+}
+
+.bulchug .filter-rooms {
+    border: 1px solid $kw-primary-color;
+    background: $kw-white-color;
+}
+
+.bulchug .filter-rooms .filter-rooms__item {
+    border-bottom: 1px solid $kw-primary-color;
+    color: $kw-black-color;
+    &:hover {
+        background: $kw-primary-color;
+    }
+}
+
+@media (max-width: 1016px) {
+    .meeting-rooms__header-right {
+        display: none;
+    }
+}

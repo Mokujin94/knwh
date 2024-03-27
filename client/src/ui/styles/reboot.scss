@@ -1,0 +1,41 @@
+@import './fonts.scss';
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $kw-main-font;
+}
+
+a {
+    &:hover {
+        color: #a557ad;
+    }
+}
+
+
+.container {
+    display: block;
+    max-width: 1496px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mySwiper {
+    width: 100%;
+    overflow: visible;
+}
+
+.mySwiper .swiper-wrapper .swiper-slide {
+    width: auto!important;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1110px;
+    }
+}

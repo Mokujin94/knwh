@@ -1,0 +1,53 @@
+@import '../../ui/styles/reboot.scss';
+
+.question {
+    max-width: 600px;
+    width: 100%;
+    padding: 25px 0;
+    background: $kw-soft-gold-color;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        cursor: pointer;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $kw-black-color;
+        margin-bottom: 0;
+        word-break: break-word;
+    }
+    &__descr {
+        position: relative;
+        // display: none;
+        opacity: 0;
+        // z-index: -1;
+        margin-top: 18px;
+        padding: 0 85px 0 30px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $kw-black-color;
+        transition: 0.5s ease-in-out;
+    }
+    &__icon {
+        transition: 0.3s ease-in-out;
+        margin-left: 20px;
+    }
+}
+
+
+  

@@ -1,0 +1,287 @@
+@import '../../ui/styles/reboot.scss';
+
+.meeting-rooms {
+    &__balchug {
+        background: $kw-soft-gold-color;
+    }
+    &__title {
+        &__balchug {
+            color: $kw-black-color;
+        }
+    }
+    &__descr {
+        &__balchug {
+            color: $kw-black-color;
+        }
+    }
+}
+
+.black {
+    &__header {
+        &__balchug {
+            margin-bottom: 59px;
+        }
+    }
+    &__title {
+        &__balchug {
+            color: $kw-black-color;
+        }
+    }
+    &__descr {
+        &__balchug {
+            color: $kw-black-color;
+        }
+    }
+    &__right {
+        &__balchug {
+            color: $kw-black-color;
+        }
+    }
+}
+
+.room {
+    &__wrapper {
+        &__balchug {
+            border: 1px solid $kw-black-color;
+        }
+    }
+}
+
+.balchug {
+    &__color {
+        color: $kw-black-color;
+    }
+    &__border {
+        border-bottom: 1px solid $kw-black-color;
+    }
+
+}
+
+.services {
+    &__balchug {
+        background: $kw-grey-color;
+        min-height: 830px;
+    }
+    &__title {
+        &__balchug {
+            color: $kw-white-color;
+        }
+    }
+    &__container-black {
+        margin-top: 800px !important;
+    }
+}
+
+.services__wrapper__balchug .services__item {
+    background: $kw-primary-color;
+}
+
+.services__wrapper__balchug .services__item .services__item-title {
+    color: $kw-white-color;
+}
+
+
+.services__wrapper__balchug .services__item .services__item-top img {
+    filter: invert(100%) sepia(2%) saturate(2586%) hue-rotate(174deg) brightness(118%) contrast(82%);
+}
+
+.rates {
+    &__balchug {
+        background: $kw-soft-gold-color;
+    }
+}
+
+.rates__balchug .container .rates__header .rates__header-title {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .rates__wrapper .rates__item {
+    background: $kw-white-color;
+}
+
+.rates__balchug .container .rates__wrapper .rates__item .tarif__top .tarif__title {
+    color: $kw-black-color;
+}
+
+.rates__balchug .rates__item .tarif__bottom .tarif__buttons .tarif__hint {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .rates__wrapper .rates__item .tarif__top .tarif__list {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .rates__wrapper .rates__item .tarif__bottom .tarif__price .tarif__price-number {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .rates__wrapper .rates__item .tarif__bottom .tarif__pay-button {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .applications .applications__left .applications__left-top {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .applications .applications__left .applications__left-bottom {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .applications .applicationsButton .applicationsButton__title {
+    color: $kw-black-color;
+}
+
+.rates__balchug .container .applications .applicationsButton {
+    border: 1px solid $kw-black-color;
+}
+
+.rates__balchug .container .applications .applicationsButton:hover {
+    background: $kw-black-color;
+}
+
+.rates__balchug .container .applications .applicationsButton:hover .applicationsButton__title{
+    color: $kw-white-color;
+}
+
+.images__balchug {
+    background: $kw-white-color;
+}
+
+.images__balchug .container .images__header .images__title {
+    color: $kw-black-color;
+}
+
+.images__balchug .container .images__header .images__descr {
+    color: $kw-black-color;
+}
+
+.footer__balchug {
+    background: $kw-white-color;
+    border: 1px solid $kw-black-color;
+}
+
+.footer__balchug .footer__left {
+    border-right: 1px solid $kw-black-color;
+}
+
+.footer__balchug .footer__left .footer__menu .footer__menu-item a {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-left .footer__contact .footer__contact-title {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-left .footer__contact .footer__contact-descr {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-left .footer_contact .footer__contact-title {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-left .footer_contact .footer__contact-descr {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-right .footer__social .footer__social-item a {
+    filter: invert(100%);
+}
+
+.footer__balchug .footer__right .footer__right-right .footer__social .footer__social-descr {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-right .footer__polytics a {
+    color: $kw-black-color;
+}
+
+.footer__balchug .footer__right .footer__right-right .footer__polytics h2 {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper {
+    border: 1px solid $kw-black-color;
+}
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__header .rooms__title {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__header .rooms__descr {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item {
+    border-bottom: 1px solid $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item .rooms__menu-title {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__price {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__btn {
+    color: $kw-black-color;
+}
+
+.meeting-rooms__balchug .carousel:last-child .carousel-control-prev .glyphicon img {
+    filter: invert(100%);
+}
+
+.meeting-rooms__balchug .carousel:last-child .carousel-control-next:last-child .glyphicon img {
+    filter: invert(100%);
+}
+
+.services__balchug .container .services__header .services__descr {
+    color: $kw-white-color;
+}
+
+.rates__header__balchug .rates__header-left .rates__header-descr {
+    color: $kw-black-color;
+}
+
+
+@media (max-width: 980px) {
+    .meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu {
+        border-top: 1px solid $kw-black-color;
+    }
+
+    .meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item {
+        border-bottom: none;
+    }
+
+    .services__container-black {
+        margin-top: 490px !important;
+    }
+}
+
+@media(max-width: 900px) {
+    .meeting-rooms {
+        min-height: 1100px;
+    }
+}
+
+@media (max-width: 560px) {
+    .services__balchug {
+        min-height: auto;
+        padding: 50px 0 100px 0;
+        height: auto;
+    }
+
+
+
+    .rates__header__balchug {
+        padding-top: 50px;
+        margin-bottom: 0;
+    }
+
+
+
+    
+}
+
+
+

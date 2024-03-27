@@ -1,0 +1,57 @@
+@import '../../ui/styles/reboot.scss';
+
+
+.servicesPageBlock {
+    max-width: 728px;
+    width: 100%;
+    height: 310px;
+    background: $kw-primary-color;
+    color: $kw-black-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px 0 51px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 263px;
+    }
+    &__img {
+        margin-right: 50px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: #222222;
+        margin-bottom: 12px;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #222222;
+    }
+}
+
+@media (max-width: 1440px) {
+    .servicesPageBlock {
+        max-width: 533px;
+        height: 269px;
+        &__img {
+            width: 400px;
+            img {
+                width: 100%;
+            }
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &__descr {
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+}

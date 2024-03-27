@@ -1,0 +1,111 @@
+@import '../../ui/styles/reboot.scss';
+
+.team {
+    padding-top: 200px;
+    padding-bottom: 223px;
+    background: $kw-soft-gold-color;
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 104%;
+        text-transform: uppercase;
+        color: $kw-black-color;
+        margin-bottom: 56px;
+    }
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.container {
+    max-width: 1496px;
+}
+
+.teamItem {
+    border-radius: 5px;
+}
+
+
+.team .container .applications .applications__left .applications__left-top {
+    color: $kw-black-color;
+}
+
+.team .container .applications .applications__left .applications__left-bottom {
+    color: $kw-black-color;
+}
+
+.team .container .applications .applicationsButton .applicationsButton__title {
+    color: $kw-black-color;
+}
+
+.team .container .applications .applicationsButton {
+    border: 1px solid $kw-black-color;
+}
+
+.team .container .applications .applicationsButton:hover {
+    background: $kw-black-color;
+}
+
+.team .container .applications .applicationsButton:hover .applicationsButton__title{
+    color: $kw-white-color;
+}
+
+@media (max-width: 1070px) {
+    .team {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+
+    .teamItem {
+        margin-right: 10px;
+        &__block-img {
+            // max-width: 344px;
+            // width: 100%;
+        }
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .team {
+        padding-top: 100px;
+        &__title {
+            font-size: 32px;
+            line-height: 110%;
+        }
+    }
+
+    .teamItem {
+        &__block-img {
+            max-width: 344px;
+            width: 100%;
+            height: 330px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .teamItem {
+        margin-right: 10px;
+        &__block-img {
+            max-width: 165px;
+            width: 100%;
+            height: 244px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 110%;
+            max-width: 160px;
+        }
+        &__descr {
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

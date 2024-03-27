@@ -1,0 +1,140 @@
+@import '../../ui/styles/reboot.scss';
+
+.header {
+    position: absolute;
+    top: 0;
+    font-family: $kw-header-font;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    &__container {
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        &-item {
+            &-logo {
+                display: none;
+            }
+        }
+        &-path {
+            text-decoration: none;
+            color: $kw-primary-color;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+            &:hover {
+                color: $kw-white-color;
+            }
+            &-auth {
+                &:hover {
+                    border: 1px solid $kw-white-color !important;
+                }
+            }
+
+        }
+    }
+    &__bottom {
+        display: none;
+    }
+
+}
+.active {
+    color: $kw-white-color;
+}
+
+.burger-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+    &__active {
+        opacity: 1;
+        z-index: 9999;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header__container {
+        max-width: 1089px;
+    }
+
+
+}
+
+@media (max-width: 920px) {
+    .header {
+        position: fixed;
+        height: 100%;
+        width: 250px;
+        right: -250px;
+        background: $kw-black-color;
+        &__container {
+            height: 100%;
+        }
+        transition: 0.3s;
+    }
+    .menu {
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        &__list {
+            flex-direction: column;
+            padding: 0;
+            justify-content: flex-start;
+            padding-top: 40px;
+            width: 130px;
+            align-items: flex-start;
+            &-item {
+                margin-bottom: 30px;
+                &:first-child {
+                    margin-bottom: 40px;
+                }
+                &-logo {
+                    display: block;
+                }
+            }
+        }
+        &__bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__descr {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: $kw-primary-color;
+            margin: 0;
+        }
+        &__social {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 121px;
+            margin-bottom: 20px;
+        }
+    }
+}
