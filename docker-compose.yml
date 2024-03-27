@@ -8,8 +8,8 @@ services:
     restart: always
     environment:
       - PORT=3000
-    depends_on:
-      - frontend
+    # depends_on:
+    #   - frontend
 
   # frontend:
   #   build: ./client
