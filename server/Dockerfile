@@ -1,20 +1,25 @@
-# ипользуем образ линукс Alpine с версией node 14
 FROM node:20.10.0-alpine
 
-# Указываем корневую папку
+# Установите Nginx
+RUN apk add --no-cache nginx
+
+# Установите рабочую папку
 WORKDIR /app
 
-# Скопировать package.json и package-lock.json внутрь контейнера
+# Скопируйте package.json и package-lock.json внутрь контейнера
 COPY package*.json ./
 
 # Устанавливаем зависимости
 RUN npm install
 
-# Копируем оставшееся пролижение в контейнер
+# Копируем оставшееся приложение в контейнер
 COPY . .
 
-# Открыть порт в нашем контейнере
-EXPOSE 3000
+# Копируем конфигурацию Nginx
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Запускаем наш сервер
-CMD [ "npm", "start" ]
+# Открыть порт 80 для HTTP трафика
+EXPOSE 80
+
+# Запустите Nginx и Node.js приложение
+CMD ["nginx", "-g", "daemon off;"]
