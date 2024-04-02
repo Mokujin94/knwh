@@ -15,8 +15,11 @@ RUN npm install
 # Копируем оставшееся приложение в контейнер
 COPY . .
 
-# Копируем конфигурацию Nginx
-COPY nginx.conf /etc/nginx/nginx.conf
+# Копируем конфигурацию Nginx в conf.d
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Удаляем стандартный файл конфигурации Nginx
+RUN rm /etc/nginx/conf.d/default.conf
 
 # Открыть порт 80 для HTTP трафика
 EXPOSE 80
