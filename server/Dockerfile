@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Открыть порт в нашем контейнере
-EXPOSE 80
+EXPOSE 3000
 
 # Запускаем наш сервер
 CMD [ "npm", "start" ]
