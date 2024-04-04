@@ -23,7 +23,7 @@ app.post('/send', (req, res) => {
         const { name, number, email, rate } = req.body;
         // console.log(code);
         const message = {
-            to: "mokujinn94@gmail.com",
+            to: "ka@knwh.ru",
             subject: "Заявка KW",
             html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${rate}`,
         };
