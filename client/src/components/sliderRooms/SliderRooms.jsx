@@ -77,6 +77,7 @@ const SliderRooms = ({ styles, color, border, arr, clame }) => {
                                     name == "СТЕЛЬВИО" ||
                                     name == "ТРАССА 60" ||
                                     name == "ТЯНЬМЭНЬ" ||
+                                    name == "ХАЙВАН" ||
                                     name == "ГОЛИАНЬ" ? (
                                     <a
                                         style={{ opacity: "0.5" }}
