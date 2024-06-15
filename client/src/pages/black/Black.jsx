@@ -92,7 +92,7 @@ import FilterRooms from "../../components/filterRooms/FilterRooms";
 import { useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 
-const Black = ({ setForm }) => {
+const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flip, setFlip] = useState(0);
     const windowInnerWidth = document.documentElement.clientWidth;
     const rooms = [
@@ -161,6 +161,8 @@ const Black = ({ setForm }) => {
             hint: "",
             hint1: "*Срок действия – 60 дней. Доступно посещение локации Balchug",
             hint2: "*Срок действия – 120 дней. Доступно посещение локации Balchug",
+            isPay: false,
+            tarif: "black"
         },
         {
             title: "Гость",
@@ -186,6 +188,8 @@ const Black = ({ setForm }) => {
             price1: "30 900₽",
             href: "SpaceinWidget.run('c3b5067e-9d55-4e42-a319-18f9123ee57d');",
             href1: "SpaceinWidget.run('79b6428e-99ed-47bc-8777-0f7f58e135fc');",
+            isPay: true,
+            tarif: "black"
         },
         {
             title: "Резидент",
@@ -212,6 +216,8 @@ const Black = ({ setForm }) => {
             price1: "92 700₽",
             href: "SpaceinWidget.run('4aec3ed6-1105-4771-bc3b-1206b53fba4e');",
             href1: "SpaceinWidget.run('95ef20cf-3b7b-46d9-9835-dd725e5b3a98');",
+            isPay: true,
+            tarif: "black"
         },
     ];
     const image = [
@@ -439,6 +445,8 @@ const Black = ({ setForm }) => {
                 hint,
                 hint1,
                 hint2,
+                isPay,
+                tarif
             },
             i
         ) => {
@@ -457,6 +465,12 @@ const Black = ({ setForm }) => {
                     hint={hint}
                     hint1={hint1}
                     hint2={hint2}
+                    isPay={isPay}
+                    tarif={tarif}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
                     key={i}
                 />
             );

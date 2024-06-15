@@ -13,7 +13,7 @@ import bulchugRoomsImg2 from "../balchug/img/rooms/2.png";
 import bulchugRoomsImg3 from "../balchug/img/rooms/3.png";
 import bulchugRoomsImg4 from "../balchug/img/rooms/4.png";
 import bulchugRoomsImg5 from "../balchug/img/rooms/5.png";
-import bulchugRoomsImg5 from "../balchug/img/rooms/6.png";
+import bulchugRoomsImg6 from "../balchug/img/rooms/6.png";
 import blackRoomsImg1 from "../black/img/rooms/1.jpg";
 import blackRoomsImg2 from "../black/img/rooms/2.jpg";
 import blackRoomsImg3 from "../black/img/rooms/3.jpg";

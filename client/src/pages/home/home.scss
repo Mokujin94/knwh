@@ -565,6 +565,12 @@
       &:last-child {
         margin-right: 0;
       }
+
+      &-sticker {
+        max-width: 110px;
+        border: 3px solid $kw-black-color;
+        font-size: 14px;
+      }
     }
   }
 
@@ -1037,6 +1043,13 @@
       min-height: 500px;
       height: auto;
       padding: 40px 32px 28px 32px;
+
+      &-sticker {
+        max-width: 120px;
+        font-size: 14px;
+        // top: -40px;
+        transform: translate(0, 0) rotate(20deg);
+      }
     }
   }
 
@@ -1289,4 +1302,15 @@
       font-size: 16px;
     }
   }
+}
+
+
+@media (max-width: 407px) {
+    .rates {
+        &__item {
+            &-sticker {
+                top: -40px;
+            }
+        }
+    }
 }

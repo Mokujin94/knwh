@@ -20,11 +20,32 @@ app.use(express.json());
 
 app.post('/send', (req, res) => {
     try {
-        const { name, number, email, rate } = req.body;
-        // console.log(code);
+        const { name, number, email, rate, mailTo } = req.body;
+        let newMailTo = mailTo;
+        if (newMailTo === '') {
+            newMailTo = "ka@knwh.ru"
+        }
+
+        function getCurrentTimeFormatted() {
+            // Получаем текущее время
+            const now = new Date();
+
+            // Форматируем день, месяц, год, часы и минуты
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0'); // Месяцы в JavaScript начинаются с 0
+            const year = now.getFullYear();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+
+            // Объединяем в строку нужного формата
+            const formattedTime = `${day}.${month}.${year} ${hours}:${minutes}`;
+            return formattedTime;
+        }
+
+        const formattedTime = getCurrentTimeFormatted();
         const message = {
-            to: "ka@knwh.ru",
-            subject: "Заявка KW",
+            to: newMailTo,
+            subject: "Заявка KW " + formattedTime,
             html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${rate}`,
         };
         mailer(message);

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import './modalForm.scss'
 import { sendForm } from '../../http/sendAPI';
 
-const ModalForm = ({ formActive, setForm }) => {
+const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, setDefaultRate, setActiveRate, activeRate }) => {
 
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
@@ -16,7 +16,7 @@ const ModalForm = ({ formActive, setForm }) => {
         if (name == '' || number == '' || email == '' || rate == '') {
             alert('Заполните все поля!');
         } else {
-            sendForm(name, number, email, rate)
+            sendForm(name, number, email, rate, mailTo)
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Заявка успешно отправлена')
@@ -57,13 +57,19 @@ const ModalForm = ({ formActive, setForm }) => {
                         type='text'
                         name='message'
                         placeholder='Интересующий тариф'
-                        value={rate}
+                        value={defaultRate ? activeRate : rate}
+                        disabled={defaultRate}
                         onChange={(e) => setRate(e.target.value)}
                     />
                     <button type='submit'>Отправить</button>
                 </form>
             </div>
-            <div onClick={() => setForm(false)} style={{ display: formActive ? 'block' : 'none' }} className='modal-form-bg'>
+            <div onClick={() => {
+                setForm(false);
+                setActiveMail('');
+                setDefaultRate(false)
+                setActiveRate('')
+            }} style={{ display: formActive ? 'block' : 'none' }} className='modal-form-bg'>
 
             </div>
         </>
