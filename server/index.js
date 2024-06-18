@@ -20,15 +20,23 @@ app.use(express.json());
 
 app.post('/send', (req, res) => {
     try {
-        const { name, number, email, rate, mailTo } = req.body;
+        const { name, number, email, rate, mailTo, defaultRate } = req.body;
         let newMailTo = mailTo;
         if (newMailTo === '') {
             newMailTo = "ka@knwh.ru"
         }
 
+        let newRate = rate
+        if (!newRate.length) {
+            newRate = defaultRate
+        }
+
         function getCurrentTimeFormatted() {
             // Получаем текущее время
             const now = new Date();
+
+            // Корректируем время на +3 часа
+            now.setHours(now.getHours() + 3);
 
             // Форматируем день, месяц, год, часы и минуты
             const day = String(now.getDate()).padStart(2, '0');
@@ -46,7 +54,7 @@ app.post('/send', (req, res) => {
         const message = {
             to: newMailTo,
             subject: "Заявка KW " + formattedTime,
-            html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${rate}`,
+            html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${newRate}`,
         };
         mailer(message);
         return res.status(200).json({ message: "Заявка отправлена!" });
