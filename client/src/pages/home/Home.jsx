@@ -181,7 +181,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             price1: "30 900₽",
             href: "SpaceinWidget.run('c3b5067e-9d55-4e42-a319-18f9123ee57d');",
             href1: "SpaceinWidget.run('79b6428e-99ed-47bc-8777-0f7f58e135fc');",
-            isPay: true,
+            isPay: false,
             tarif: "black"
         },
         {

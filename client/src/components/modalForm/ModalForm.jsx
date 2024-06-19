@@ -16,7 +16,7 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
         if (name == '' || number == '' || email == '' || (rate == '' && !defaultRate)) {
             alert('Заполните все поля!');
         } else {
-            sendForm(name, number, email, rate, mailTo, defaultRate)
+            sendForm(name, number, email, rate, mailTo, activeRate)
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
                     alert('Заявка успешно отправлена')

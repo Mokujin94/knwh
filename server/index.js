@@ -20,15 +20,15 @@ app.use(express.json());
 
 app.post('/send', (req, res) => {
     try {
-        const { name, number, email, rate, mailTo, defaultRate } = req.body;
-        let newMailTo = mailTo;
+        const { name, number, email, rate, mailTo, activeRate } = req.body;
+        let newMailTo = "mokujinn94@gmail.com";
         if (newMailTo === '') {
-            newMailTo = "ka@knwh.ru"
+            newMailTo = "mokujinn94@gmail.com"
         }
 
         let newRate = rate
         if (!newRate.length) {
-            newRate = defaultRate
+            newRate = activeRate
         }
 
         function getCurrentTimeFormatted() {

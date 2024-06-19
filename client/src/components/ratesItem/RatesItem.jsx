@@ -37,7 +37,16 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     const onForm = () => {
         if (tarif === "black") {
             setActiveMail("black@knwh.ru")
-            setActiveRate("Black - Гость (день)")
+            if (title === "Гость") {
+                if (activeButton === 0) {
+                    setActiveRate("Black - Гость (неделя)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Black - Гость (месяц)")
+                }
+            } else {
+                setActiveRate("Black - Гость (день)")
+            }
             setDefaultRate(true)
             setForm(true);
             return;
@@ -63,11 +72,10 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     })
 
 
-
     return (
 
         <div className='rates__item'>
-            {!isPay && <div className="rates__item-sticker">Количество мест ограниченно</div>}
+            {!isPay && title === "День" && <div className="rates__item-sticker">Количество мест ограниченно</div>}
             <div className="tarif__top">
                 <h2 className="tarif__title">{title}</h2>
                 <ul className="tarif__list">
@@ -83,7 +91,7 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
                     <h2 className="tarif__price-number">{activeButton !== 0 ? eval('price' + activeButton) : price} </h2>
                 </div>
                 {
-                    isPay
+                    isPay && (tarif === "bulchug" && (title === "Гость" || title === "Резидент")) || tarif === "black" && title === "Резидент"
                         ?
                         <a href='javascript:void(0)' onClick={() => (activeButton === 0 ? eval(href) : activeButton === 1 ? eval(href1) : activeButton === 2 ? eval(href2) : console.log('error'))} className="tarif__pay-button">Купить</a>
                         :
