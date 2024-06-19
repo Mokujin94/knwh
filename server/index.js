@@ -21,9 +21,9 @@ app.use(express.json());
 app.post('/send', (req, res) => {
     try {
         const { name, number, email, rate, mailTo, activeRate } = req.body;
-        let newMailTo = "mokujinn94@gmail.com";
+        let newMailTo = mailTo;
         if (newMailTo === '') {
-            newMailTo = "mokujinn94@gmail.com"
+            newMailTo = "ka@knwh.ru"
         }
 
         let newRate = rate
