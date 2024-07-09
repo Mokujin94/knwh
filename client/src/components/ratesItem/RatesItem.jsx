@@ -44,8 +44,23 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
                 if (activeButton === 1) {
                     setActiveRate("Black - Гость (месяц)")
                 }
+            } else if (title === "Резидент") {
+                if (activeButton === 0) {
+                    setActiveRate("Black - Резидент (1 месяц)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Black - Резидент (3 месяца)")
+                }
             } else {
-                setActiveRate("Black - Гость (день)")
+                if (activeButton === 0) {
+                    setActiveRate("Black - Гость (1 день)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Black - Гость (10 дней)")
+                }
+                if (activeButton === 2) {
+                    setActiveRate("Black - Гость (25 дней)")
+                }
             }
             setDefaultRate(true)
             setForm(true);
@@ -53,7 +68,15 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
         }
         if (tarif === "bulchug") {
             setActiveMail("balchug@knwh.ru")
-            setActiveRate("Balchug - Гость (день)")
+            if (activeButton === 0) {
+                setActiveRate("Balchug - Гость (1 день)")
+            }
+            if (activeButton === 1) {
+                setActiveRate("Balchug - Гость (10 дней)")
+            }
+            if (activeButton === 2) {
+                setActiveRate("Balchug - Гость (25 дней)")
+            }
             setDefaultRate(true)
             setForm(true);
             return;
@@ -91,7 +114,7 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
                     <h2 className="tarif__price-number">{activeButton !== 0 ? eval('price' + activeButton) : price} </h2>
                 </div>
                 {
-                    isPay && (tarif === "bulchug" && (title === "Гость" || title === "Резидент")) || tarif === "black" && title === "Резидент"
+                    isPay && (tarif === "bulchug" && (title === "Гость" || title === "Резидент"))
                         ?
                         <a href='javascript:void(0)' onClick={() => (activeButton === 0 ? eval(href) : activeButton === 1 ? eval(href1) : activeButton === 2 ? eval(href2) : console.log('error'))} className="tarif__pay-button">Купить</a>
                         :
