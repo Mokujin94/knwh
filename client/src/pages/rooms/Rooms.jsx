@@ -13,6 +13,7 @@ import bulchugRoomsImg2 from "../balchug/img/rooms/2.png";
 import bulchugRoomsImg3 from "../balchug/img/rooms/3.png";
 import bulchugRoomsImg4 from "../balchug/img/rooms/4.png";
 import bulchugRoomsImg5 from "../balchug/img/rooms/5.png";
+import bulchugRoomsImg6 from "../balchug/img/rooms/6.png";
 import blackRoomsImg1 from "../black/img/rooms/1.jpg";
 import blackRoomsImg2 from "../black/img/rooms/2.jpg";
 import blackRoomsImg3 from "../black/img/rooms/3.jpg";
@@ -102,6 +103,20 @@ const Rooms = () => {
             ],
             price: "3000₽ / час",
             href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
+            places: "8",
+        },
+        {
+            img: bulchugRoomsImg6,
+            name: "ТРАНСФЭГЕРАШСКОЕ ШОССЕ",
+            adress: "м. Новокузнецкая Садовническая набережная, 9",
+            list: [
+                { icon: дом, title: "8 посадочных мест" },
+                { icon: стол, title: "Общий стол" },
+                { icon: проектор, title: "Флипчарт с маркерами " },
+                { icon: тв, title: "ТВ-плазма 55”" },
+            ],
+            price: "3000₽ / час",
+            href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
             places: "8",
         },
     ];

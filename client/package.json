@@ -1,7 +1,7 @@
 {
   "name": "knwh",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@gumgum/react-script-tag": "^0.0.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -19,7 +19,7 @@
     "react-router-dom": "^6.4.3",
     "react-safe": "^1.3.0",
     "react-slick": "^0.29.0",
-    "react-spring": "^9.5.5",
+    "react-spring": "^9.7.3",
     "react-transition-group": "^4.4.5",
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",

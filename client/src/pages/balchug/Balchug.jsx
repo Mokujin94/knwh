@@ -71,6 +71,7 @@ import bulchugRoomsImg2 from "./img/rooms/2.png";
 import bulchugRoomsImg3 from "./img/rooms/3.png";
 import bulchugRoomsImg4 from "./img/rooms/4.png";
 import bulchugRoomsImg5 from "./img/rooms/5.png";
+import bulchugRoomsImg6 from "./img/rooms/6.png";
 import стол from "./img/icons/стол.svg";
 import дом from "./img/icons/дом.svg";
 import проектор from "./img/icons/проектор.svg";
@@ -88,7 +89,7 @@ import FilterRooms from "../../components/filterRooms/FilterRooms";
 import Footer from "../../components/footer/Footer";
 import { useEffect } from "react";
 
-const Balchug = ({ setForm }) => {
+const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flip, setFlip] = useState(0);
     const windowInnerWidth = document.documentElement.clientWidth;
     const rooms = [
@@ -156,6 +157,8 @@ const Balchug = ({ setForm }) => {
             hint: "",
             hint1: "*Срок действия – 60 дней",
             hint2: "*Срок действия – 120 дней",
+            isPay: false,
+            tarif: "bulchug"
         },
         {
             title: "Гость",
@@ -181,6 +184,8 @@ const Balchug = ({ setForm }) => {
             price1: "21 900₽",
             href: "SpaceinWidget.run('bf2eec79-8926-40b9-8d9d-23a395128825');",
             href1: "SpaceinWidget.run('bd4b030c-3522-458b-9a37-6200c4d7c44b');",
+            isPay: true,
+            tarif: "bulchug"
         },
         {
             title: "Резидент",
@@ -207,6 +212,8 @@ const Balchug = ({ setForm }) => {
             price1: "68 700₽",
             href: "SpaceinWidget.run('501e3c77-047e-43db-a8e9-bc7bd4f3fd9a');",
             href1: "SpaceinWidget.run('c5c84909-29c7-4fb4-915b-536241f74f03');",
+            isPay: true,
+            tarif: "bulchug"
         },
     ];
     const image = [
@@ -305,6 +312,20 @@ const Balchug = ({ setForm }) => {
             href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
             places: "8",
         },
+        {
+            img: bulchugRoomsImg6,
+            name: "ТРАНСФЭГЕРАШСКОЕ ШОССЕ",
+            adress: "м. Новокузнецкая Садовническая набережная, 9",
+            list: [
+                { icon: дом, title: "8 посадочных мест" },
+                { icon: стол, title: "Общий стол" },
+                { icon: проектор, title: "Флипчарт с маркерами " },
+                { icon: тв, title: "ТВ-плазма 55”" },
+            ],
+            price: "3000₽ / час",
+            href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
+            places: "8",
+        },
     ];
     const [filter, setFilter] = useState(bulchugRoomsArr);
 
@@ -324,6 +345,8 @@ const Balchug = ({ setForm }) => {
                 hint,
                 hint1,
                 hint2,
+                isPay,
+                tarif
             },
             i
         ) => {
@@ -342,6 +365,12 @@ const Balchug = ({ setForm }) => {
                     hint={hint}
                     hint1={hint1}
                     hint2={hint2}
+                    isPay={isPay}
+                    tarif={tarif}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
                     key={i}
                 />
             );
