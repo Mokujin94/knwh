@@ -54,7 +54,7 @@ function Footer({style}) {
                         <a target='_blank' href="https://t.me/knwh_cowork"><img src={telegram} alt="vk" className="footer__social-icon" /></a>
                         <a target='_blank' href="https://httpsknwhru.taplink.ws/?from=qr"><img src={taplink2} alt="telegram" className="footer__social-icon footer__social-icon-taplink" /></a>
                     </div>
-                    <p className="footer__social-descr">Пишите нам в любимых <br /> мессенджерах. Мы отвечаем <br /> каждый день с 9:00 до 19:00</p>
+                    <p className="footer__social-descr">Пишите нам в любимых <br /> мессенджерах. Мы отвечаем <br /> каждый день с 9:00 до 21:00</p>
                 </div>
                 <div className="footer__social-block">
                     <div className="footer__social-icons">
