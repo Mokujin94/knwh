@@ -1,263 +1,262 @@
 @import '../../ui/styles/reboot.scss';
 
 .rooms {
+  width: 100%;
+  height: 644px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrapper {
     width: 100%;
-    height: 644px;
+    height: 100%;
+    border: 1px solid $kw-white-color;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    position: relative;
+    display: block;
+    width: 898px;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  &__right {
+    width: 597px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 112px 0 85px;
+  }
+  &__header {
+    max-width: 380px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 80px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: $kw-white-color;
+    margin-bottom: 1px;
+  }
+  &__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $kw-white-color;
+    margin: 0;
+  }
+  &__menu {
+    margin-top: 40px;
+    width: 100%;
+    &-title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $kw-white-color;
+      margin: 0;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 34px;
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $kw-white-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__icon {
+    &-block {
+      width: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 12px;
+    }
+  }
+  &__price {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 17px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: $kw-primary-color;
+    margin-bottom: 17px;
+  }
+  &__btn {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    &__wrapper {
-        width: 100%;
-        height: 100%;
-        border: 1px solid $kw-white-color;
-        border-radius: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    padding: 18px 0;
+    border: 1px solid $kw-primary-color;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: $kw-white-color;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    &:hover {
+      color: $kw-white-color;
+      background: $kw-primary-color;
     }
-    &__left {
-        position: relative;
-        display: block;
-        width: 898px;
-        height: 100%;
-        overflow: hidden;
-    }
-    &__img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        border-radius: 5px;
-        object-fit: cover;
-    }
-    &__right {
-        width: 597px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 112px 0 85px;
-    }
-    &__header {
-        max-width: 380px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 80px;
-    }
-    &__title {
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 38px;
-        text-transform: uppercase;
-        color: $kw-white-color;
-        margin-bottom: 1px;
-    }
-    &__descr {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: $kw-white-color;
-        margin: 0;
-    }
-    &__menu {
-        margin-top: 40px;
-        width: 100%;
-        &-title {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: $kw-white-color;
-            margin: 0;
-        }
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        list-style: none;
-        margin-bottom: 34px;
-        width: 100%;
-    }
-    &__item {
-        width: 100%;
-        padding-bottom: 15px;
-        border-bottom: 1px solid $kw-white-color;
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-        &:last-child {
-            margin: 0;
-        }
-    }
-    &__icon {
-        &-block {
-            width: 44px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 12px;
-        }
-    }
-    &__price {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 17px;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 29px;
-        text-transform: uppercase;
-        color: $kw-primary-color;
-        margin-bottom: 17px;
-    }
-    &__btn {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 18px 0;
-        border: 1px solid $kw-primary-color;
-        border-radius: 5px;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 29px;
-        color: $kw-white-color;
-        text-decoration: none;
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover {
-            color: $kw-white-color;
-            background: $kw-primary-color;
-        }
-    }
+  }
 }
 
 .carousel-rooms [aria-label] {
-    width: 11px !important;
-    height: 11px !important;
-    border-radius: 50%;
+  width: 11px !important;
+  height: 11px !important;
+  border-radius: 50%;
 }
 
 .carousel-rooms .carousel-indicators [data-bs-target] {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .carousel-rooms.carousel-fade .carousel-item {
-    // width: 100%;
-    height: 644px;
-    overflow: hidden;
-    // opacity: 0;
+  // width: 100%;
+  height: 644px;
+  overflow: hidden;
+  // opacity: 0;
 }
 
 .carousel-rooms .carousel-inner {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; 
-    overflow: hidden;
-    margin: 0 auto;
-    display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
 }
 
 .carousel-rooms .carousel-indicators {
-    position: absolute;
-    top: 900px;
-    right: 0;
-    /* bottom: 0; */
-    left: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    // margin-right: 15%;
-    margin-bottom: 1rem;
-    // margin-left: 15%;
-    list-style: none;
-    display: none;
-    
+  position: absolute;
+  top: 900px;
+  right: 0;
+  /* bottom: 0; */
+  left: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  // margin-right: 15%;
+  margin-bottom: 1rem;
+  // margin-left: 15%;
+  list-style: none;
+  display: none;
 }
 
 .carousel-rooms .carousel-control-prev {
-    // display: none;
-    top: 322px;
-    transform: translateY(-50%);
-    height: 644px;
+  // display: none;
+  top: 322px;
+  transform: translateY(-50%);
+  height: 644px;
 }
 
 .carousel-rooms .carousel-control-next {
-    top: 322px;
-    transform: translateY(-50%);
-    height: 644px;
+  top: 322px;
+  transform: translateY(-50%);
+  height: 644px;
 }
 
 @media (max-width: 1440px) {
-    .rooms {
-        height: 473px;
-        &__header {
-            margin-top: 50px;
-        }
-        &__title {
-            font-weight: 500;
-            font-size: 26px;
-            line-height: 31px;
-        }
-        &__menu {
-            margin-top: 18px;
-            &-title {
-                font-weight: 400;
-                font-size: 12px;
-                line-height: 14px;
-            }
-        }
-        &__item {
-            padding-bottom: 10px;
-        }
-        &__list {
-            margin-bottom: 16px;
-        }
-        &__icon {
-            &-block {
-                // width: 32px;
-                margin-right: 16px;
-                img {
-                //    min-width: 100%; 
-                }
-            }
-        }
-        &__right {
-            padding: 0 70px;
-        }
-        &__price {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
-            margin-bottom: 13px;
-        }
-        &__btn {
-            padding: 12px 0;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 22px;
-        }
+  .rooms {
+    height: 473px;
+    &__header {
+      margin-top: 50px;
     }
-
-    .carousel-rooms.carousel-fade .carousel-item {
-        height: 473px;
+    &__title {
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 31px;
     }
+    &__menu {
+      margin-top: 18px;
+      &-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &__item {
+      padding-bottom: 10px;
+    }
+    &__list {
+      margin-bottom: 16px;
+    }
+    &__icon {
+      &-block {
+        // width: 32px;
+        margin-right: 16px;
+        img {
+          //    min-width: 100%;
+        }
+      }
+    }
+    &__right {
+      padding: 0 70px;
+    }
+    &__price {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 13px;
+    }
+    &__btn {
+      padding: 12px 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
 
+  .carousel-rooms.carousel-fade .carousel-item {
+    height: 473px;
+  }
 }
 
 @media (max-width: 980px) {
-    .carousel-rooms.carousel-fade .carousel-item {
-        height: 600px;
-    }
+  .carousel-rooms.carousel-fade .carousel-item {
+    height: 600px;
+  }
 
-    .rooms {
-        height: 600px;
-    }
+  .rooms {
+    height: 600px;
+  }
 }
