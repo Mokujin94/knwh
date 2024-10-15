@@ -26,6 +26,7 @@ import useScript from './components/useScript/UseScript';
 import Polityc from './pages/polytic/Polityc';
 import ModalForm from './components/modalForm/ModalForm';
 
+//тестовый коммит
 
 function App() {
     const location = useLocation()
