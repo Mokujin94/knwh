@@ -64,6 +64,9 @@ import news7 from "./img/news/4.jpg";
 import news8 from "./img/news/5.jpg";
 import news9 from "./img/news/6.png";
 import news10 from "./img/news/6.jpg";
+import news11 from "./img/news/11.jpg";
+import news12 from "./img/news/12.jpg";
+import news13 from "./img/news/13.jpg";
 import newsLetter from "./img/news/letter.pdf";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Parallax } from "swiper";
@@ -359,6 +362,21 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             img: news10,
             descr: "«Национальная Лотерея» расширилась в KW Black на Кожевнической",
             link: "https://cre.ru/news/91018",
+        },
+        {
+            img: news11,
+            descr: "В KNOW WHERE СДАЛИ 137 МЕСТ",
+            link: "https://cre.ru/news/93214",
+        },
+        {
+            img: news12,
+            descr: "МАРКЕТОЛОГИ ВЫБРАЛИ KNOW WHERE БАЛЧУГ",
+            link: "https://cre.ru/news/95178",
+        },
+        {
+            img: news13,
+            descr: "FLOWWOW СМЕНИЛ АДРЕС",
+            link: "https://cre.ru/news/95201",
         },
     ];
 
