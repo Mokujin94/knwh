@@ -67,6 +67,7 @@ import news10 from "./img/news/6.jpg";
 import news11 from "./img/news/11.jpg";
 import news12 from "./img/news/12.jpg";
 import news13 from "./img/news/13.jpg";
+import news14 from "./img/news/14.jpg";
 import newsLetter from "./img/news/letter.pdf";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Parallax } from "swiper";
@@ -378,7 +379,12 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             descr: "FLOWWOW СМЕНИЛ АДРЕС",
             link: "https://cre.ru/news/95201",
         },
-    ];
+        {
+            img: news14,
+            descr: "В KW BLACK АРЕНДОВАЛИ 793 КВ. М",
+            link: "https://cre.ru/news/96729",
+        },
+    ].reverse();
 
     const ratesHeaderButtons = [{ title: "BLACK" }, { title: "BALCHUG" }];
 
