@@ -56,8 +56,8 @@ app.post('/send', (req, res) => {
             subject: "Заявка KW " + formattedTime,
             html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${newRate}`,
         };
-        mailer(message);
-        return res.status(200).json({ message: "Заявка отправлена!" });
+        // mailer(message);
+        return res.status(200).json({ message: "Заявка отправлена!", emailTo: newMailTo });
     } catch (error) {
         res.status(404).json({ message: error })
         console.log(error)
