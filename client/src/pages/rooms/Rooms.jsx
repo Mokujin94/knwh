@@ -48,20 +48,7 @@ const Rooms = () => {
             price: "2000₽ / час",
             href: "SpaceinWidget.run('ff210f96-4c91-433f-922d-d056bb1a2fd3');",
             places: "6",
-        },
-        {
-            img: bulchugRoomsImg2,
-            name: "КОНФЕРЕНЦ-ЗАЛ",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "65 посадочных мест" },
-                { icon: union, title: "Проектор и звуковая система" },
-                { icon: стул, title: "Кресла для выступающих" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-            ],
-            price: "9000₽ / час",
-            href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
-            places: "65",
+            available: true,
         },
         {
             img: bulchugRoomsImg3,
@@ -76,20 +63,7 @@ const Rooms = () => {
             price: "4000₽ / час",
             href: "SpaceinWidget.run('c7d0a8af-984d-4268-83f7-8e831ce74ccf');",
             places: "12",
-        },
-        {
-            img: bulchugRoomsImg4,
-            name: "ХАЙВАН",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "8 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-                { icon: тв, title: "ТВ-плазма 55”" },
-            ],
-            price: "3000₽ / час",
-            href: "SpaceinWidget.run('5e7d26b2-5d9b-4b48-a096-813ab767dc35');",
-            places: "8",
+            available: true,
         },
         {
             img: bulchugRoomsImg5,
@@ -104,6 +78,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
             places: "8",
+            available: true,
         },
         {
             img: bulchugRoomsImg6,
@@ -118,6 +93,37 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
             places: "8",
+            available: true,
+        },
+        {
+            img: bulchugRoomsImg4,
+            name: "ХАЙВАН",
+            adress: "м. Новокузнецкая Садовническая набережная, 9",
+            list: [
+                { icon: дом, title: "8 посадочных мест" },
+                { icon: стол, title: "Общий стол" },
+                { icon: проектор, title: "Флипчарт с маркерами " },
+                { icon: тв, title: "ТВ-плазма 55”" },
+            ],
+            price: "3000₽ / час",
+            href: "SpaceinWidget.run('5e7d26b2-5d9b-4b48-a096-813ab767dc35');",
+            places: "8",
+            available: false,
+        },
+        {
+            img: bulchugRoomsImg2,
+            name: "КОНФЕРЕНЦ-ЗАЛ",
+            adress: "м. Новокузнецкая Садовническая набережная, 9",
+            list: [
+                { icon: дом, title: "65 посадочных мест" },
+                { icon: union, title: "Проектор и звуковая система" },
+                { icon: стул, title: "Кресла для выступающих" },
+                { icon: проектор, title: "Флипчарт с маркерами " },
+            ],
+            price: "9000₽ / час",
+            href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
+            places: "65",
+            available: false,
         },
     ];
 
@@ -139,6 +145,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('1e6ecb9a-e184-4dbd-97a6-2fa757078910');",
             places: "8",
+            available: false,
         },
         {
             img: blackRoomsImg3,
@@ -157,6 +164,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('f2a170bd-c098-4d15-a354-9556ae27ee1a');",
             places: "8",
+            available: false,
         },
         {
             img: blackRoomsImg9,
@@ -175,6 +183,7 @@ const Rooms = () => {
             price: "2000₽ / час",
             href: "SpaceinWidget.run('19dd9e2b-13f7-4495-bd03-bbdf3928f8c3');",
             places: "6",
+            available: false,
         },
         {
             img: blackRoomsImg8,
@@ -193,6 +202,7 @@ const Rooms = () => {
             price: "2000₽ / час",
             href: "SpaceinWidget.run('5a1e175a-d66c-47d3-860b-6913d983dbf6');",
             places: "6",
+            available: false,
         },
         {
             img: blackRoomsImgDgakku,
@@ -211,6 +221,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('962f2f62-a46f-493f-8baf-5c060a00762f');",
             places: "8",
+            available: false,
         },
         {
             img: blackRoomsImg1,
@@ -229,6 +240,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('b3b33b9d-f598-441c-8859-84e014120661');",
             places: "8",
+            available: false,
         },
         {
             img: blackRoomsImg6,
@@ -247,6 +259,7 @@ const Rooms = () => {
             price: "2000₽ / час",
             href: "SpaceinWidget.run('ff25bcf4-359c-45fc-8ede-7b6b184df402');",
             places: "6",
+            available: false,
         },
         {
             img: blackRoomsImg5,
@@ -265,6 +278,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('0c38816a-4b21-46de-92d1-2edff7cbd789');",
             places: "8",
+            available: false,
         },
         {
             img: blackRoomsImg7,
@@ -283,6 +297,7 @@ const Rooms = () => {
             price: "2000₽ / час",
             href: "SpaceinWidget.run('4fd6513c-286a-45c2-8eb1-1d3b8a067ab3');",
             places: "6",
+            available: false,
         },
         {
             img: blackRoomsImg4,
@@ -301,6 +316,7 @@ const Rooms = () => {
             price: "3000₽ / час",
             href: "SpaceinWidget.run('19612355-b762-481d-88c4-3daf902f2742');",
             places: "8",
+            available: false,
         },
     ];
 
@@ -374,23 +390,6 @@ const Rooms = () => {
     };
     return (
         <>
-            <section className="rooms-black">
-                <div className="container">
-                    <div className="rooms-black__header">
-                        <div className="rooms-black__header-wrapper">
-                            <h2 className="rooms-black__title">переговорные black</h2>
-                            <p className="rooms-black__descr">
-                                Комфортабельные ПК со всем необходимым для продуктивных встреч
-                                недалеко от м.Павелецкая
-                            </p>
-                        </div>
-                        <div className="rooms-black__header-right">
-                            <FilterRooms onClick={newFilterBlack} option={optionBlack} />
-                        </div>
-                    </div>
-                </div>
-                <SliderRooms styles={""} color={""} border={""} arr={filterBlack} />
-            </section>
             <section className="rooms-balchug">
                 <div className="container">
                     <div className="rooms-balchug__header">
@@ -418,7 +417,24 @@ const Rooms = () => {
                     arr={filter}
                 />
             </section>
-            <Footer style={"footer__white footer__primary"} />
+            <section className="rooms-black">
+                <div className="container">
+                    <div className="rooms-black__header">
+                        <div className="rooms-black__header-wrapper">
+                            <h2 className="rooms-black__title">переговорные black</h2>
+                            <p className="rooms-black__descr">
+                                Комфортабельные ПК со всем необходимым для продуктивных встреч
+                                недалеко от м.Павелецкая
+                            </p>
+                        </div>
+                        <div className="rooms-black__header-right">
+                            <FilterRooms onClick={newFilterBlack} option={optionBlack} />
+                        </div>
+                    </div>
+                </div>
+                <SliderRooms styles={""} color={""} border={""} arr={filterBlack} />
+            </section>
+            <Footer style={""} />
         </>
     );
 };

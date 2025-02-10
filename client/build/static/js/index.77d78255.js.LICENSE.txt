@@ -1,0 +1,1055 @@
+/*! ../../ui/icons/footer/telegram.svg */
+
+/*! ./img/chilling-rooms/12.jpg */
+
+/*! ../../ui/icons/polytic/download.svg */
+
+/*! ./img/mobile/rooms/6.png */
+
+/*! ./flipSlider.scss */
+
+/*! react-router-dom */
+
+/*! ../../components/sliderRooms/SliderRooms */
+
+/*! slick-carousel/slick/slick.css */
+
+/*! ../../components/filterRooms/FilterRooms */
+
+/*! ../balchug/img/rooms/3.png */
+
+/*! ./img/mobile/chilling-rooms/3.png */
+
+/*! ./img/mobile/2.jpg */
+
+/*! ./img/mobile/work-place/3.png */
+
+/*! core-js/modules/esnext.async-iterator.filter.js */
+
+/*! ./img/mobile/work-place/5.png */
+
+/*! react/jsx-runtime */
+
+/*! ../black/img/rooms/5.jpg */
+
+/*! ../../components/applications/Applications */
+
+/*! ../services/icons/defend.svg */
+
+/*! ./img/work-place/4.jpg */
+
+/*! bootstrap/dist/css/bootstrap.min.css */
+
+/*! ../../components/footer/Footer */
+
+/*! ../../components/ratesItem/RatesItem */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react/jsx-runtime */
+
+/*! ./img/chilling-rooms/5.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ../../components/aboutBlock/AboutBlock */
+
+/*! ./img/2.jpg */
+
+/*! ./img/icons/стол.svg */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! slick-carousel/slick/slick-theme.css */
+
+/*! react */
+
+/*! ../services/icons/clock.svg */
+
+/*! ./img/mobile/work-place/2.png */
+
+/*! ./img/work-place/3.jpg */
+
+/*! ../../ui/icons/footer/telegram.svg */
+
+/*! ./img/1.jpg */
+
+/*! react-spring */
+
+/*! react-slick */
+
+/*! ./balchug.scss */
+
+/*! ./icons/table.svg */
+
+/*! ../../components/applications/Applications */
+
+/*! ../services/icons/wifi.svg */
+
+/*! ./icons/item.svg */
+
+/*! ../services/icons/technic.svg */
+
+/*! ../../ui/icons/logoBgFront.png */
+
+/*! ../services/icons/item.svg */
+
+/*! ../services/icons/cofee2.svg */
+
+/*! ./img/work-place/7.jpg */
+
+/*! ../../components/servicesBlock/ServicesBlock */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ../../components/servicesPageBlock/ServicesPageBlock */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ./img/work-place/2.jpg */
+
+/*! ./img/rooms/6.jpg */
+
+/*! ./img/mobile/chilling-rooms/3.png */
+
+/*! react-bootstrap/Carousel */
+
+/*! react/jsx-runtime */
+
+/*! ./icons/technic.svg */
+
+/*! ../../http/sendAPI */
+
+/*! ./img/slider/2.jpg */
+
+/*! ./img/rooms/5.jpg */
+
+/*! react/jsx-runtime */
+
+/*! react-router-dom */
+
+/*! ./img/news/letter.pdf */
+
+/*! ../services/icons/кран.svg */
+
+/*! ./img/2.jpg */
+
+/*! ./img/rooms/4.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/mobile/work-place/2.png */
+
+/*! ../balchug/img/icons/стол.svg */
+
+/*! ./polityc.scss */
+
+/*! ./imagesItem.scss */
+
+/*! ./img/mobile/work-place/4.png */
+
+/*! ./icons/clock.svg */
+
+/*! ./img/rooms/3.jpg */
+
+/*! ./img/chilling-rooms/4.jpg */
+
+/*! ../../components/imagesItem/ImagesItem */
+
+/*! ../services/icons/замок.svg */
+
+/*! ./icons/zone.svg */
+
+/*! ./img/rooms/2.jpg */
+
+/*! ./icons/menu.svg */
+
+/*! ./icons/icon.svg */
+
+/*! ./home.scss */
+
+/*! ../../components/footer/Footer */
+
+/*! ./img/rooms/1.jpg */
+
+/*! ./icons/wifi.svg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/news/2.jpg */
+
+/*! ./img/mobile/work-place/9.png */
+
+/*! ./img/logo.svg */
+
+/*! ../../components/footer/Footer */
+
+/*! ./img/mobile/chilling-rooms/4.png */
+
+/*! ./img/black.jpg */
+
+/*! ../../components/footer/Footer */
+
+/*! ./black.scss */
+
+/*! ./icons/galka.svg */
+
+/*! ./img/news/5.png */
+
+/*! ./img/rooms/8.jpg */
+
+/*! ./icons/i.svg */
+
+/*! ./img/rooms/7.jpg */
+
+/*! swiper/react */
+
+/*! react */
+
+/*! ./img/mobile/7.png */
+
+/*! ./img/work-place/1.jpg */
+
+/*! react */
+
+/*! ../balchug/img/rooms/1.png */
+
+/*! ./img/rooms/9.jpg */
+
+/*! ./img/rooms/6.jpg */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ./img/work-place/7.jpg */
+
+/*! ./img/chilling-rooms/8.jpg */
+
+/*! ./img/news/5.jpg */
+
+/*! ./img/rooms/8.jpg */
+
+/*! ./img/rooms/5.jpg */
+
+/*! ./img/4.jpg */
+
+/*! ./img/mobile/rooms/4.png */
+
+/*! ./img/rooms/7.jpg */
+
+/*! ./img/rooms/4.jpg */
+
+/*! ./icons/hz.svg */
+
+/*! ./img/3.jpg */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ./img/rooms/6.jpg */
+
+/*! ./img/mobile/work-place/1.png */
+
+/*! ./img/rooms/3.jpg */
+
+/*! ../black/img/rooms/7.jpg */
+
+/*! ./aboutBlock.scss */
+
+/*! ./img/chilling-rooms/10.jpg */
+
+/*! ./img/rooms/5.jpg */
+
+/*! ./img/rooms/2.jpg */
+
+/*! ./pages/balchug/Balchug */
+
+/*! ../../ui/icons/footer/jcb.png */
+
+/*! ./img/rooms/4.jpg */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ./gallery.scss */
+
+/*! ./img/rooms/1.jpg */
+
+/*! ./img/chilling-rooms/13.jpg */
+
+/*! ../../components/homeCategory/HomeCategory */
+
+/*! ./img/rooms/3.jpg */
+
+/*! ./img/mobile/work-place/9.png */
+
+/*! ../services/icons/coffee.svg */
+
+/*! ./img/rooms/2.jpg */
+
+/*! ../../components/sliderBlack/SliderBlack */
+
+/*! core-js/modules/esnext.iterator.filter.js */
+
+/*! ./applications.scss */
+
+/*! ./img/rooms/1.jpg */
+
+/*! ../../components/flipSlider/FlipSlider */
+
+/*! ./pages/galleryBalchug/GalleryBalchug */
+
+/*! ./img/mobile/4.png */
+
+/*! ./img/mobile/rooms/3.png */
+
+/*! ./img/slider/6.jpg */
+
+/*! ./img/balchug.png */
+
+/*! ../balchug/img/rooms/4.png */
+
+/*! ../black/img/rooms/2.jpg */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ./img/work-place/6.jpg */
+
+/*! ../services/icons/paper.svg */
+
+/*! ./img/balchug4.jpg */
+
+/*! ./img/chilling-rooms/3.jpg */
+
+/*! ../services/icons/table.svg */
+
+/*! ./img/4.jpg */
+
+/*! ../../ui/icons/sliderBlack/prevIcon.svg */
+
+/*! bootstrap/dist/css/bootstrap.min.css */
+
+/*! ./sliderHome.scss */
+
+/*! react */
+
+/*! ./img/balchug2.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/balchug1.jpg */
+
+/*! ./img/mobile/work-place/1.png */
+
+/*! react/jsx-runtime */
+
+/*! ./img/mobile/1.png */
+
+/*! slick-carousel/slick/slick.css */
+
+/*! react-router-dom */
+
+/*! ./img/mobile/6.jpg */
+
+/*! swiper */
+
+/*! ./components/burgerMenu/BurgerMenu */
+
+/*! ./homeCategory.scss */
+
+/*! ./img/work-place/4.jpg */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ./img/chilling-rooms/7.jpg */
+
+/*! ./img/mobile/chilling-rooms/4.png */
+
+/*! ./img/mobile/rooms/7.png */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! react */
+
+/*! ./img/rooms.jpg */
+
+/*! ../../components/applications/Applications */
+
+/*! ../../components/footer/Footer */
+
+/*! ../services/icons/technic.svg */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react/jsx-runtime */
+
+/*! ../services/icons/wifi.svg */
+
+/*! react-router-dom */
+
+/*! react/jsx-runtime */
+
+/*! ../services/icons/cofee2.svg */
+
+/*! ./img/5.jpg */
+
+/*! ../../components/footer/Footer */
+
+/*! ./components/header/Header */
+
+/*! ./img/mobile/chilling-rooms/5.png */
+
+/*! ./img/mobile/3.jpg */
+
+/*! ./icons/arrow.svg */
+
+/*! core-js/modules/esnext.iterator.filter.js */
+
+/*! ./img/work-place/9.jpg */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ../services/icons/zone.svg */
+
+/*! ../../components/applicationsButton/ApplicationsButton */
+
+/*! ../balchug/img/icons/стол.svg */
+
+/*! ../services/icons/call.svg */
+
+/*! ./img/work-place/3.jpg */
+
+/*! ./img/chilling-rooms/2.jpg */
+
+/*! ./img/mobile/work-place/8.png */
+
+/*! ./img/mobile/chilling-rooms/1.png */
+
+/*! ../services/icons/замок.svg */
+
+/*! ../../ui/icons/question/arrow.svg */
+
+/*! ./questions.scss */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! swiper */
+
+/*! ./img/blackCategory.jpg */
+
+/*! ./img/6.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/icons/дом.svg */
+
+/*! react */
+
+/*! ./img/mobile/rooms/1.png */
+
+/*! react */
+
+/*! ../black/img/rooms/9.jpg */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ./img/chilling-rooms/6.jpg */
+
+/*! ./img/work-place/2.jpg */
+
+/*! ../../components/servicesBlock/ServicesBlock */
+
+/*! ./img/work-place/9.jpg */
+
+/*! react */
+
+/*! ./img/rooms/6.png */
+
+/*! ../black/img/rooms/4.jpg */
+
+/*! ../../components/imagesItem/ImagesItem */
+
+/*! ./img/rooms/5.png */
+
+/*! ../../ui/icons/footer/masterCard.png */
+
+/*! ../services/icons/coffee.svg */
+
+/*! ./icons/cleener.svg */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ./icons/замок.svg */
+
+/*! ./img/mobile/rooms/1.png */
+
+/*! ./img/rooms/4.png */
+
+/*! ./img/chilling-rooms/14.jpg */
+
+/*! ./applicationsButton.scss */
+
+/*! ./img/rooms/3.png */
+
+/*! ../balchug/img/icons/тв.svg */
+
+/*! ./icons/кран.svg */
+
+/*! ../../components/servicesBlock/ServicesBlock */
+
+/*! ../../ui/icons/logo.svg */
+
+/*! ./img/rooms/2.png */
+
+/*! ./img/mobile/rooms/5.png */
+
+/*! ./modalForm.scss */
+
+/*! ./img/chilling-rooms/1.jpg */
+
+/*! ./img/rooms/1.png */
+
+/*! ../services/icons/paper.svg */
+
+/*! ./img/work-place/1.jpg */
+
+/*! ../services/icons/cleener.svg */
+
+/*! swiper/css/free-mode */
+
+/*! ./img/mobile/chilling-rooms/5.png */
+
+/*! ./components/modalForm/ModalForm */
+
+/*! ./img/slider/3.jpg */
+
+/*! ../services/icons/table.svg */
+
+/*! core-js/modules/esnext.iterator.constructor.js */
+
+/*! ./icons/call.svg */
+
+/*! ./img/3.jpg */
+
+/*! ../../components/sliderHome/SliderHome */
+
+/*! ./icons/coffee.svg */
+
+/*! react-dom/client */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ../../ui/icons/sliderBlack/nextIcon.svg */
+
+/*! ./icons/arrowTop.svg */
+
+/*! ./icons/arrowWhite.svg */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../balchug/img/rooms/5.png */
+
+/*! ./galleryBalchug.scss */
+
+/*! ../../polytics/Оферта.pdf */
+
+/*! ./img/mobile/work-place/7.png */
+
+/*! ./img/mobile/chilling-rooms/6.png */
+
+/*! ./img/mobile/rooms/4.png */
+
+/*! ./img/news/1.png */
+
+/*! swiper/css */
+
+/*! ./icons/arrowBlockLeft.svg */
+
+/*! ./img/chilling-rooms/5.jpg */
+
+/*! ../../polytics/Политика конфиденциальности KNWH.pdf */
+
+/*! ../../ui/icons/sliderBlack/prevIcon.svg */
+
+/*! ./img/mobile/8.png */
+
+/*! ./img/balchug.png */
+
+/*! react-transition-group */
+
+/*! ./img/news/4.png */
+
+/*! ../../ui/icons/sliderBlack/nextIcon.svg */
+
+/*! ./img/work-place/6.jpg */
+
+/*! ./icons/arrow4.svg */
+
+/*! ../services/icons/technic.svg */
+
+/*! ./icons/arrow3.svg */
+
+/*! ../../ui/icons/footer/market.svg */
+
+/*! ./img/news/4.jpg */
+
+/*! ../services/icons/cofee2.svg */
+
+/*! ./img/news/13.jpg */
+
+/*! react */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! react */
+
+/*! ./img/news/12.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/news/11.jpg */
+
+/*! ./img/1.jpg */
+
+/*! ./img/news/6.jpg */
+
+/*! ./burgerMenu.scss */
+
+/*! ../balchug/img/icons/проектор.svg */
+
+/*! react */
+
+/*! ../services/icons/zone.svg */
+
+/*! ../../components/footer/Footer */
+
+/*! ./img/mobile/5.png */
+
+/*! ./img/mobile/rooms/8.png */
+
+/*! ../services/icons/call.svg */
+
+/*! ./icons/arrowBlockLeftBottom.svg */
+
+/*! ../../components/sliderRooms/SliderRooms */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ./img/icons/стул.svg */
+
+/*! ./pages/contact/Contact */
+
+/*! react */
+
+/*! core-js/modules/esnext.iterator.constructor.js */
+
+/*! core-js/modules/esnext.iterator.filter.js */
+
+/*! ../services/icons/замок.svg */
+
+/*! ../../ui/icons/logoBg.png */
+
+/*! react-router-dom */
+
+/*! ./contact.scss */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ./img/black1.jpg */
+
+/*! ./img/5.jpg */
+
+/*! ./img/2.jpg */
+
+/*! ./img/chilling-rooms/4.jpg */
+
+/*! ./img/mobile/2.png */
+
+/*! ../black/img/rooms/dgakku.jpg */
+
+/*! ./img/black2.jpg */
+
+/*! ./img/slider/4.jpg */
+
+/*! ./App */
+
+/*! ../../components/ratesItem/RatesItem */
+
+/*! ./img/black3.jpg */
+
+/*! ../../ui/icons/footer/visa.png */
+
+/*! ./rooms.scss */
+
+/*! ../services/icons/defend.svg */
+
+/*! ./img/mobile/chilling-rooms/6.png */
+
+/*! swiper/react */
+
+/*! ../black/img/rooms/6.jpg */
+
+/*! ./img/mobile/work-place/6.png */
+
+/*! ./img/mobile/work-place/8.png */
+
+/*! ./pages/polytic/Polityc */
+
+/*! ../../components/filterRooms/FilterRooms */
+
+/*! ./img/black4.jpg */
+
+/*! react */
+
+/*! react */
+
+/*! ../../components/filterRooms/FilterRooms */
+
+/*! ../../components/footer/Footer */
+
+/*! react */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ./img/icons/тв.svg */
+
+/*! ./img/work-place/5.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./pages/black/Black */
+
+/*! ../services/icons/coffee.svg */
+
+/*! ../balchug/img/icons/тв.svg */
+
+/*! ./img/mobile/rooms/2.png */
+
+/*! react */
+
+/*! react */
+
+/*! ./img/mobile/4.jpg */
+
+/*! ./img/chilling-rooms/9.jpg */
+
+/*! ../black/img/rooms/1.jpg */
+
+/*! swiper/css/free-mode */
+
+/*! ./servicesPageBlock.scss */
+
+/*! ../../ui/icons/footer/mir.png */
+
+/*! ../services/icons/clock.svg */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../services/icons/cleener.svg */
+
+/*! ./img/chilling-rooms/15.jpg */
+
+/*! ./pages/home/Home */
+
+/*! ../services/icons/paper.svg */
+
+/*! ./img/1.jpg */
+
+/*! ../services/icons/table.svg */
+
+/*! ./img/1.png */
+
+/*! react/jsx-runtime */
+
+/*! core-js/modules/esnext.async-iterator.filter.js */
+
+/*! react/jsx-runtime */
+
+/*! ./sliderRooms.scss */
+
+/*! ./img/mobile/rooms/2.png */
+
+/*! swiper/css */
+
+/*! ./components/scrollToTop/ScrollToTop */
+
+/*! axios */
+
+/*! ../services/icons/item.svg */
+
+/*! ./img/mobile/1.jpg */
+
+/*! ./img/chilling-rooms/3.jpg */
+
+/*! react/jsx-runtime */
+
+/*! ./img/mobile/rooms/6.png */
+
+/*! ../balchug/img/icons/дом.svg */
+
+/*! react-router-dom */
+
+/*! ../../ui/icons/sliderBlack/nextIcon.svg */
+
+/*! react/jsx-runtime */
+
+/*! ./icons/arrowBlockRight.svg */
+
+/*! ./filterRooms.scss */
+
+/*! ../balchug/img/rooms/6.png */
+
+/*! swiper */
+
+/*! ../../components/sliderRooms/SliderRooms */
+
+/*! ../../ui/icons/footer/store.svg */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! ../services/icons/кран.svg */
+
+/*! ./img/work-place/8.jpg */
+
+/*! ./img/2.png */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ../balchug/img/icons/проектор.svg */
+
+/*! ./img/mobile/rooms/5.png */
+
+/*! ./img/chilling-rooms/8.jpg */
+
+/*! ./img/mobile/work-place/5.png */
+
+/*! ./img/mobile/work-place/7.png */
+
+/*! ../footer/icons/menu.svg */
+
+/*! ../../components/footer/icons/menu.svg */
+
+/*! ../services/icons/zone.svg */
+
+/*! react-router-dom */
+
+/*! ./icons/defend.svg */
+
+/*! ../services/icons/call.svg */
+
+/*! react-router-dom */
+
+/*! ../balchug/img/rooms/2.png */
+
+/*! ./img/chilling-rooms/11.jpg */
+
+/*! ../../components/flipSlider/FlipSlider */
+
+/*! react */
+
+/*! ./pages/gallery/Gallery */
+
+/*! ./icons/cofee2.svg */
+
+/*! core-js/modules/esnext.async-iterator.filter.js */
+
+/*! ./img/4.png */
+
+/*! core-js/modules/web.dom-collections.iterator.js */
+
+/*! slick-carousel/slick/slick-theme.css */
+
+/*! ./icons/mobileSwitcher.svg */
+
+/*! core-js/modules/esnext.iterator.constructor.js */
+
+/*! ./icons/paper.svg */
+
+/*! ./img/chilling-rooms/2.jpg */
+
+/*! ./img/rooms/dgakku.jpg */
+
+/*! ./header.scss */
+
+/*! ../black/img/rooms/8.jpg */
+
+/*! ./img/work-place/8.jpg */
+
+/*! react */
+
+/*! ./footer.scss */
+
+/*! react */
+
+/*! react-bootstrap/Carousel */
+
+/*! ./pages/services/Services */
+
+/*! ./services.scss */
+
+/*! ./icons/logo.svg */
+
+/*! ../services/icons/defend.svg */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ./img/mobile/chilling-rooms/1.png */
+
+/*! ./img/telegram.svg */
+
+/*! ./img/slider/1.jpg */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! ../../ui/icons/arrow.svg */
+
+/*! ./img/news/3.png */
+
+/*! ../black/img/rooms/3.jpg */
+
+/*! react */
+
+/*! react-slick */
+
+/*! ./img/5.png */
+
+/*! ../../components/flipSlider/FlipSlider */
+
+/*! ./img/chilling-rooms/7.jpg */
+
+/*! ./img/news/3.jpg */
+
+/*! ./img/mobile/chilling-rooms/2.png */
+
+/*! ./pages/rooms/Rooms */
+
+/*! react-router-dom */
+
+/*! ../balchug/img/icons/стул.svg */
+
+/*! ./img/news/14.jpg */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! react-router-dom */
+
+/*! ../../ui/icons/polytic/arrow.svg */
+
+/*! ../services/icons/clock.svg */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
+/*! ./img/news/6.png */
+
+/*! ../services/icons/cleener.svg */
+
+/*! ./icons/palka.svg */
+
+/*! ./img/mobile/6.png */
+
+/*! ./icons/lupa.svg */
+
+/*! ./img/mobile/work-place/4.png */
+
+/*! ./img/mobile/work-place/6.png */
+
+/*! ../../components/ratesItem/RatesItem */
+
+/*! ./ratesItem.scss */
+
+/*! react */
+
+/*! ../services/icons/wifi.svg */
+
+/*! ../services/icons/item.svg */
+
+/*! ./img/chilling-rooms/1.jpg */
+
+/*! react-bootstrap/Carousel */
+
+/*! ./img/work-place/5.jpg */
+
+/*! ./img/6.png */
+
+/*! ../balchug/img/icons/дом.svg */
+
+/*! ./img/black.jpg */
+
+/*! ../applicationsButton/ApplicationsButton */
+
+/*! ./img/mobile/3.png */
+
+/*! ./img/slider/5.jpg */
+
+/*! ./img/icons/union.svg */
+
+/*! ./sliderBlack.scss */
+
+/*! core-js/modules/esnext.iterator.map.js */
+
+/*! ./index */
+
+/*! ../../components/questions/Questions */
+
+/*! react */
+
+/*! ./img/balchug3.jpg */
+
+/*! swiper/react */
+
+/*! react */
+
+/*! ../services/icons/кран.svg */
+
+/*! bootstrap/dist/css/bootstrap.min.css */
+
+/*! react/jsx-runtime */
+
+/*! react/jsx-runtime */
+
+/*! ./ui/styles/app.scss */
+
+/*! ./img/mobile/work-place/3.png */
+
+/*! ./img/mobile/rooms/3.png */
+
+/*! ./servicesBlock.scss */
+
+/*! ./icons/mobileSwitcherReverse.svg */
+
+/*! ../../components/sliderBlack/SliderBlack */
+
+/*! ./img/chilling-rooms/6.jpg */
+
+/*! ./img/balchugCategory.png */
+
+/*! react */
+
+/*! react */
+
+/*! ./img/7.png */
+
+/*! ./img/mobile/5.jpg */
+
+/*! ../balchug/img/icons/union.svg */
+
+/*! ./img/icons/проектор.svg */
+
+/*! ./img/mobile/chilling-rooms/2.png */

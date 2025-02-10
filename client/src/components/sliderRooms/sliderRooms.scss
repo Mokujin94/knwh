@@ -135,6 +135,11 @@
       color: $kw-white-color;
       background: $kw-primary-color;
     }
+
+    &_disabled {
+      opacity: .5;
+      pointer-events: none;
+    }
   }
 }
 

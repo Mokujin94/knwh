@@ -31,7 +31,7 @@ const icon = {
 };
 
 const SliderRooms = ({ styles, color, border, arr, clame }) => {
-  const items = arr.map(({ img, name, list, price, href }, i) => {
+  const items = arr.map(({ img, name, list, price, href, available }, i) => {
     return (
       <Carousel.Item key={i}>
         <div className='container'>
@@ -68,21 +68,10 @@ const SliderRooms = ({ styles, color, border, arr, clame }) => {
                   </ul>
                 </div>
                 <div className={`rooms__price ${color}`}>{price}</div>
-                {name == 'ДАЛТОН' ||
-                name == 'БОЛЬШОЙ КРУГ' ||
-                name == 'ЧУЙСКИЙ ТРАКТ' ||
-                name == 'КОНФЕРЕНЦ-ЗАЛ' ||
-                name == 'ДОРОГА ТРОЛЛЕЙ' ||
-                name == 'ВЕРДОН' ||
-                name == 'СТЕЛЬВИО' ||
-                name == 'ТРАССА 60' ||
-                name == 'ТЯНЬМЭНЬ' ||
-                name == 'ХАЙВАН' ||
-                name == 'ГОЛИАНЬ' ||
-                name == 'ПАМИРСКИЙ ТРАКТ' ? (
+                {available == false ? (
                   <a
-                    style={{ opacity: '0.5' }}
-                    className={`rooms__btn ${color}`}
+                    href='javascript:void(0)'
+                    className={`rooms__btn rooms__btn_disabled ${color}`}
                   >
                     Недоступно
                   </a>

@@ -2,8 +2,8 @@
 
 .rooms-black {
     width: 100%;
-    min-height: 1191px;
-    padding-top: 200px;
+    min-height: 1080px;
+    padding-top: 89px;
     &__header {
         display: flex;
         justify-content: space-between;
@@ -33,7 +33,7 @@
 .rooms-balchug {
     width: 100%;
     min-height: 1080px;
-    padding-top: 89px;
+    padding-top: 120px;
     background: $kw-soft-gold-color;
     &__header {
         display: flex;
@@ -113,7 +113,7 @@
 
 @media (max-width: 1440px) {
     .rooms-black {
-        min-height: 980px;
+        min-height: 860px;
         &__title {
             font-size: 32px;
         }

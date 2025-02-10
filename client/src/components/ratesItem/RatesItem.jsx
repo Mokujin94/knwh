@@ -100,7 +100,7 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     return (
 
         <div className='rates__item'>
-            {!isPay && title === "День" && <div className="rates__item-sticker">Количество мест ограниченно</div>}
+            {!isPay && title === "День" && <div className="rates__item-sticker">Количество мест ограничено</div>}
             <div className="tarif__top">
                 <h2 className="tarif__title">{title}</h2>
                 <ul className="tarif__list">
