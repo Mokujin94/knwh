@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './ratesItem.scss';
 import arrow from '../../ui/icons/arrow.svg';
 
-const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href, href1, href2, hint, hint1, hint2, isPay, setForm, setActiveMail, tarif, setDefaultRate, setActiveRate }) => {
+const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href, href1, href2, hint, hint1, hint2, isPay, label, setForm, setActiveMail, tarif, setDefaultRate, setActiveRate }) => {
 
     const [activeButton, setActiveButton] = useState(0);
 
@@ -100,7 +100,7 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     return (
 
         <div className='rates__item'>
-            {!isPay && title === "День" && <div className="rates__item-sticker">Количество мест ограничено</div>}
+            {label && <div className="rates__item-sticker">{label}</div>}
             <div className="tarif__top">
                 <h2 className="tarif__title">{title}</h2>
                 <ul className="tarif__list">

@@ -13,6 +13,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './black.scss';
 
+import { blackTarif } from "../../data/tariffs";
+
 import clock from '../services/icons/clock.svg';
 import wifi from '../services/icons/wifi.svg';
 import technic from '../services/icons/technic.svg';
@@ -132,96 +134,6 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     { icon: defend, title: 'круглосуточная охрана' },
   ];
 
-  let tarif = [
-    {
-      title: 'День',
-      list: [
-        { title: 'Свободное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-      ],
-      listTwo: [
-        { title: 'Свободное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-      ],
-      buttons: [
-        { title: '1 день' },
-        { title: '10 дней' },
-        { title: '25 дней' },
-      ],
-      price: '1 790₽',
-      price1: '15 900₽',
-      price2: '37 250₽',
-      href: "SpaceinWidget.run('d54d816a-eb47-481f-ad0d-2feaef9fefa3');",
-      href1: "SpaceinWidget.run('9e8a1613-4569-48e5-93fb-bb88136f0dc7');",
-      href2: "SpaceinWidget.run('0a3e5956-7e70-47ed-89ab-5497a460eab9');",
-      hint: '',
-      hint1: '*Срок действия – 60 дней. Доступно посещение локации Balchug',
-      hint2: '*Срок действия – 120 дней. Доступно посещение локации Balchug',
-      isPay: false,
-      tarif: 'black',
-    },
-    {
-      title: 'Гость',
-      list: [
-        { title: 'Свободное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-        { title: '1 час любой переговорной комнаты' },
-      ],
-      listTwo: [
-        { title: 'Свободное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-        { title: '5 часов любой переговорной комнаты' },
-        { title: '30% скидка на аренду переговорных комнат' },
-      ],
-      buttons: [{ title: 'Неделя' }, { title: 'Месяц' }],
-      price: '9 800₽',
-      price1: '30 900₽',
-      href: "SpaceinWidget.run('c3b5067e-9d55-4e42-a319-18f9123ee57d');",
-      href1: "SpaceinWidget.run('79b6428e-99ed-47bc-8777-0f7f58e135fc');",
-      isPay: true,
-      tarif: 'black',
-    },
-    {
-      title: 'Резидент',
-      list: [
-        { title: 'Фиксированное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-        { title: '10 часов любой переговорной комнаты' },
-        { title: '50% скидка на аренду переговорных' },
-      ],
-      listTwo: [
-        { title: 'Фиксированное рабочее место' },
-        { title: 'Вода, чай и кофе' },
-        { title: 'Принтер и сканер' },
-        { title: 'Кухня и душевые' },
-        { title: 'Доступ 24/7' },
-        { title: '10 часов любой переговорной комнаты' },
-        { title: '50% скидка на аренду переговорных' },
-      ],
-      buttons: [{ title: '1 месяц' }, { title: '3 месяца' }],
-      price: '33 900₽',
-      price1: '92 700₽',
-      href: "SpaceinWidget.run('4aec3ed6-1105-4771-bc3b-1206b53fba4e');",
-      href1: "SpaceinWidget.run('95ef20cf-3b7b-46d9-9835-dd725e5b3a98');",
-      isPay: true,
-      tarif: 'black',
-    },
-  ];
   const image = [
     { img: imagesSlides1 },
     { img: imagesSlides2 },
@@ -431,7 +343,7 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
   const [translateImages, setTranslateImages] = useState(0);
 
-  const tarifs = tarif.map(
+  const tarifs = blackTarif.map(
     (
       {
         title,
@@ -448,6 +360,7 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         hint1,
         hint2,
         isPay,
+        label,
         tarif,
       },
       i
@@ -468,6 +381,7 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
           hint1={hint1}
           hint2={hint2}
           isPay={isPay}
+          label={label}
           tarif={tarif}
           setForm={setForm}
           setActiveMail={setActiveMail}

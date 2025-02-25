@@ -17,6 +17,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./balchug.scss";
 
+import { balchugTarif } from "../../data/tariffs";
+
 import clock from "../services/icons/clock.svg";
 import wifi from "../services/icons/wifi.svg";
 import technic from "../services/icons/technic.svg";
@@ -126,96 +128,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         { icon: кран, title: "коммунальные услуги" },
         { icon: defend, title: "круглосуточная охрана" },
     ];
-    const balchugTarif = [
-        {
-            title: "День",
-            list: [
-                { title: "Свободное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-            ],
-            listTwo: [
-                { title: "Свободное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-            ],
-            buttons: [
-                { title: "1 день" },
-                { title: "10 дней" },
-                { title: "25 дней" },
-            ],
-            price: "1 390₽",
-            price1: "11 900₽",
-            price2: "28 250₽",
-            href: "SpaceinWidget.run('ddc6aef0-3f36-4a7a-8d51-4e107502841a');",
-            href1: "SpaceinWidget.run('0ac8ceef-a349-43ea-a902-fc2de129d1b0');",
-            href2: "SpaceinWidget.run('ca9c54d5-ac78-4849-a48d-6490c131f836');",
-            hint: "",
-            hint1: "*Срок действия – 60 дней",
-            hint2: "*Срок действия – 120 дней",
-            isPay: false,
-            tarif: "bulchug"
-        },
-        {
-            title: "Гость",
-            list: [
-                { title: "Свободное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-                { title: "1 час любой переговорной комнаты" },
-            ],
-            listTwo: [
-                { title: "Свободное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-                { title: "5 часов любой переговорной комнаты" },
-                { title: "30% скидка на аренду переговорных комнат" },
-            ],
-            buttons: [{ title: "Неделя" }, { title: "Месяц" }],
-            price: "8 900₽",
-            price1: "21 900₽",
-            href: "SpaceinWidget.run('bf2eec79-8926-40b9-8d9d-23a395128825');",
-            href1: "SpaceinWidget.run('bd4b030c-3522-458b-9a37-6200c4d7c44b');",
-            isPay: true,
-            tarif: "bulchug"
-        },
-        {
-            title: "Резидент",
-            list: [
-                { title: "Фиксированное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-                { title: "10 часов любой переговорной комнаты" },
-                { title: "50% скидка на аренду переговорных" },
-            ],
-            listTwo: [
-                { title: "Фиксированное рабочее место" },
-                { title: "Вода, чай и кофе" },
-                { title: "Принтер и сканер" },
-                { title: "Кухня и душевые" },
-                { title: "Доступ 24/7" },
-                { title: "10 часов любой переговорной комнаты" },
-                { title: "50% скидка на аренду переговорных" },
-            ],
-            buttons: [{ title: "1 месяц" }, { title: "3 месяца" }],
-            price: "24 900₽",
-            price1: "68 700₽",
-            href: "SpaceinWidget.run('501e3c77-047e-43db-a8e9-bc7bd4f3fd9a');",
-            href1: "SpaceinWidget.run('c5c84909-29c7-4fb4-915b-536241f74f03');",
-            isPay: true,
-            tarif: "bulchug"
-        },
-    ];
+
     const image = [
         { img: imagesSlides1 },
         { img: imagesSlides2 },
@@ -346,6 +259,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                 hint1,
                 hint2,
                 isPay,
+                label,
                 tarif
             },
             i
@@ -366,6 +280,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     hint1={hint1}
                     hint2={hint2}
                     isPay={isPay}
+                    label={label}
                     tarif={tarif}
                     setForm={setForm}
                     setActiveMail={setActiveMail}

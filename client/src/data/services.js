@@ -1,0 +1,16 @@
+export const servicesArray = [
+    { icon: '/services/icons/clock.svg', title: "Доступ 24/7" },
+    { icon: '/services/icons/wifi.svg', title: "безлимитный интернет" },
+    { icon: '/services/icons/technic.svg', title: "оборудованные переговорки" },
+    { icon: '/services/icons/zone.svg', title: "мягкие зоны" },
+    { icon: '/services/icons/coffee.svg', title: "ОБОРУДОВАННЫЕ КУХНИ" },
+    { icon: '/services/icons/cofee2.svg', title: "ВОДА, ЧАЙ, КОФЕ" },
+    { icon: '/services/icons/call.svg', title: "телефонные будки" },
+    { icon: '/services/icons/paper.svg', title: "принтер и расходники" },
+    { icon: '/services/icons/cleener.svg', title: "Уборка" },
+    { icon: '/services/icons/item.svg', title: "Услуги ресепшн" },
+    { icon: '/services/icons/table.svg', title: "мебель: кресла, столы" },
+    { icon: '/services/icons/замок.svg', title: "СКУД, пропуска от коворкинга" },
+    { icon: '/services/icons/кран.svg', title: "коммунальные услуги" },
+    { icon: '/services/icons/defend.svg', title: "круглосуточная охрана" },
+];
