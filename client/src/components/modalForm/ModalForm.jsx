@@ -18,7 +18,8 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
         } else {
             sendForm(name, number, email, rate, mailTo, activeRate)
                 .then((response) => {
-                    console.log('SUCCESS!');
+                    // console.log('SUCCESS!');
+                    // console.log(response)
                     alert('Заявка успешно отправлена')
                     setForm(false)
                 })

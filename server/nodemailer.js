@@ -1,25 +1,40 @@
 const nodemailer = require("nodemailer");
 
+// const transporter = nodemailer.createTransport(
+//     {
+//         host: "smtp.gmail.com",
+//         port: 465,
+//         secure: true,
+//         auth: {
+//             user: "knowwhere.all@gmail.com",
+//             pass: "dlyswyxyropuyzdu",
+//         },
+
+//     },
+//     {
+//         from: "knwh <ka@knwh.ru>",
+//     }
+// );
+
 const transporter = nodemailer.createTransport(
     {
-        host: "smtp.gmail.com",
+        host: "smtp.yandex.ru",
         port: 465,
         secure: true,
         auth: {
-            user: "knowwhere.all@gmail.com",
-            pass: "dlyswyxyropuyzdu",
+            user: "hello@knwh.ru",
+            pass: "emcrgfoqeuejjxbi",
         },
+
     },
     {
-        from: "knwh <ka@knwh.ru>",
+        from: "knwh <hello@knwh.ru>",
     }
 );
 
+
 const mailer = (message) => {
-    transporter.sendMail(message, (err, info) => {
-        if (err) return console.log(err);
-        console.log("Email sent: ", info);
-    });
+    return transporter.sendMail(message);
 };
 
 module.exports = mailer;

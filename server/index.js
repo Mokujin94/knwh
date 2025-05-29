@@ -18,7 +18,7 @@ const app = express();
 app.use(cors('*'));
 app.use(express.json());
 
-app.post('/send', (req, res) => {
+app.post('/send', async (req, res) => {
     try {
         const { name, number, email, rate, mailTo, activeRate } = req.body;
         let newMailTo = mailTo;
@@ -56,11 +56,14 @@ app.post('/send', (req, res) => {
             subject: "Заявка KW " + formattedTime,
             html: `Имя - ${name} <br/> Телефон - ${number} <br/> Почта - ${email} <br/> Интересующий тариф - ${newRate}`,
         };
-        // mailer(message);
-        return res.status(200).json({ message: "Заявка отправлена!", emailTo: newMailTo });
+
+        await mailer(message)
+            .then((result) => { res.status(200).json({ message: "Заявка отправлена!", res: result }) })
+            .catch((err) => { res.status(400).json({ message: "Ошибка отправки заявки!", error: err }) })
+
     } catch (error) {
-        res.status(404).json({ message: error })
-        console.log(error)
+        res.status(400).json({ message: error })
+        console.error(error)
     }
 })
 

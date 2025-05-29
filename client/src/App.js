@@ -25,6 +25,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import useScript from './components/useScript/UseScript';
 import Polityc from './pages/polytic/Polityc';
 import ModalForm from './components/modalForm/ModalForm';
+import Test from './pages/test/Test';
 
 function App() {
     const location = useLocation()
@@ -82,6 +83,7 @@ function App() {
                         {/* <Route path="/team" element={<Team setForm={setFormActive}/>} /> */}
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/polytics" element={<Polityc />} />
+                        <Route path="/test" element={<Test />} />
                     </Routes>
                 </div>
             </animated.div>
