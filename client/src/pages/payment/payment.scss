@@ -1,0 +1,31 @@
+.payment-page {
+    width: 100%;
+    min-height: 1080px;
+    padding-top: 120px;
+    background-color: #D2C7B6;
+}
+
+// .payment-page .yoomoney-payment-form .ym-payment-btn-block {
+//     height: auto;
+// }
+
+// .payment-page .yoomoney-payment-form {
+//     padding: 20px;
+//     border: 1px solid #222;
+//     border-radius: 5px;
+// }
+
+.payment-page h1 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 104%;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+@media (max-width: 520px) {
+    .payment-page h1 {
+        font-size: 32px;
+        line-height: 110%;
+    }
+}

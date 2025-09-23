@@ -58,11 +58,11 @@ app.post('/send', async (req, res) => {
         };
 
         await mailer(message)
-            .then((result) => { res.status(200).json({ message: "Заявка отправлена!", res: result }) })
-            .catch((err) => { res.status(400).json({ message: "Ошибка отправки заявки!", error: err }) })
+            .then((result) => { res.status(200).json({ mess: "Заявка отправлена!", res: result }) })
+            .catch((err) => { res.status(400).json({ mess: "Ошибка отправки заявки!", error: err }) })
 
     } catch (error) {
-        res.status(400).json({ message: error })
+        res.status(400).json({ mess: error })
         console.error(error)
     }
 })

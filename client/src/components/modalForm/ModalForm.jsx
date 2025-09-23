@@ -11,6 +11,8 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
     const [email, setEmail] = useState('');
     const [rate, setRate] = useState('');
 
+    const mailToMe = 'alexandra.filipceva@yandex.ru';
+
     const onSubmit = (e) => {
         e.preventDefault();
         if (name == '' || number == '' || email == '' || (rate == '' && !defaultRate)) {
@@ -19,7 +21,7 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
             sendForm(name, number, email, rate, mailTo, activeRate)
                 .then((response) => {
                     // console.log('SUCCESS!');
-                    // console.log(response)
+                    // console.log('response: ', response)
                     alert('Заявка успешно отправлена')
                     setForm(false)
                 })

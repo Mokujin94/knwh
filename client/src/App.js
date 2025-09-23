@@ -25,7 +25,8 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import useScript from './components/useScript/UseScript';
 import Polityc from './pages/polytic/Polityc';
 import ModalForm from './components/modalForm/ModalForm';
-import Test from './pages/test/Test';
+import PaymentBalchug from './pages/payment/PaymentBalchug';
+import PaymentBlack from './pages/payment/PaymentBLack';
 
 function App() {
     const location = useLocation()
@@ -83,7 +84,8 @@ function App() {
                         {/* <Route path="/team" element={<Team setForm={setFormActive}/>} /> */}
                         <Route path="/contact" element={<Contact />} />
                         <Route path="/polytics" element={<Polityc />} />
-                        <Route path="/test" element={<Test />} />
+                        <Route path="/paymentbalchug" element={<PaymentBalchug />} />
+                        <Route path="/paymentblack" element={<PaymentBlack />} />
                     </Routes>
                 </div>
             </animated.div>
