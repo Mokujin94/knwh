@@ -55,6 +55,13 @@
         color: $kw-white-color;
         margin: 0;
     }
+    a.black-contact__number {
+        text-decoration: none;
+
+        &:hover {
+            color: $kw-primary-color;
+        }
+    }
     &__bottom {
         color: $kw-white-color;
     }

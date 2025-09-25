@@ -35,9 +35,10 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     }
 
     const onForm = () => {
+        
         if (tarif === "black") {
-            // setActiveMail("black@knwh.ru")
-            setActiveMail("ka@knwh.ru")
+            setActiveMail("vs@knwh.ru");
+
             if (title === "Гость") {
                 if (activeButton === 0) {
                     setActiveRate("Black - Гость (неделя)")
@@ -68,8 +69,8 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
             return;
         }
         if (tarif === "bulchug") {
-            // setActiveMail("balchug@knwh.ru")
-            setActiveMail("ka@knwh.ru")
+            setActiveMail("vs@knwh.ru");
+
             if (activeButton === 0) {
                 setActiveRate("Balchug - Гость (1 день)")
             }

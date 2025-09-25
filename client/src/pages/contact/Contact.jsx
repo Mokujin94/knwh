@@ -30,25 +30,25 @@ const Contact = () => {
                         <div className="black-contact__left">
                             <div className="black-contact__left-item">
                                 <h2 className="black-contact__numberFor">телефон</h2>
-                                <p className="black-contact__number">+7 (499) 647-85-63</p>
+                                <a className="black-contact__number" href="tel:+74996478563">+7 (499) 647-85-63</a>
                             </div>
                             <div className="black-contact__left-item">
                                 <h2 className="black-contact__numberFor">общая почта</h2>
-                                <p className="black-contact__number">hello@knwh.ru</p>
+                                <a className="black-contact__number" href="mailto:hello@knwh.ru">hello@knwh.ru</a>
                             </div>
                             <div className="black-contact__left-item">
                                 <p className="black-contact__number">ПО ВОПРОСАМ РАБОТЫ <br /> С БРОКЕРСКИМИ АГЕНТСТВАМИ</p>
-                                <p className="black-contact__number">ka@knwh.ru</p>
+                                <a className="black-contact__number" href="mailto:vs@knwh.ru">vs@knwh.ru</a>
                             </div>
                         </div>
                         <div className="black-contact__left">
                             <div className="black-contact__left-item">
                                 <h2 className="black-contact__numberFor">почта BLACK</h2>
-                                <p className="black-contact__number">black@knwh.ru</p>
+                                <a className="black-contact__number" href="mailto:black@knwh.ru">black@knwh.ru</a>
                             </div>
                             <div className="black-contact__left-item">
                                 <h2 className="black-contact__numberFor">почта BALCHUG</h2>
-                                <p className="black-contact__number">balchug@knwh.ru</p>
+                                <a className="black-contact__number" href="mailto:balchug@knwh.ru">balchug@knwh.ru</a>
                             </div>
                         </div>
                         <div className="black-contact__social">
