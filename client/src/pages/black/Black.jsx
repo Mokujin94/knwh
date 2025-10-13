@@ -784,7 +784,17 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             </div>
           </div>
         </div>
-        <SliderRooms styles={''} color={''} border={''} arr={filter} />
+        <SliderRooms 
+          styles={''} 
+          color={''} 
+          border={''} 
+          arr={filter} 
+          roomsType={"Black"}
+          setForm={setForm}
+          setActiveMail={setActiveMail}
+          setDefaultRate={setDefaultRate}
+          setActiveRate={setActiveRate}
+          />
       </section>
       <Footer />
     </>

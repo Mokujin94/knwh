@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,7 +31,16 @@ const icon = {
   ),
 };
 
-const SliderRooms = ({ styles, color, border, arr, clame }) => {
+const SliderRooms = ({ styles, color, border, arr, clame, roomsType, setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
+
+  const onForm = (name) => {
+    setActiveMail("tickets@knwh.ru");
+    setActiveRate(`${roomsType} - ${name}`);
+    setDefaultRate(true);
+    setForm(true);
+    return;
+  }
+
   const items = arr.map(({ img, name, list, price, href, available }, i) => {
     return (
       <Carousel.Item key={i}>
@@ -68,7 +78,7 @@ const SliderRooms = ({ styles, color, border, arr, clame }) => {
                   </ul>
                 </div>
                 <div className={`rooms__price ${color}`}>{price}</div>
-                {available == false ? (
+                {/* {available == false ? (
                   <a
                     href='javascript:void(0)'
                     className={`rooms__btn rooms__btn_disabled ${color}`}
@@ -83,7 +93,8 @@ const SliderRooms = ({ styles, color, border, arr, clame }) => {
                   >
                     Забронировать
                   </a>
-                )}
+                )} */}
+                <div onClick={() => onForm(name)} className={`rooms__btn ${color}`}>Оставить заявку</div>
               </div>
             </div>
           </div>

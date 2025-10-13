@@ -27,7 +27,7 @@ const Header = ({burger, onClick}) => {
                             <li className="menu__list-item"><NavLink to="/services" activeClassName="active" className="menu__list-path">УСЛУГИ</NavLink></li>
                             {/* <li className="menu__list-item"><NavLink to="/team" activeClassName="active" className="menu__list-path">КОМАНДА</NavLink></li> */}
                             <li className="menu__list-item"><NavLink to="/contact" activeClassName="active" className="menu__list-path">КОНТАКТЫ</NavLink></li>
-                            <li className="menu__list-item"><a href="https://my.knwh.ru/login" style={{border: '1px solid #B3A16E', padding: '7px 30px', borderRadius: '10px'}} activeClassName="active" className="menu__list-path menu__list-path-auth">ВОЙТИ</a></li>
+                            {/* <li className="menu__list-item"><a href="https://my.knwh.ru/login" style={{border: '1px solid #B3A16E', padding: '7px 30px', borderRadius: '10px'}} activeClassName="active" className="menu__list-path menu__list-path-auth">ВОЙТИ</a></li> */}
                         </ul>
                         <div className="menu__bottom">
                             <div className="menu__social">

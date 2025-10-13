@@ -77,7 +77,7 @@ function App() {
                         <Route exact path="/" element={<Home setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/black" element={<Black setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/balchug" element={<Balchug setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
-                        <Route path="/rooms" element={<Rooms />} />
+                        <Route path="/rooms" element={<Rooms setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/gallery" element={<Gallery />} />
                         <Route path="/gallery-balchug" element={<GalleryBalchug />} />
                         <Route path="/services" element={<Services />} />

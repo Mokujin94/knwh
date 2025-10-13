@@ -56,13 +56,13 @@ function Footer({style}) {
                     </div>
                     <p className="footer__social-descr">Пишите нам в любимых <br /> мессенджерах. Мы отвечаем <br /> каждый день с 9:00 до 21:00</p>
                 </div>
-                <div className="footer__social-block">
+                {/* <div className="footer__social-block">
                     <div className="footer__social-icons">
                         <a target='_blank' href="https://play.google.com/store/apps/details?id=pro.spacepass.mobile.knwh&hl=en_US"><img src={market} alt="market" className="footer__social-icon" /></a>
                         <a target='_blank' href="https://apps.apple.com/ru/app/kw/id1625112664"><img src={store} alt="store" className="footer__social-icon" /></a>
                     </div>
                     <p className="footer__social-descr">Наше приложение в Google Play <br /> и App Store</p>
-                </div>
+                </div> */}
                 <div className="polytics">
                     <a target='_blank' href={ofer}>Оферта</a>
                 </div>

@@ -33,7 +33,7 @@ import стул from "../balchug/img/icons/стул.svg";
 import FilterRooms from "../../components/filterRooms/FilterRooms";
 import Footer from "../../components/footer/Footer";
 
-const Rooms = () => {
+const Rooms = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const bulchugRoomsArr = [
         {
             img: bulchugRoomsImg1,
@@ -415,6 +415,11 @@ const Rooms = () => {
                     color={"balchug__color"}
                     border={"balchug__border"}
                     arr={filter}
+                    roomsType={"Balchug"}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
                 />
             </section>
             <section className="rooms-black">
@@ -432,7 +437,17 @@ const Rooms = () => {
                         </div>
                     </div>
                 </div>
-                <SliderRooms styles={""} color={""} border={""} arr={filterBlack} />
+                <SliderRooms 
+                    styles={""} 
+                    color={""} 
+                    border={""} 
+                    arr={filterBlack} 
+                    roomsType={"Black"}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
+          />
             </section>
             <Footer style={""} />
         </>

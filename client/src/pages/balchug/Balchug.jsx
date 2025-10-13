@@ -662,6 +662,11 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     border={"balchug__border"}
                     arr={filter}
                     clame={"carousel__black-new"}
+                    roomsType={"Balchug"}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
                 />
             </section>
             <Footer style={"footer__white"} />

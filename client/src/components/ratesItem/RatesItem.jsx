@@ -37,7 +37,7 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     const onForm = () => {
         
         if (tarif === "black") {
-            setActiveMail("vs@knwh.ru");
+            setActiveMail("tickets@knwh.ru");
 
             if (title === "Гость") {
                 if (activeButton === 0) {
@@ -69,16 +69,32 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
             return;
         }
         if (tarif === "bulchug") {
-            setActiveMail("vs@knwh.ru");
+            setActiveMail("tickets@knwh.ru");
 
-            if (activeButton === 0) {
-                setActiveRate("Balchug - Гость (1 день)")
-            }
-            if (activeButton === 1) {
-                setActiveRate("Balchug - Гость (10 дней)")
-            }
-            if (activeButton === 2) {
-                setActiveRate("Balchug - Гость (25 дней)")
+            if (title === "День") {
+                if (activeButton === 0) {
+                    setActiveRate("Balchug - День (1 день)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Balchug - День (10 дней)")
+                }
+                if (activeButton === 2) {
+                    setActiveRate("Balchug - День (25 дней)")
+                }
+            } else if(title === "Гость") {
+                if (activeButton === 0) {
+                    setActiveRate("Balchug - Гость (Неделя)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Balchug - Гость (Месяц)")
+                }
+            } else if(title === "Резидент") {
+                if (activeButton === 0) {
+                    setActiveRate("Balchug - Резидент (1 месяц)")
+                }
+                if (activeButton === 1) {
+                    setActiveRate("Balchug - Резидент (3 месяца)")
+                }
             }
             setDefaultRate(true)
             setForm(true);
@@ -116,13 +132,14 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
                 <div className="tarif__price">
                     <h2 className="tarif__price-number">{activeButton !== 0 ? eval('price' + activeButton) : price} </h2>
                 </div>
-                {
+                {/* {
                     isPay && (tarif === "bulchug" && (title === "Гость" || title === "Резидент"))
                         ?
                         <a href='javascript:void(0)' onClick={() => (activeButton === 0 ? eval(href) : activeButton === 1 ? eval(href1) : activeButton === 2 ? eval(href2) : console.log('error'))} className="tarif__pay-button">Купить</a>
                         :
                         <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
-                }
+                } */}
+                <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
             </div>
         </div>
     );
