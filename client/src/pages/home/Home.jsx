@@ -220,45 +220,10 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     });
 
     const tarifs = blackTarif.map(
-        (
-            {
-                title,
-                list,
-                listTwo,
-                buttons,
-                price,
-                price1,
-                price2,
-                href,
-                href1,
-                href2,
-                hint,
-                hint1,
-                hint2,
-                isPay,
-                label,
-                tarif
-            },
-            i
-        ) => {
+        ( tariff, i ) => {
             return (
                 <RatesItem
-                    title={title}
-                    list={list}
-                    listTwo={listTwo}
-                    buttons={buttons}
-                    price={price}
-                    price1={price1}
-                    price2={price2}
-                    href={href}
-                    href1={href1}
-                    href2={href2}
-                    hint={hint}
-                    hint1={hint1}
-                    hint2={hint2}
-                    isPay={isPay}
-                    label={label}
-                    tarif={tarif}
+                    tariff={tariff}
                     setForm={setForm}
                     setActiveMail={setActiveMail}
                     setDefaultRate={setDefaultRate}
@@ -269,45 +234,10 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         }
     );
     const balchugTarifs = balchugTarif.map(
-        (
-            {
-                title,
-                list,
-                listTwo,
-                buttons,
-                price,
-                price1,
-                price2,
-                href,
-                href1,
-                href2,
-                hint,
-                hint1,
-                hint2,
-                isPay,
-                label,
-                tarif
-            },
-            i
-        ) => {
+        ( tariff, i ) => {
             return (
                 <RatesItem
-                    title={title}
-                    list={list}
-                    listTwo={listTwo}
-                    buttons={buttons}
-                    price={price}
-                    price1={price1}
-                    price2={price2}
-                    href={href}
-                    href1={href1}
-                    href2={href2}
-                    hint={hint}
-                    hint1={hint1}
-                    hint2={hint2}
-                    isPay={isPay}
-                    label={label}
-                    tarif={tarif}
+                    tariff={tariff}
                     setForm={setForm}
                     setActiveMail={setActiveMail}
                     setDefaultRate={setDefaultRate}

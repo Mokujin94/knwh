@@ -2,114 +2,77 @@ import React from 'react';
 import { useState } from 'react';
 import './ratesItem.scss';
 import arrow from '../../ui/icons/arrow.svg';
+import action from '../../ui/action.png';
 
-const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href, href1, href2, hint, hint1, hint2, isPay, label, setForm, setActiveMail, tarif, setDefaultRate, setActiveRate }) => {
+const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
-    const [activeButton, setActiveButton] = useState(0);
+    const [activeCategories, setActiveCategories] = useState(0);
 
-    let tarifListTwo = listTwo.map(({ title }, i) => {
+    
+    let setList = tariff.categories[activeCategories].list.map((listItem, i) => {
         return (
             <div className="tarif__list-wrapper">
                 <img src={arrow} className="tarif__list-marker" />
-                <li className="tarif__list-item" key={i}>{title}</li>
+                <li className="tarif__list-item" key={i}>{listItem.title}</li>
             </div>
+        );
+    });
 
-        )
-    })
+    const setPrice = (category) => {
+        if(category.price) {
+            return (
+                <div className="tarif__price">
+                    {category.priceBeforeSale ? <p className="tarif__price-number tarif__price-number_before">{category.priceBeforeSale}</p> : ""}
+                    <p className="tarif__price-number">{category.price}</p>
+                </div>
+            );
+        }
+    }
 
-    const tarifList = list.map(({ title }, i) => {
+    const setHint = (category) => {
         return (
-            <div className="tarif__list-wrapper">
-                <img src={arrow} className="tarif__list-marker" />
-                <li className="tarif__list-item" key={i}>{title}</li>
-            </div>
+            <p className="tarif__hint">{category.hint ? category.hint : false}</p>
+        );
+    }
 
-        )
-    })
+    const setLabel = (category) => {
+        let labelText = tariff.label ? tariff.label : "";
+        labelText = category.label ? category.label : labelText;
 
+        if(labelText) {
+            return(
+                <div className="rates__item-sticker">{labelText}</div>
+            );
+        }
+    }
 
-    function changeBtn() {
-        const str = 'href';
-        let result = str + activeButton;
-        eval('href' + activeButton);
+    const setOrderBtn = (category) => {
+        if(category.isPay && category.href) {
+            return(
+                <a href='javascript:void(0)' onClick={() => (eval(category.href))} className="tarif__pay-button">Купить</a>
+            );
+        } else {
+            return (
+                <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
+            );
+        };
     }
 
     const onForm = () => {
-        
-        if (tarif === "black") {
-            setActiveMail("tickets@knwh.ru");
-
-            if (title === "Гость") {
-                if (activeButton === 0) {
-                    setActiveRate("Black - Гость (неделя)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Black - Гость (месяц)")
-                }
-            } else if (title === "Резидент") {
-                if (activeButton === 0) {
-                    setActiveRate("Black - Резидент (1 месяц)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Black - Резидент (3 месяца)")
-                }
-            } else {
-                if (activeButton === 0) {
-                    setActiveRate("Black - Гость (1 день)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Black - Гость (10 дней)")
-                }
-                if (activeButton === 2) {
-                    setActiveRate("Black - Гость (25 дней)")
-                }
-            }
-            setDefaultRate(true)
-            setForm(true);
-            return;
-        }
-        if (tarif === "bulchug") {
-            setActiveMail("tickets@knwh.ru");
-
-            if (title === "День") {
-                if (activeButton === 0) {
-                    setActiveRate("Balchug - День (1 день)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Balchug - День (10 дней)")
-                }
-                if (activeButton === 2) {
-                    setActiveRate("Balchug - День (25 дней)")
-                }
-            } else if(title === "Гость") {
-                if (activeButton === 0) {
-                    setActiveRate("Balchug - Гость (Неделя)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Balchug - Гость (Месяц)")
-                }
-            } else if(title === "Резидент") {
-                if (activeButton === 0) {
-                    setActiveRate("Balchug - Резидент (1 месяц)")
-                }
-                if (activeButton === 1) {
-                    setActiveRate("Balchug - Резидент (3 месяца)")
-                }
-            }
-            setDefaultRate(true)
-            setForm(true);
-            return;
-        }
+        setActiveMail("tickets@knwh.ru");
+        setActiveRate(tariff.categories[activeCategories].orderBtnText ? tariff.categories[activeCategories].orderBtnText : "");
+        setDefaultRate(true)
+        setForm(true);
+        return;
     }
 
-    const swither = (i) => {
-        setActiveButton(i);
+    function handleClick(i) {
+        setActiveCategories(i);
     }
 
-
-    const tarifButtons = buttons.map(({ title }, i) => {
+    const tarifButtons = tariff.categories.map((category, i) => {
         return (
-            <div key={i} onClick={() => swither(i)} className={activeButton === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{title}</div>
+            <div key={i} onClick={() => handleClick(i)} className={activeCategories === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{category.button}</div>
         )
     })
 
@@ -117,29 +80,20 @@ const RatesItem = ({ title, list, listTwo, buttons, price, price1, price2, href,
     return (
 
         <div className='rates__item'>
-            {label && <div className="rates__item-sticker">{label}</div>}
+            {setLabel(tariff.categories[activeCategories])}
             <div className="tarif__top">
-                <h2 className="tarif__title">{title}</h2>
+                <h2 className="tarif__title">{tariff.title}</h2>
                 <ul className="tarif__list">
-                    {activeButton === 0 ? tarifList : tarifListTwo}
+                    {setList}
                 </ul>
             </div>
             <div className="tarif__bottom">
                 <div className="tarif__buttons">
                     {tarifButtons}
-                    <p className="tarif__hint">{activeButton === 0 ? hint : activeButton === 1 ? hint1 : activeButton === 2 ? hint2 : false}</p>
+                    {setHint(tariff.categories[activeCategories])}
                 </div>
-                <div className="tarif__price">
-                    <h2 className="tarif__price-number">{activeButton !== 0 ? eval('price' + activeButton) : price} </h2>
-                </div>
-                {/* {
-                    isPay && (tarif === "bulchug" && (title === "Гость" || title === "Резидент"))
-                        ?
-                        <a href='javascript:void(0)' onClick={() => (activeButton === 0 ? eval(href) : activeButton === 1 ? eval(href1) : activeButton === 2 ? eval(href2) : console.log('error'))} className="tarif__pay-button">Купить</a>
-                        :
-                        <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
-                } */}
-                <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
+                {setPrice(tariff.categories[activeCategories])}
+                {setOrderBtn(tariff.categories[activeCategories])}
             </div>
         </div>
     );

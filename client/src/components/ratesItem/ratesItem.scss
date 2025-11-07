@@ -16,8 +16,9 @@
         transition: 0.3s all;
 
         &-sticker {
+            width: 140px;
             position: absolute;
-            max-width: 140px;
+            // max-width: 140px;
             aspect-ratio: 1 / 1;
             height: auto;
             background: $kw-primary-color;
@@ -34,7 +35,10 @@
             font-weight: 500;
             border-radius: 50%;
             transition: .3s;
+        }
 
+        @media screen and (max-width: 1440px) {
+            height: 560px !important;
         }
     }
 }
@@ -123,10 +127,27 @@
         align-items: center;
         margin-bottom: 15px;
         &-number {
+            margin: 0;
             font-weight: 500;
             font-size: 32px;
             text-transform: uppercase;
             color: $kw-white-color;
+
+            &_before {
+                margin: 0 10px 0 0;
+                text-decoration: line-through;
+                opacity: .5;
+
+                @media screen and (max-width: 1440px) {
+                    margin: 0 0 5px;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1440px) {
+            flex-direction: column;
+            align-items: flex-end;
         }
     }
     &__pay-button {
