@@ -27,6 +27,7 @@ import Polityc from './pages/polytic/Polityc';
 import ModalForm from './components/modalForm/ModalForm';
 import PaymentBalchug from './pages/payment/PaymentBalchug';
 import PaymentBlack from './pages/payment/PaymentBLack';
+import CookiesWindow from './components/cookiesWindow/CookiesWindow';
 
 function App() {
     const location = useLocation()
@@ -73,6 +74,7 @@ function App() {
                     <BurgerMenu onClick={() => burgerOpen()} />
                     <ModalForm formActive={formActive} setForm={setFormActive} mailTo={activeMail} setActiveMail={setActiveMail} defaultRate={defaultRate} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} activeRate={activeRate} />
                     <ScrollToTop />
+                    <CookiesWindow />
                     <Routes location={item}>
                         <Route exact path="/" element={<Home setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/black" element={<Black setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />

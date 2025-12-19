@@ -10,11 +10,14 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
     const [number, setNumber] = useState('');
     const [email, setEmail] = useState('');
     const [rate, setRate] = useState('');
+    const [policy, setPolicy] = useState(true);
 
     const onSubmit = (e) => {
         e.preventDefault();
         if (name == '' || number == '' || email == '' || (rate == '' && !defaultRate)) {
             alert('Заполните все поля!');
+        } else if(!policy) {
+            alert('Подтвердите согласие с обработкой персональных данных и с политикой конфиденциальности');
         } else {
             sendForm(name, number, email, rate, mailTo, activeRate)
                 .then((response) => {
@@ -61,6 +64,19 @@ const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, se
                         disabled={defaultRate}
                         onChange={(e) => setRate(e.target.value)}
                     />
+                    <div className='modal-form__checkbox-wrap'>
+                        <input 
+                            className="modal-form__checkbox"  
+                            type="checkbox" 
+                            name="policy-checkbox" 
+                            id="policy-checkbox" 
+                            onChange={(e) => setPolicy(item => !item)}
+                            checked={policy}
+                        />
+                        <label className='modal-form__label' for='policy-checkbox'>
+                            Оставляя заявку, я даю согласие на обработку персональных данных и согласен с <a href='/polytics'>политикой конфиденциальности</a>
+                        </label>
+                    </div>
                     <button type='submit'>Отправить</button>
                 </form>
             </div>
