@@ -20,6 +20,8 @@ import taplink2 from './icons/menu.svg'
 
 function Footer({style}) {
 
+    const year = new Date().getFullYear();
+
   return (
     <footer className={style ? `footer ${style}` : 'footer'}>
         <div className="footer__left">
@@ -47,7 +49,7 @@ function Footer({style}) {
                     <h2 className="footer__contact-title">Адрес</h2>
                     <p className="footer__contact-descr">BLACK: <br /> м. Павелецкая, Кожевническая 14 <br /> Вход со стороны ул. Летниковской <br /> <br /> BALCHUG: <br /> м. Новокузнецкая, <br /> Садовническая наб., 9</p>
                 </div>
-                <div className="knwh">© {new Date().getFullYear()}, KNOW WHERE</div>
+                <div className="knwh">© {year}, KNOW WHERE</div>
             </div>
             <div className="footer__social">
                 <div className="footer__social-block">

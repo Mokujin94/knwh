@@ -5,7 +5,7 @@ export const balchugTarif = [
         categories: [
             {
                 button: "1 день",
-                price: "1 590 ₽",
+                price: "1 790 ₽",
                 href: "SpaceinWidget.run('ddc6aef0-3f36-4a7a-8d51-4e107502841a');",
                 isPay: false,
                 list: [
@@ -20,7 +20,7 @@ export const balchugTarif = [
             },
             {
                 button: "10 дней",
-                price: "13 900 ₽",
+                price: "15 900 ₽",
                 href: "SpaceinWidget.run('0ac8ceef-a349-43ea-a902-fc2de129d1b0');",
                 isPay: false,
                 list: [
@@ -35,7 +35,7 @@ export const balchugTarif = [
             },
             {
                 button: "25 дней",
-                price: "33 250 ₽",
+                price: "38 250 ₽",
                 href: "SpaceinWidget.run('ca9c54d5-ac78-4849-a48d-6490c131f836');",
                 isPay: false,
                 list: [
@@ -95,7 +95,7 @@ export const balchugTarif = [
         categories: [
             {
                 button: "1 месяц",
-                price: "26 600 ₽",
+                price: "30 000 ₽",
                 href: "SpaceinWidget.run('501e3c77-047e-43db-a8e9-bc7bd4f3fd9a');",
                 isPay: false,
                 list: [
@@ -112,7 +112,7 @@ export const balchugTarif = [
             },
             {
                 button: "3 месяца",
-                price: "74 700 ₽",
+                price: "85 000 ₽",
                 href: "SpaceinWidget.run('c5c84909-29c7-4fb4-915b-536241f74f03');",
                 isPay: false,
                 list: [
@@ -138,7 +138,7 @@ export const blackTarif = [
         categories: [
             {
                 button: "1 день",
-                price: "1 990 ₽",
+                price: "2 190 ₽",
                 href: "SpaceinWidget.run('d54d816a-eb47-481f-ad0d-2feaef9fefa3');",
                 isPay: false,
                 list: [
@@ -153,7 +153,7 @@ export const blackTarif = [
             },
             {
                 button: "10 дней",
-                price: "17 900 ₽",
+                price: "19 900 ₽",
                 href: "SpaceinWidget.run('9e8a1613-4569-48e5-93fb-bb88136f0dc7');",
                 isPay: false,
                 list: [
@@ -168,7 +168,7 @@ export const blackTarif = [
             },
             {
                 button: "25 дней",
-                price: "43 250 ₽",
+                price: "48 250 ₽",
                 href: "SpaceinWidget.run('0a3e5956-7e70-47ed-89ab-5497a460eab9');",
                 isPay: false,
                 list: [
@@ -228,8 +228,8 @@ export const blackTarif = [
         categories: [
             {
                 button: "1 месяц",
-                price: "26 600 ₽",
-                priceBeforeSale: "36 600 ₽",
+                price: "30 000 ₽",
+                priceBeforeSale: "42 600 ₽",
                 label: "АКЦИЯ",
                 href: "SpaceinWidget.run('4aec3ed6-1105-4771-bc3b-1206b53fba4e');",
                 isPay: false,
@@ -247,7 +247,7 @@ export const blackTarif = [
             },
             {
                 button: "3 месяца",
-                price: "104 700 ₽",
+                price: "120 800 ₽",
                 href: "SpaceinWidget.run('95ef20cf-3b7b-46d9-9835-dd725e5b3a98');",
                 isPay: false,
                 list: [
