@@ -25,7 +25,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
         list-style: none;
         padding: 0;
@@ -40,6 +40,17 @@
             font-weight: 600;
             font-size: 16px;
             transition: 0.3s;
+            display: block;
+            text-align: center;
+
+            @media screen and (max-width: 920px) {
+                text-align: left;
+            }
+
+            &.unactive {
+                pointer-events: none;
+                opacity: .6;
+            }
             &:hover {
                 color: $kw-white-color;
             }
@@ -105,7 +116,7 @@
             padding: 0;
             justify-content: flex-start;
             padding-top: 40px;
-            width: 130px;
+            width: 150px;
             align-items: flex-start;
             &-item {
                 margin-bottom: 30px;

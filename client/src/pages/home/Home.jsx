@@ -17,6 +17,7 @@ import useScript from "../../components/useScript/UseScript";
 import "./home.scss";
 
 import { balchugTarif, blackTarif } from "../../data/tariffs";
+import { servicesArray } from "../../data/services";
 
 import logo from "../../ui/icons/logo.svg";
 import blackCategory from "./img/blackCategory.jpg";
@@ -88,22 +89,22 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flipNews, setFlipNews] = useState(0);
 
     const windowInnerWidth = document.documentElement.clientWidth;
-    const service = [
-        { icon: clock, title: "Доступ 24/7" },
-        { icon: wifi, title: "безлимитный интернет" },
-        { icon: technic, title: "оборудованные переговорки" },
-        { icon: zone, title: "мягкие зоны" },
-        { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
-        { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
-        { icon: call, title: "телефонные будки" },
-        { icon: paper, title: "принтер и расходники" },
-        { icon: cleener, title: "Уборка" },
-        { icon: item, title: "Услуги ресепшн" },
-        { icon: table, title: "мебель: кресла, столы" },
-        { icon: замок, title: "СКУД, пропуска от коворкинга" },
-        { icon: кран, title: "коммунальные услуги" },
-        { icon: defend, title: "круглосуточная охрана" },
-    ];
+    // const servicesArray = [
+    //     { icon: clock, title: "Доступ 24/7" },
+    //     { icon: wifi, title: "безлимитный интернет" },
+    //     { icon: technic, title: "оборудованные переговорки" },
+    //     { icon: zone, title: "мягкие зоны" },
+    //     { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
+    //     { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
+    //     { icon: call, title: "телефонные будки" },
+    //     { icon: paper, title: "принтер и расходники" },
+    //     { icon: cleener, title: "Уборка" },
+    //     { icon: item, title: "Услуги ресепшн" },
+    //     { icon: table, title: "мебель: кресла, столы" },
+    //     { icon: замок, title: "СКУД, пропуска от коворкинга" },
+    //     { icon: кран, title: "коммунальные услуги" },
+    //     { icon: defend, title: "круглосуточная охрана" },
+    // ];
 
     const category = [
         {
@@ -248,7 +249,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         }
     );
 
-    const services = service.map(({ icon, title }, i) => {
+    const services = servicesArray.map(({ icon, title }, i) => {
         if (windowInnerWidth <= 900) {
             return (
                 <SwiperSlide>
@@ -366,7 +367,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         setAs1((prev) => !prev);
     };
 
-    let itemsAll = service.length;
+    let itemsAll = servicesArray.length;
     let itemsNewsAll = aboutBlock.length;
     let itemsTranslate = itemsAll / 4;
     // console.log(itemsTranslate)

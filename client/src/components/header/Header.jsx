@@ -22,6 +22,7 @@ const Header = ({burger, onClick}) => {
                             <li className="menu__list-item"><NavLink to="/" activeClassName="active" className="menu__list-path">ГЛАВНАЯ</NavLink></li>
                             <li className="menu__list-item"><NavLink to="/black" activeClassName="active" className="menu__list-path">BLACK</NavLink></li>
                             <li className="menu__list-item"><NavLink to="/balchug" activeClassName="active" className="menu__list-path">BALCHUG</NavLink></li>
+                            <li className="menu__list-item"><NavLink to="javascript:void(0)" activeClassName="active" className="menu__list-path unactive">SIMONOV<br/>(скоро открытие)</NavLink></li>
                             <li className="menu__list-item"><NavLink to="/rooms" activeClassName="active" className="menu__list-path">ПЕРЕГОВОРКИ</NavLink></li>
                             <li className="menu__list-item"><NavLink to="/gallery" className={location.pathname === '/gallery' || location.pathname === '/gallery-balchug' ? 'menu__list-path active' : 'menu__list-path'} >ГАЛЕРЕЯ</NavLink></li>
                             <li className="menu__list-item"><NavLink to="/services" activeClassName="active" className="menu__list-path">УСЛУГИ</NavLink></li>

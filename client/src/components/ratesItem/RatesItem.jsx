@@ -70,11 +70,13 @@ const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRa
         setActiveCategories(i);
     }
 
-    const tarifButtons = tariff.categories.map((category, i) => {
-        return (
-            <div key={i} onClick={() => handleClick(i)} className={activeCategories === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{category.button}</div>
-        )
-    })
+    const tarifButtons = tariff.categories.length > 1 
+        ? tariff.categories.map((category, i) => {
+            return (
+                <div key={i} onClick={() => handleClick(i)} className={activeCategories === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{category.button}</div>
+            )
+        })
+        : null;
 
 
     return (

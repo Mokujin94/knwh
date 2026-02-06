@@ -122,14 +122,19 @@
     color: $kw-white-color;
     margin-bottom: 24px;
   }
+
+  .tarif__button + .tarif__hint {
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
   &__hint {
+    margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: $kw-white-color;
-    position: absolute;
-    top: 50px;
-    left: 0;
     max-width: 230px;
   }
   &__list {
@@ -239,10 +244,14 @@
 
 @media (max-width: 1440px) {
   .tarif {
+
+    .tarif__button + .tarif__hint {
+      top: 41px;
+    }
+
     &__hint {
       font-size: 10px;
       line-height: 12px;
-      top: 41px;
       max-width: 149px;
     }
   }

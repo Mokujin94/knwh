@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Parallax } from "swiper";
@@ -18,6 +18,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./balchug.scss";
 
 import { balchugTarif } from "../../data/tariffs";
+import { bulchugRoomsArr } from "../../data/rooms";
+import { servicesArray } from "../../data/services";
 
 import clock from "../services/icons/clock.svg";
 import wifi from "../services/icons/wifi.svg";
@@ -34,20 +36,6 @@ import замок from "../services/icons/замок.svg";
 import кран from "../services/icons/кран.svg";
 import defend from "../services/icons/defend.svg";
 
-// import wifi from '../../ui/icons/servicesBlock/wifi.svg';
-// import utilities from '../../ui/icons/servicesBlock/utilities.svg';
-// import reseption from '../../ui/icons/servicesBlock/reseption.svg'
-// import passes from '../../ui/icons/servicesBlock/passes.svg';
-// import papers from '../../ui/icons/servicesBlock/papers.svg';
-// import mobile from '../../ui/icons/servicesBlock/mobile.svg';
-// import furniture from '../../ui/icons/servicesBlock/furniture.svg';
-// import equipment from '../../ui/icons/servicesBlock/equipment.svg';
-// import defend from '../../ui/icons/servicesBlock/defend.svg';
-// import cup from '../../ui/icons/servicesBlock/cup.svg';
-// import coffee from '../../ui/icons/servicesBlock/coffee.svg';
-// import clock from '../../ui/icons/servicesBlock/clock.svg';
-// import cleaner from '../../ui/icons/servicesBlock/cleaner.svg';
-// import bedroom from '../../ui/icons/servicesBlock/bedroom.svg';
 
 import imagesSlides1 from "./img/1.png";
 import imagesSlides2 from "./img/2.png";
@@ -89,7 +77,6 @@ import logoBg from "../../ui/icons/logoBgFront.png";
 import FlipSlider from "../../components/flipSlider/FlipSlider";
 import FilterRooms from "../../components/filterRooms/FilterRooms";
 import Footer from "../../components/footer/Footer";
-import { useEffect } from "react";
 
 const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flip, setFlip] = useState(0);
@@ -112,22 +99,22 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             ],
         },
     ];
-    const service = [
-        { icon: clock, title: "Доступ 24/7" },
-        { icon: wifi, title: "безлимитный интернет" },
-        { icon: technic, title: "оборудованные переговорки" },
-        { icon: zone, title: "мягкие зоны" },
-        { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
-        { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
-        { icon: call, title: "телефонные будки" },
-        { icon: paper, title: "принтер и расходники" },
-        { icon: cleener, title: "Уборка" },
-        { icon: item, title: "Услуги ресепшн" },
-        { icon: table, title: "мебель: кресла, столы" },
-        { icon: замок, title: "СКУД, пропуска от коворкинга" },
-        { icon: кран, title: "коммунальные услуги" },
-        { icon: defend, title: "круглосуточная охрана" },
-    ];
+    // const servicesArray = [
+    //     { icon: clock, title: "Доступ 24/7" },
+    //     { icon: wifi, title: "безлимитный интернет" },
+    //     { icon: technic, title: "оборудованные переговорки" },
+    //     { icon: zone, title: "мягкие зоны" },
+    //     { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
+    //     { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
+    //     { icon: call, title: "телефонные будки" },
+    //     { icon: paper, title: "принтер и расходники" },
+    //     { icon: cleener, title: "Уборка" },
+    //     { icon: item, title: "Услуги ресепшн" },
+    //     { icon: table, title: "мебель: кресла, столы" },
+    //     { icon: замок, title: "СКУД, пропуска от коворкинга" },
+    //     { icon: кран, title: "коммунальные услуги" },
+    //     { icon: defend, title: "круглосуточная охрана" },
+    // ];
 
     const image = [
         { img: imagesSlides1 },
@@ -154,92 +141,92 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         { img: bulchugSliderImg2 },
         { img: bulchugSliderImg3 },
     ];
-    const bulchugRoomsArr = [
-        {
-            img: bulchugRoomsImg1,
-            name: "Трасса №40",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "6 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами" },
-                { icon: тв, title: "ТВ-плазма 55”" },
-            ],
-            price: "3000 ₽ / час",
-            href: "SpaceinWidget.run('ff210f96-4c91-433f-922d-d056bb1a2fd3');",
-            places: "6",
-        },
-        {
-            img: bulchugRoomsImg2,
-            name: "КОНФЕРЕНЦ-ЗАЛ",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "65 посадочных мест" },
-                { icon: union, title: "Проектор и звуковая система" },
-                { icon: стул, title: "Кресла для выступающих" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-            ],
-            price: "12000 ₽ / час",
-            href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
-            places: "65",
-        },
-        {
-            img: bulchugRoomsImg3,
-            name: "МИЛФОРД",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "12 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-                { icon: тв, title: "ТВ-плазма 75”" },
-            ],
-            price: "5000 ₽ / час",
-            href: "SpaceinWidget.run('c7d0a8af-984d-4268-83f7-8e831ce74ccf');",
-            places: "12",
-        },
-        {
-            img: bulchugRoomsImg4,
-            name: "ХАЙВАН",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "8 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-                { icon: тв, title: "ТВ-плазма 55”" },
-            ],
-            price: "4000 ₽ / час",
-            href: "SpaceinWidget.run('5e7d26b2-5d9b-4b48-a096-813ab767dc35');",
-            places: "8",
-        },
-        {
-            img: bulchugRoomsImg5,
-            name: "АМАЛЬФИ",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "8 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-                { icon: тв, title: "ТВ-плазма 55”" },
-            ],
-            price: "4000 ₽ / час",
-            href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
-            places: "8",
-        },
-        {
-            img: bulchugRoomsImg6,
-            name: "ТРАНСФЭГЕРАШСКОЕ ШОССЕ",
-            adress: "м. Новокузнецкая Садовническая набережная, 9",
-            list: [
-                { icon: дом, title: "8 посадочных мест" },
-                { icon: стол, title: "Общий стол" },
-                { icon: проектор, title: "Флипчарт с маркерами " },
-                { icon: тв, title: "ТВ-плазма 55”" },
-            ],
-            price: "4000 ₽ / час",
-            href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
-            places: "8",
-        },
-    ];
+    // const bulchugRoomsArr = [
+    //     {
+    //         img: bulchugRoomsImg1,
+    //         name: "Трасса №40",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "6 посадочных мест" },
+    //             { icon: стол, title: "Общий стол" },
+    //             { icon: проектор, title: "Флипчарт с маркерами" },
+    //             { icon: тв, title: "ТВ-плазма 55”" },
+    //         ],
+    //         price: "3000 ₽ / час",
+    //         href: "SpaceinWidget.run('ff210f96-4c91-433f-922d-d056bb1a2fd3');",
+    //         places: "6",
+    //     },
+    //     {
+    //         img: bulchugRoomsImg2,
+    //         name: "КОНФЕРЕНЦ-ЗАЛ",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "65 посадочных мест" },
+    //             { icon: union, title: "Проектор и звуковая система" },
+    //             { icon: стул, title: "Кресла для выступающих" },
+    //             { icon: проектор, title: "Флипчарт с маркерами " },
+    //         ],
+    //         price: "12000 ₽ / час",
+    //         href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
+    //         places: "65",
+    //     },
+    //     {
+    //         img: bulchugRoomsImg3,
+    //         name: "МИЛФОРД",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "12 посадочных мест" },
+    //             { icon: стол, title: "Общий стол" },
+    //             { icon: проектор, title: "Флипчарт с маркерами " },
+    //             { icon: тв, title: "ТВ-плазма 75”" },
+    //         ],
+    //         price: "5000 ₽ / час",
+    //         href: "SpaceinWidget.run('c7d0a8af-984d-4268-83f7-8e831ce74ccf');",
+    //         places: "12",
+    //     },
+    //     {
+    //         img: bulchugRoomsImg4,
+    //         name: "ХАЙВАН",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "8 посадочных мест" },
+    //             { icon: стол, title: "Общий стол" },
+    //             { icon: проектор, title: "Флипчарт с маркерами " },
+    //             { icon: тв, title: "ТВ-плазма 55”" },
+    //         ],
+    //         price: "4000 ₽ / час",
+    //         href: "SpaceinWidget.run('5e7d26b2-5d9b-4b48-a096-813ab767dc35');",
+    //         places: "8",
+    //     },
+    //     {
+    //         img: bulchugRoomsImg5,
+    //         name: "АМАЛЬФИ",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "8 посадочных мест" },
+    //             { icon: стол, title: "Общий стол" },
+    //             { icon: проектор, title: "Флипчарт с маркерами " },
+    //             { icon: тв, title: "ТВ-плазма 55”" },
+    //         ],
+    //         price: "4000 ₽ / час",
+    //         href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
+    //         places: "8",
+    //     },
+    //     {
+    //         img: bulchugRoomsImg6,
+    //         name: "ТРАНСФЭГЕРАШСКОЕ ШОССЕ",
+    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //         list: [
+    //             { icon: дом, title: "8 посадочных мест" },
+    //             { icon: стол, title: "Общий стол" },
+    //             { icon: проектор, title: "Флипчарт с маркерами " },
+    //             { icon: тв, title: "ТВ-плазма 55”" },
+    //         ],
+    //         price: "4000 ₽ / час",
+    //         href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
+    //         places: "8",
+    //     },
+    // ];
     const [filter, setFilter] = useState(bulchugRoomsArr);
 
     const tarifs = balchugTarif.map(
@@ -256,7 +243,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             );
         }
     );
-    const services = service.map(({ icon, title }, i) => {
+    const services = servicesArray.map(({ icon, title }, i) => {
         if (windowInnerWidth <= 900) {
             return (
                 <SwiperSlide>
@@ -289,7 +276,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const countPounts2 = windowInnerWidth / (1192 - 280 - 20);
     const countPounts3 = windowInnerWidth / (403 - 90 - 20);
 
-    let itemsAll = service.length;
+    let itemsAll = servicesArray.length;
     let itemsTranslate = itemsAll / 4;
     let translate = 368 * itemsTranslate;
     let translate1440 = 285 * itemsTranslate;
@@ -400,34 +387,6 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             document.body.removeChild(script);
         };
     }, []);
-
-    //   useEffect(() => {
-    //     const script = document.createElement('script');
-
-    //     script.id = "amoforms_script_947509";
-    //     script.src = "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678781638";
-    //     script.async = true;
-
-    //     document.body.appendChild(script);
-
-    //     return () => {
-    //         document.body.removeChild(script);
-    //       }
-    //   }, []);
-
-    //   useEffect(() => {
-    //     const script = document.createElement('script');
-
-    //     script.id = "amoforms_script_1097978";
-    //     script.src = "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782043";
-    //     script.async = true;
-
-    //     document.body.appendChild(script);
-
-    //     return () => {
-    //         document.body.removeChild(script);
-    //       }
-    //   }, [])
 
     return (
         <>
