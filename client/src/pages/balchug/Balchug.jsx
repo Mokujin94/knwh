@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Pagination, Parallax } from "swiper";
 import Slider from "react-slick";
 import "swiper/css";
 import "swiper/css/free-mode";
 
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
 import SliderRooms from "../../components/sliderRooms/SliderRooms";
-import ServicesBlock from "../../components/servicesBlock/ServicesBlock";
+import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import RatesItem from "../../components/ratesItem/RatesItem";
 import Applications from "../../components/applications/Applications";
 import ImagesItem from "../../components/imagesItem/ImagesItem";
@@ -21,30 +20,13 @@ import { balchugTarif } from "../../data/tariffs";
 import { bulchugRoomsArr } from "../../data/rooms";
 import { servicesArray } from "../../data/services";
 
-import clock from "../services/icons/clock.svg";
-import wifi from "../services/icons/wifi.svg";
-import technic from "../services/icons/technic.svg";
-import zone from "../services/icons/zone.svg";
-import coffee from "../services/icons/coffee.svg";
-import cofee2 from "../services/icons/cofee2.svg";
-import call from "../services/icons/call.svg";
-import paper from "../services/icons/paper.svg";
-import cleener from "../services/icons/cleener.svg";
-import item from "../services/icons/item.svg";
-import table from "../services/icons/table.svg";
-import замок from "../services/icons/замок.svg";
-import кран from "../services/icons/кран.svg";
-import defend from "../services/icons/defend.svg";
-
 
 import imagesSlides1 from "./img/1.png";
 import imagesSlides2 from "./img/2.png";
-// import imagesSlides3 from './img/3.png'
 import imagesSlides4 from "./img/4.png";
 import imagesSlides5 from "./img/5.png";
 import imagesSlides6 from "./img/6.png";
 import imagesSlides7 from "./img/7.png";
-// import imagesSlides8 from './img/8.png'
 import imagesMobile1 from "./img/mobile/1.png";
 import imagesMobile2 from "./img/mobile/2.png";
 import imagesMobile3 from "./img/mobile/3.png";
@@ -56,22 +38,7 @@ import imagesMobile8 from "./img/mobile/8.png";
 import bulchugSliderImg1 from "./img/slider/1.jpg";
 import bulchugSliderImg2 from "./img/slider/2.jpg";
 import bulchugSliderImg3 from "./img/slider/3.jpg";
-import bulchugRoomsImg1 from "./img/rooms/1.png";
-import bulchugRoomsImg2 from "./img/rooms/2.png";
-import bulchugRoomsImg3 from "./img/rooms/3.png";
-import bulchugRoomsImg4 from "./img/rooms/4.png";
-import bulchugRoomsImg5 from "./img/rooms/5.png";
-import bulchugRoomsImg6 from "./img/rooms/6.png";
-import стол from "./img/icons/стол.svg";
-import дом from "./img/icons/дом.svg";
-import проектор from "./img/icons/проектор.svg";
-import тв from "./img/icons/тв.svg";
-import union from "./img/icons/union.svg";
-import стул from "./img/icons/стул.svg";
-import telegram from "../../ui/icons/footer/telegram.svg";
-import vk from "../../ui/icons/footer/vk.svg";
-import market from "../../ui/icons/footer/market.svg";
-import store from "../../ui/icons/footer/store.svg";
+
 import logoBg from "../../ui/icons/logoBgFront.png";
 
 import FlipSlider from "../../components/flipSlider/FlipSlider";
@@ -79,53 +46,19 @@ import FilterRooms from "../../components/filterRooms/FilterRooms";
 import Footer from "../../components/footer/Footer";
 
 const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
-    const [flip, setFlip] = useState(0);
+    const [filter, setFilter] = useState(bulchugRoomsArr);
+
     const windowInnerWidth = document.documentElement.clientWidth;
-    const rooms = [
-        {
-            img: "img",
-            title: "ДЖАККУ",
-            descr: "м. Павелецкая Кожевническая улица, 14",
-            price: "2500₽ / час",
-            menu: [
-                { icon: "icon", title: "8 посадочных мест" },
-                { icon: "icon", title: "Общий стол" },
-                { icon: "icon", title: "Samsung Flip — цифровой флипчарт " },
-                {
-                    icon: "icon",
-                    title:
-                        "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения",
-                },
-            ],
-        },
-    ];
-    // const servicesArray = [
-    //     { icon: clock, title: "Доступ 24/7" },
-    //     { icon: wifi, title: "безлимитный интернет" },
-    //     { icon: technic, title: "оборудованные переговорки" },
-    //     { icon: zone, title: "мягкие зоны" },
-    //     { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
-    //     { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
-    //     { icon: call, title: "телефонные будки" },
-    //     { icon: paper, title: "принтер и расходники" },
-    //     { icon: cleener, title: "Уборка" },
-    //     { icon: item, title: "Услуги ресепшн" },
-    //     { icon: table, title: "мебель: кресла, столы" },
-    //     { icon: замок, title: "СКУД, пропуска от коворкинга" },
-    //     { icon: кран, title: "коммунальные услуги" },
-    //     { icon: defend, title: "круглосуточная охрана" },
-    // ];
 
     const image = [
         { img: imagesSlides1 },
         { img: imagesSlides2 },
-        // {img: imagesSlides3},
         { img: imagesSlides4 },
         { img: imagesSlides5 },
         { img: imagesSlides6 },
         { img: imagesSlides7 },
-        // {img: imagesSlides8},
     ];
+
     const image2 = [
         { img: imagesMobile1 },
         { img: imagesMobile2 },
@@ -136,98 +69,12 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         { img: imagesMobile7 },
         { img: imagesMobile8 },
     ];
+
     const sliderBulchugImg = [
         { img: bulchugSliderImg1 },
         { img: bulchugSliderImg2 },
         { img: bulchugSliderImg3 },
     ];
-    // const bulchugRoomsArr = [
-    //     {
-    //         img: bulchugRoomsImg1,
-    //         name: "Трасса №40",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "6 посадочных мест" },
-    //             { icon: стол, title: "Общий стол" },
-    //             { icon: проектор, title: "Флипчарт с маркерами" },
-    //             { icon: тв, title: "ТВ-плазма 55”" },
-    //         ],
-    //         price: "3000 ₽ / час",
-    //         href: "SpaceinWidget.run('ff210f96-4c91-433f-922d-d056bb1a2fd3');",
-    //         places: "6",
-    //     },
-    //     {
-    //         img: bulchugRoomsImg2,
-    //         name: "КОНФЕРЕНЦ-ЗАЛ",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "65 посадочных мест" },
-    //             { icon: union, title: "Проектор и звуковая система" },
-    //             { icon: стул, title: "Кресла для выступающих" },
-    //             { icon: проектор, title: "Флипчарт с маркерами " },
-    //         ],
-    //         price: "12000 ₽ / час",
-    //         href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
-    //         places: "65",
-    //     },
-    //     {
-    //         img: bulchugRoomsImg3,
-    //         name: "МИЛФОРД",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "12 посадочных мест" },
-    //             { icon: стол, title: "Общий стол" },
-    //             { icon: проектор, title: "Флипчарт с маркерами " },
-    //             { icon: тв, title: "ТВ-плазма 75”" },
-    //         ],
-    //         price: "5000 ₽ / час",
-    //         href: "SpaceinWidget.run('c7d0a8af-984d-4268-83f7-8e831ce74ccf');",
-    //         places: "12",
-    //     },
-    //     {
-    //         img: bulchugRoomsImg4,
-    //         name: "ХАЙВАН",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "8 посадочных мест" },
-    //             { icon: стол, title: "Общий стол" },
-    //             { icon: проектор, title: "Флипчарт с маркерами " },
-    //             { icon: тв, title: "ТВ-плазма 55”" },
-    //         ],
-    //         price: "4000 ₽ / час",
-    //         href: "SpaceinWidget.run('5e7d26b2-5d9b-4b48-a096-813ab767dc35');",
-    //         places: "8",
-    //     },
-    //     {
-    //         img: bulchugRoomsImg5,
-    //         name: "АМАЛЬФИ",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "8 посадочных мест" },
-    //             { icon: стол, title: "Общий стол" },
-    //             { icon: проектор, title: "Флипчарт с маркерами " },
-    //             { icon: тв, title: "ТВ-плазма 55”" },
-    //         ],
-    //         price: "4000 ₽ / час",
-    //         href: "SpaceinWidget.run('186ee6f7-44a0-4060-98df-89ca4e4548d9');",
-    //         places: "8",
-    //     },
-    //     {
-    //         img: bulchugRoomsImg6,
-    //         name: "ТРАНСФЭГЕРАШСКОЕ ШОССЕ",
-    //         adress: "м. Новокузнецкая Садовническая набережная, 9",
-    //         list: [
-    //             { icon: дом, title: "8 посадочных мест" },
-    //             { icon: стол, title: "Общий стол" },
-    //             { icon: проектор, title: "Флипчарт с маркерами " },
-    //             { icon: тв, title: "ТВ-плазма 55”" },
-    //         ],
-    //         price: "4000 ₽ / час",
-    //         href: "SpaceinWidget.run('3486e7ce-0b4a-4cb5-9f00-86468bbc3d6c');",
-    //         places: "8",
-    //     },
-    // ];
-    const [filter, setFilter] = useState(bulchugRoomsArr);
 
     const tarifs = balchugTarif.map(
         ( tariff, i ) => {
@@ -243,26 +90,13 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             );
         }
     );
-    const services = servicesArray.map(({ icon, title }, i) => {
-        if (windowInnerWidth <= 900) {
-            return (
-                <SwiperSlide>
-                    <ServicesBlock icon={icon} title={title} key={i} />
-                </SwiperSlide>
-            );
-        } else {
-            return (
-                <ServicesBlock icon={icon} title={title} key={i} translate={flip} />
-            );
-        }
-    });
+
     const images = image.map(({ img }, i) => {
         return (
-            // <SwiperSlide>
             <ImagesItem img={img} key={i} />
-            // </SwiperSlide>
         );
     });
+
     const images2 = image2.map(({ img }, i) => {
         return (
             <SwiperSlide>
@@ -270,46 +104,6 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             </SwiperSlide>
         );
     });
-
-    const countPounts = windowInnerWidth / 388;
-    const countPounts1 = windowInnerWidth / 250;
-    const countPounts2 = windowInnerWidth / (1192 - 280 - 20);
-    const countPounts3 = windowInnerWidth / (403 - 90 - 20);
-
-    let itemsAll = servicesArray.length;
-    let itemsTranslate = itemsAll / 4;
-    let translate = 368 * itemsTranslate;
-    let translate1440 = 285 * itemsTranslate;
-    const flipLeft = () => {
-        if (windowInnerWidth > 1440) {
-            if (flip <= -3864) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip - translate);
-            }
-        } else {
-            if (flip <= -2980) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip - translate1440);
-            }
-        }
-    };
-    const flipRight = () => {
-        if (windowInnerWidth > 1440) {
-            if (flip >= 0) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip + translate);
-            }
-        } else {
-            if (flip >= 0) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip + translate1440);
-            }
-        }
-    };
 
     const option = [
         { name: "Все" },
@@ -413,7 +207,8 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     </div>
                 </div>
                 <SliderBlack bg={sliderBulchugImg} />
-                <div className="container services__container-black">
+                <ServicesSlider services={servicesArray} pagesStyle={"news"} />
+                {/* <div className="container services__container-black">
                     <div className="services__header">
                         <div className="services__title">услуги</div>
                         <p className="services__descr">
@@ -460,7 +255,7 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                         number100={windowInnerWidth > 1440 ? -3864 : -2993}
                         style={"news"}
                     />
-                </div>
+                </div> */}
             </section>
 
             {/* <section className='services services__balchug'>

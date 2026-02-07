@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './header.scss';
 
@@ -11,6 +11,35 @@ const Header = ({burger, onClick}) => {
 
     const location = useLocation();
 
+    const menuItemsArr = [
+        { link: '/', name: 'ГЛАВНАЯ', isActive: false, },
+        { link: '/black', name: 'BLACK', isActive: false, },
+        { link: '/balchug', name: 'BALCHUG', isActive: false, },
+        { link: 'javascript:void(0)', name: ['SIMONOV', <br/>, '(скоро открытие)'], isUnactive: true, isActive: false, },
+        { link: '/rooms', name: 'ПЕРЕГОВОРКИ', isActive: false, },
+        { link: '/gallery', name: 'ГАЛЕРЕЯ', isActive: false, },
+        { link: '/services', name: 'УСЛУГИ', isActive: false, },
+        // { link: '/team', name: 'КОМАНДА', isActive: false, },
+        { link: '/contact', name: 'КОНТАКТЫ', isActive: false, },
+        // { link: 'https://my.knwh.ru/login', name: 'ВОЙТИ', isActive: false, },
+    ];
+
+    menuItemsArr.forEach((listItem, i) => {
+        if(listItem.link == location.pathname || (location.pathname == '/gallery-balchug' && listItem.link == '/gallery')) {
+            menuItemsArr[i].isActive = true; 
+        }
+    })
+
+
+    const setMenuList = menuItemsArr.map((listItem, i) => {
+        let itemClassName = 'menu__list-path';
+        if(listItem.isActive) itemClassName += ' active';
+        if(listItem.isUnactive) itemClassName += ' unactive';
+
+        return (
+            <li className="menu__list-item" key={i}><NavLink to={listItem.link} activeClassName="active" className={itemClassName}>{listItem.name}</NavLink></li>
+        );
+    });
 
     return (
         <>
@@ -18,17 +47,7 @@ const Header = ({burger, onClick}) => {
                 <div className="header__container">
                     <menu className="menu">
                         <ul className="menu__list">
-                            <li className="menu__list-item menu__list-item-logo"><NavLink to="/" activeClassName="active" className="menu__list-path"><img src={logo} alt="" /></NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/" activeClassName="active" className="menu__list-path">ГЛАВНАЯ</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/black" activeClassName="active" className="menu__list-path">BLACK</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/balchug" activeClassName="active" className="menu__list-path">BALCHUG</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="javascript:void(0)" activeClassName="active" className="menu__list-path unactive">SIMONOV<br/>(скоро открытие)</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/rooms" activeClassName="active" className="menu__list-path">ПЕРЕГОВОРКИ</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/gallery" className={location.pathname === '/gallery' || location.pathname === '/gallery-balchug' ? 'menu__list-path active' : 'menu__list-path'} >ГАЛЕРЕЯ</NavLink></li>
-                            <li className="menu__list-item"><NavLink to="/services" activeClassName="active" className="menu__list-path">УСЛУГИ</NavLink></li>
-                            {/* <li className="menu__list-item"><NavLink to="/team" activeClassName="active" className="menu__list-path">КОМАНДА</NavLink></li> */}
-                            <li className="menu__list-item"><NavLink to="/contact" activeClassName="active" className="menu__list-path">КОНТАКТЫ</NavLink></li>
-                            {/* <li className="menu__list-item"><a href="https://my.knwh.ru/login" style={{border: '1px solid #B3A16E', padding: '7px 30px', borderRadius: '10px'}} activeClassName="active" className="menu__list-path menu__list-path-auth">ВОЙТИ</a></li> */}
+                            {setMenuList}
                         </ul>
                         <div className="menu__bottom">
                             <div className="menu__social">

@@ -6,7 +6,8 @@ import { useLocation } from "react-router-dom";
 import SliderHome from "../../components/sliderHome/SliderHome";
 import HomeCategory from "../../components/homeCategory/HomeCategory";
 import RatesItem from "../../components/ratesItem/RatesItem";
-import ServicesBlock from "../../components/servicesBlock/ServicesBlock";
+import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
+import FaqBlock from "../../components/faqBlock/FaqBlock";
 import Questions from "../../components/questions/Questions";
 import AboutBlock from "../../components/aboutBlock/AboutBlock";
 import ApplicationsButton from "../../components/applicationsButton/ApplicationsButton";
@@ -18,45 +19,13 @@ import "./home.scss";
 
 import { balchugTarif, blackTarif } from "../../data/tariffs";
 import { servicesArray } from "../../data/services";
+import { homePageFAQ } from "../../data/faq";
 
 import logo from "../../ui/icons/logo.svg";
 import blackCategory from "./img/blackCategory.jpg";
 import balchugCategory from "./img/balchugCategory.png";
 import roomsCategory from "./img/rooms.jpg";
 
-import clock from "../services/icons/clock.svg";
-import wifi from "../services/icons/wifi.svg";
-import technic from "../services/icons/technic.svg";
-import zone from "../services/icons/zone.svg";
-import coffee from "../services/icons/coffee.svg";
-import cofee2 from "../services/icons/cofee2.svg";
-import call from "../services/icons/call.svg";
-import paper from "../services/icons/paper.svg";
-import cleener from "../services/icons/cleener.svg";
-import item from "../services/icons/item.svg";
-import table from "../services/icons/table.svg";
-import замок from "../services/icons/замок.svg";
-import кран from "../services/icons/кран.svg";
-import defend from "../services/icons/defend.svg";
-
-// import wifi from '../../ui/icons/servicesBlock/wifi.svg';
-// import utilities from '../../ui/icons/servicesBlock/utilities.svg';
-// import reseption from '../../ui/icons/servicesBlock/reseption.svg'
-// import passes from '../../ui/icons/servicesBlock/passes.svg';
-// import papers from '../../ui/icons/servicesBlock/papers.svg';
-// import mobile from '../../ui/icons/servicesBlock/mobile.svg';
-// import furniture from '../../ui/icons/servicesBlock/furniture.svg';
-// import equipment from '../../ui/icons/servicesBlock/equipment.svg';
-// import defend from '../../ui/icons/servicesBlock/defend.svg';
-// import cup from '../../ui/icons/servicesBlock/cup.svg';
-// import coffee from '../../ui/icons/servicesBlock/coffee.svg';
-// import clock from '../../ui/icons/servicesBlock/clock.svg';
-// import cleaner from '../../ui/icons/servicesBlock/cleaner.svg';
-// import bedroom from '../../ui/icons/servicesBlock/bedroom.svg';
-import telegram from "../../ui/icons/footer/telegram.svg";
-import vk from "../../ui/icons/footer/vk.svg";
-import market from "../../ui/icons/footer/market.svg";
-import store from "../../ui/icons/footer/store.svg";
 import news1 from "./img/news/1.png";
 import news2 from "./img/news/2.jpg";
 import news3 from "./img/news/3.png";
@@ -78,33 +47,12 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import FlipSlider from "../../components/flipSlider/FlipSlider";
 import Footer from "../../components/footer/Footer";
-import { Helmet } from "react-helmet";
-import ReactSafe from "react-safe";
-import ScriptTag from "@gumgum/react-script-tag";
-import App from "../../App";
-import ModalForm from "../../components/modalForm/ModalForm";
+
 
 const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
-    const [flip, setFlip] = useState(0);
     const [flipNews, setFlipNews] = useState(0);
 
     const windowInnerWidth = document.documentElement.clientWidth;
-    // const servicesArray = [
-    //     { icon: clock, title: "Доступ 24/7" },
-    //     { icon: wifi, title: "безлимитный интернет" },
-    //     { icon: technic, title: "оборудованные переговорки" },
-    //     { icon: zone, title: "мягкие зоны" },
-    //     { icon: coffee, title: "ОБОРУДОВАННЫЕ КУХНИ" },
-    //     { icon: cofee2, title: "ВОДА, ЧАЙ, КОФЕ" },
-    //     { icon: call, title: "телефонные будки" },
-    //     { icon: paper, title: "принтер и расходники" },
-    //     { icon: cleener, title: "Уборка" },
-    //     { icon: item, title: "Услуги ресепшн" },
-    //     { icon: table, title: "мебель: кресла, столы" },
-    //     { icon: замок, title: "СКУД, пропуска от коворкинга" },
-    //     { icon: кран, title: "коммунальные услуги" },
-    //     { icon: defend, title: "круглосуточная охрана" },
-    // ];
 
     const category = [
         {
@@ -129,8 +77,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                 "Удобные переговорные комнаты для бизнес встреч и важных дел, оборудованные всем необходимым",
         },
     ];
-
-    
 
     const aboutBlock = [
         {
@@ -234,6 +180,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             );
         }
     );
+
     const balchugTarifs = balchugTarif.map(
         ( tariff, i ) => {
             return (
@@ -248,20 +195,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             );
         }
     );
-
-    const services = servicesArray.map(({ icon, title }, i) => {
-        if (windowInnerWidth <= 900) {
-            return (
-                <SwiperSlide>
-                    <ServicesBlock icon={icon} title={title} key={i} />
-                </SwiperSlide>
-            );
-        } else {
-            return (
-                <ServicesBlock icon={icon} title={title} key={i} translate={flip} />
-            );
-        }
-    });
 
     const aboutBlocks = aboutBlock.map(({ img, descr, link }, i) => {
         if (windowInnerWidth < 900) {
@@ -308,8 +241,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         }
     };
 
-    const countPounts = windowInnerWidth / 388;
-    const countPounts1 = windowInnerWidth / 250;
     const countPounts2 = windowInnerWidth / 283;
     const countPounts3 = windowInnerWidth / 502;
 
@@ -367,14 +298,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         setAs1((prev) => !prev);
     };
 
-    let itemsAll = servicesArray.length;
     let itemsNewsAll = aboutBlock.length;
-    let itemsTranslate = itemsAll / 4;
-    // console.log(itemsTranslate)
-    // console.log(((512 * 8 - 40) / 1472));
-    // console.log((1472 / 4))
-    // console.log((512 * 1.7))
-    // console.log(itemsNewsAll * 512)
     let newsItem = 512;
     let newsFullWidthItem = (newsItem * itemsNewsAll - 40) / 1512;
     let newsTranslate = Math.floor(newsItem * (newsFullWidthItem - 1));
@@ -383,38 +307,8 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     let newsTranslate1444 = Math.floor(
         newsItem1444 * (newsFullWidthItem1444 - 1)
     );
-    let translate = 368 * itemsTranslate;
-    let translate1440 = 285 * itemsTranslate;
-    const flipLeft = () => {
-        if (windowInnerWidth > 1440) {
-            if (flip <= -3864) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip - translate);
-            }
-        } else {
-            if (flip <= -2980) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip - translate1440);
-            }
-        }
-    };
-    const flipRight = () => {
-        if (windowInnerWidth > 1440) {
-            if (flip >= 0) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip + translate);
-            }
-        } else {
-            if (flip >= 0) {
-                setFlip(0);
-            } else {
-                setFlip((flip) => flip + translate1440);
-            }
-        }
-    };
+
+
 
     const flipNewsLeft = () => {
         if (windowInnerWidth > 1440) {
@@ -455,13 +349,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
         document.body.appendChild(script);
 
-        const script1 = document.createElement("script");
-        script1.id = "amoforms_script_1097986";
-        script1.src =
-            "https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782321";
-
-        document.body.appendChild(script1);
-
         const script2 = document.createElement("script");
         script2.id = "amoforms_script_1097978";
         script2.src =
@@ -469,15 +356,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
         document.body.appendChild(script2);
     }, []);
-
-    // useEffect(() => {
-    //     // const openForms = () => {
-    //         const form = document.querySelector('#amoforms_overlay_947509');
-    //         console.log(form.style.opacity)
-    //         form.style.zIndex = '9999';
-    //         form.style.opacity = '1';
-    //     // }
-    // }, [])
 
     return (
         <>
@@ -581,103 +459,10 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     </div>
                 </div>
             </section>
-            <section className="services">
-                <div className="container">
-                    <div className="services__header">
-                        <div className="services__title">услуги</div>
-                        <p className="services__descr">
-                            В гибких офисах KNOW WHERE предусмотрены удобства и услуги для
-                            вашего комфорта
-                        </p>
-                    </div>
 
-                    <div className="services__wrapper">
-                        {windowInnerWidth <= 900 ? (
-                            <Swiper
-                                freeMode={true}
-                                grabCursor={true}
-                                modules={[FreeMode]}
-                                className="mySwiper"
-                                spaceBetween={40}
-                                breakpoints={{
-                                    1: {
-                                        slidesPerView: countPounts1,
-                                    },
-                                    980: {
-                                        slidesPerView: countPounts,
-                                    },
-                                    1480: {
-                                        slidesPerView: 3.95,
-                                    },
-                                }}
-                            >
-                                {services}
-                            </Swiper>
-                        ) : (
-                            services
-                        )}
-                    </div>
-                    <FlipSlider
-                        onClickRight={() => flipRight()}
-                        onClickLeft={() => flipLeft()}
-                        translate={flip}
-                        number25={0}
-                        number50={windowInnerWidth > 1440 ? -1288 : -998}
-                        number75={windowInnerWidth > 1440 ? -2576 : -1995}
-                        number100={windowInnerWidth > 1440 ? -3864 : -2993}
-                    />
-                    <div className="services__bottom">
-                        <h2 className="services__bottom-title">FAQ</h2>
-                        <div className="services__wrapper-between">
-                            <div className="services__between">
-                                <Questions
-                                    title="Вы работаете без выходных 24/7?"
-                                    descr="Да. Если у вас уже есть активный тариф, вы можете прийти на локацию в любое время. Если это ваше первое посещение, то нужно прийти в промежутке с 9:00 до 20:00 для регистрации, активации тарифа и получения карты доступа."
-                                />
-                                <Questions
-                                    title="Где можно поесть рядом с KW?"
-                                    descr="KW Black: в шаговой доступности рыбный ресторан Boston, мясной ресторан Torro Grill, Вкусно - и точка, Prime, Osteria Mario, Пан запекан, KFC, Хлеб насущный, столовая на территории нашего БЦ. KW Balchug: в шаговой доступности Prime, ресторан Touch Chef’s Place & Bar, Хачапури и Вино, ресторан Бьёрн, Masters & Margaritas, Хлеб насущный, Вай мэ."
-                                />
-                                <Questions
-                                    title="Можно запарковать машину у KW?"
-                                    descr="Около наших площадок есть городские парковки. Также есть внутренняя парковка на обеих площадках для резидентов с длительной арендой парковочного места."
-                                />
-                                <Questions
-                                    title="Можно ли разговаривать в ваших open space?"
-                                    descr="Наши open-space делятся на тихие, где говорить можно только шепотом и общие, где нет ограничений на общение. Также у нас есть удобные лаунж зоны и телефонные будки для комфортных переговоров."
-                                />
-                            </div>
-                            <div className="services__between">
-                                <Questions
-                                    title="Можно ли юридическому лицу использовать адрес офиса для указания в ЕГРЮЛ?"
-                                    descr="Да. Уточнить детали можно у наших администраторов."
-                                />
-                                <Questions
-                                    title="Нужно ли бронировать рабочее место заранее?"
-                                    descr="Мы рекомендуем вам рабочее место бронировать заранее, можно даже день в день."
-                                />
-                                <div className="services__popular-question">
-                                    <div className="services__popular-question-top">
-                                        <h1 className="services__popular-title">
-                                            Остались вопросы?
-                                        </h1>
-                                        <p className="services__popular-descr">
-                                            Оставьте заявку и наш специалист с вами свяжется.
-                                        </p>
-                                    </div>
-                                    <ApplicationsButton
-                                        // onClick={() => flipSlider()}
-                                        title="Оставить заявку"
-                                        styleing="aplicationHover"
-                                        setForm={setForm}
-                                    />
-                                    {/* <script id="amoforms_script_1097986" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782321"></script>    */}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <ServicesSlider services={servicesArray} pagesStyle={"home"} />
+            <FaqBlock array={homePageFAQ} setForm={setForm} pagesStyle={"home"} />
+            
             <section className="about">
                 <div className="container">
                     <h2 className="about__title">СМИ О НАС</h2>

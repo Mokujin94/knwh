@@ -326,6 +326,8 @@
     //   width: 347px;
     //   height: 520px;
     //   margin-right: 24px;
+      width: 100%;
+      max-width: 347px;
       padding: 47px 57px 40px 57px;
       &:last-child {
         margin-right: 0;

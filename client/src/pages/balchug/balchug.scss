@@ -57,34 +57,6 @@
 
 }
 
-.services {
-    &__balchug {
-        background: $kw-grey-color;
-        min-height: 830px;
-    }
-    &__title {
-        &__balchug {
-            color: $kw-white-color;
-        }
-    }
-    &__container-black {
-        margin-top: 800px !important;
-    }
-}
-
-.services__wrapper__balchug .services__item {
-    background: $kw-primary-color;
-}
-
-.services__wrapper__balchug .services__item .services__item-title {
-    color: $kw-white-color;
-}
-
-
-.services__wrapper__balchug .services__item .services__item-top img {
-    filter: invert(100%) sepia(2%) saturate(2586%) hue-rotate(174deg) brightness(118%) contrast(82%);
-}
-
 .rates {
     &__balchug {
         background: $kw-soft-gold-color;
@@ -235,10 +207,6 @@
     filter: invert(100%);
 }
 
-.services__balchug .container .services__header .services__descr {
-    color: $kw-white-color;
-}
-
 .rates__header__balchug .rates__header-left .rates__header-descr {
     color: $kw-black-color;
 }
@@ -252,10 +220,6 @@
     .meeting-rooms__balchug .carousel .carousel-inner .carousel-item .container .rooms .rooms__wrapper .rooms__right .rooms__menu .rooms__list .rooms__item {
         border-bottom: none;
     }
-
-    .services__container-black {
-        margin-top: 490px !important;
-    }
 }
 
 @media(max-width: 900px) {
@@ -265,22 +229,10 @@
 }
 
 @media (max-width: 560px) {
-    .services__balchug {
-        min-height: auto;
-        padding: 50px 0 100px 0;
-        height: auto;
-    }
-
-
-
     .rates__header__balchug {
         padding-top: 50px;
         margin-bottom: 0;
     }
-
-
-
-    
 }
 
 
