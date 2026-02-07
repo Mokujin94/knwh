@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Slider from "react-slick";
 
+import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficePage";
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
-import SliderRooms from "../../components/sliderRooms/SliderRooms";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import RatesItem from "../../components/ratesItem/RatesItem";
 import Applications from "../../components/applications/Applications";
-import ImagesItem from "../../components/imagesItem/ImagesItem";
+import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
+import MeetingRoomsOfficePage from "../../components/meetingRoomsOfficePage/MeetingRoomsOfficePage";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./black.scss";
 
 import { blackTarif } from "../../data/tariffs";
@@ -33,18 +30,12 @@ import blackSliderImg1 from "./img/slider/4.jpg";
 import blackSliderImg2 from "./img/slider/5.jpg";
 import blackSliderImg3 from "./img/slider/6.jpg";
 
-import logoBg from "../../ui/icons/logoBg.png";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import FilterRooms from "../../components/filterRooms/FilterRooms";
 import Footer from "../../components/footer/Footer";
 
 const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
-	const [filter, setFilter] = useState(blackRoomsArr);
-
 	const windowInnerWidth = document.documentElement.clientWidth;
 
-	const image = [
+	const deskImagesGalleryArr = [
 		{ img: imagesSlides1 },
 		{ img: imagesSlides2 },
 		{ img: imagesSlides3 },
@@ -53,7 +44,7 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		{ img: imagesSlides6 },
 	];
 
-	const image2 = [
+	const mobImagesGalleryArr = [
 		{ img: imagesMobile1 },
 		{ img: imagesMobile2 },
 		{ img: imagesMobile3 },
@@ -68,7 +59,6 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		{ img: blackSliderImg3 },
 	];
 
-
 	const tarifs = blackTarif.map((tariff, i) => {
 		return (
 			<RatesItem
@@ -82,95 +72,34 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		);
 	});
 
-	const images = image.map(({ img }, i) => {
-		return (
-			<ImagesItem img={img} key={i} />
-		);
-	});
-
-	const images2 = image2.map(({ img }, i) => {
-		return (
-			<SwiperSlide>
-				<ImagesItem img={img} key={i} />
-			</SwiperSlide>
-		);
-	});
-
-  const option = [
-    { name: "Все" },
-    { name: "до 8 мест" },
-    { name: "до 6 мест" },
-  ];
-
-	const newFilter = (name) => {
-		if (name === "Все") {
-			setFilter(blackRoomsArr);
-		} else if (name === "65 мест") {
-			const filtered = blackRoomsArr.filter((arr) => {
-				return arr.places === "65";
-			});
-			setFilter(filtered);
-		} else if (name === "12 мест") {
-			const filtered = blackRoomsArr.filter((arr) => {
-				return arr.places === "12";
-			});
-		setFilter(filtered);
-		} else if (name === "до 8 мест") {
-			const filtered = blackRoomsArr.filter((arr) => {
-				return arr.places === "8";
-			});
-		setFilter(filtered);
-		} else if (name === "до 6 мест") {
-			const filtered = blackRoomsArr.filter((arr) => {
-				return arr.places === "6";
-			});
-			setFilter(filtered);
-		}
+	const headingContent = {
+		title: "Black",
+		descr: ["Полностью оборудованные офисы с высокими потолками, панорамным остеклением и мебелью.", 
+				<br/>, <br/>, 
+				"Большие входные группы, зерновые кофе-машины, оборудованные кухни, мягкие зоны, переговорные комнаты, телефонные будки, душевые комнаты, принтерные зоны."],
+		address: ["м. Павелецкая", <br/>, 
+				"Кожевническая улица, 14", <br/>, 
+				"Вход со стороны ул. Летниковской", <br/>, 
+				<a href="tel:+74996478563">+7 (499) 647-85-63</a>],
+		svgHEX: "#464646",
 	};
 
-	const settings = {
-		dots: false,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 11,
-		autoplay: true,
-		speed: 60000,
-		autoplaySpeed: 10,
-		cssEase: "linear",
-		variableWidth: true,
-		rows: 1,
-		arrows: false,
+	const galleryContent = {
+		title: "Общие зоны",
+		descr: "Зоны отдыха BLACK оборудованы всеми необходимыми удобствами. Вы можете отдохнуть в мягких креслах и диванах, воспользоваться кухнями с зерновыми кофе-машинами или душевыми после рабочего дня.",
+		deskImagesArr: deskImagesGalleryArr,
+		mobImagesArr: mobImagesGalleryArr,
 	};
 
-	const settings2 = {
-		dots: false,
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 11,
-		autoplay: true,
-		speed: 60000,
-		autoplaySpeed: 10,
-		cssEase: "linear",
-		variableWidth: true,
-		rows: 1,
-		arrows: false,
-		rtl: true,
-	};
-
-	useEffect(() => {
-		const script = document.createElement("script");
-
-		script.id = "amoforms_script_1097986";
-		script.src =
-		"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782321";
-		script.async = true;
-
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, []);
+	const meetingRoomsContent = {
+		title: "Переговорные",
+		descr: "Комфортабельные ПК со всем необходимым для продуктивных встреч",
+		roomsArr: blackRoomsArr,
+		filterArr: [{ name: "Все" }, { name: "до 8 мест" }, { name: "до 6 мест" }],
+		roomsType: "Black",
+		filterStyle: "black",
+        roomsStyles: { styles: "", color: "", border: "", clame: "" }
+	}
 
 	useEffect(() => {
 		const script = document.createElement("script");
@@ -182,146 +111,103 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
 		document.body.appendChild(script);
 
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, []);
+		const script1 = document.createElement("script");
 
-	useEffect(() => {
-		const script = document.createElement("script");
-
-		script.id = "amoforms_script_1097978";
-		script.src =
+		script1.id = "amoforms_script_1097978";
+		script1.src =
 		"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782043";
-		script.async = true;
+		script1.async = true;
 
-		document.body.appendChild(script);
+		document.body.appendChild(script1);
+
+		const script2 = document.createElement("script");
+
+		script2.id = "amoforms_script_1097986";
+		script2.src =
+		"https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678782321";
+		script2.async = true;
+
+		document.body.appendChild(script2);
 
 		return () => {
 			document.body.removeChild(script);
+			document.body.removeChild(script1);
+			document.body.removeChild(script2);
 		};
 	}, []);
 
   return (
     <>
-      <section id="meetingRooms" className="meeting-rooms">
-        <img className="logo-bg" src={logoBg} alt="logo" />
-        <div className="container">
-          <div className="black__header">
-            <div className="black__left">
-              <h1 className="black__title">black</h1>
-              <div className="black__right black__right__mobile">
-                м. Павелецкая <br />
-                Кожевническая улица, 14 <br />
-                Вход со стороны ул. Летниковской <br />
-                +7 (499) 647-85-63
-                <br />
-                <br />
-                <br />
-              </div>
-              <p className="black__descr">
-                Полностью оборудованные офисы с высокими потолками, панорамным
-                остеклением и мебелью. <br /> <br /> Большие входные группы,
-                зерновые кофе-машины, оборудованные кухни, мягкие зоны,
-                переговорные комнаты, телефонные будки, душевые комнаты,
-                принтерные зоны.
-              </p>
-            </div>
-            <div className="black__right">
-              м. Павелецкая <br />
-              Кожевническая улица, 14 <br />
-              Вход со стороны ул. Летниковской <br />
-              +7 (499) 647-85-63
-            </div>
-          </div>
-        </div>
+      <main id="meetingRooms" className="meeting-rooms">
+		<HeadingOfficePage 
+			title={headingContent.title} 
+			descr={headingContent.descr} 
+			address={headingContent.address} 
+			svgHEX={headingContent.svgHEX}
+		/>
         <SliderBlack bg={sliderBlackImg} />
-		<ServicesSlider services={servicesArray} pagesStyle={"black"} />
-      </section>
+		<ServicesSlider 
+			services={servicesArray} 
+			pagesStyle={"black"} 
+		/>
+		<section className="rates">
+			<div className="container">
+			<div
+				className={
+				windowInnerWidth < 560
+					? "rates__header rates__header__black"
+					: "rates__header"
+				}
+			>
+				<div className="rates__header-left">
+				<h2 className="rates__header-title">ТАРИФЫ</h2>
+				<p className="rates__header-descr">Найдите ваш идеальный тариф</p>
+				</div>
+			</div>
+			<div className="rates__wrapper">{tarifs}</div>
+			<div style={{ display: "flex", alignItems: "center" }}>
+				<Applications
+				title="посмотрите вживую"
+				descr="Выберите кабинет, который подойдёт именно вашей команде"
+				// additionally={"Будьте в числе первых!"}
+				// additionally2={
+				//   "*акция действует до 31.01 включительно. *при единовременной оплате 2-х месяцев."
+				// }
+				style={windowInnerWidth > 560 ? "apliHome" : false}
+				button="Записаться"
+				setForm={setForm}
+				/>
+				<script
+				id="amoforms_script_947509"
+				async="async"
+				charset="utf-8"
+				src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678781638"
+				></script>
+			</div>
+			</div>
+		</section>
+		<GalleryOfficePage 
+			title={galleryContent.title} 
+			descr={galleryContent.descr} 
+			deskImagesArr={galleryContent.deskImagesArr} 
+			mobImagesArr={galleryContent.mobImagesArr} 
+		/>
+		<MeetingRoomsOfficePage 
+			title={meetingRoomsContent.title} 
+			descr={meetingRoomsContent.descr} 
+			roomsArr={meetingRoomsContent.roomsArr}
+			filterArr={meetingRoomsContent.filterArr}
+			roomsType={meetingRoomsContent.roomsType} 
+			filterStyle={meetingRoomsContent.filterStyle}
+        	roomsStyles={meetingRoomsContent.roomsStyles}
+			setForm={setForm} 
+			setActiveMail={setActiveMail} 
+			setDefaultRate={setDefaultRate} 
+			setActiveRate={setActiveRate}
+		/>
+      </main>
 
-      <section className="rates">
-        <div className="container">
-          <div
-            className={
-              windowInnerWidth < 560
-                ? "rates__header rates__header__black"
-                : "rates__header"
-            }
-          >
-            <div className="rates__header-left">
-              <h2 className="rates__header-title">ТАРИФЫ</h2>
-              <p className="rates__header-descr">Найдите ваш идеальный тариф</p>
-            </div>
-          </div>
-          <div className="rates__wrapper">{tarifs}</div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Applications
-              title="посмотрите вживую"
-              descr="Выберите кабинет, который подойдёт именно вашей команде"
-              // additionally={"Будьте в числе первых!"}
-              // additionally2={
-              //   "*акция действует до 31.01 включительно. *при единовременной оплате 2-х месяцев."
-              // }
-              style={windowInnerWidth > 560 ? "apliHome" : false}
-              button="Записаться"
-              setForm={setForm}
-            />
-            <script
-              id="amoforms_script_947509"
-              async="async"
-              charset="utf-8"
-              src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678781638"
-            ></script>
-          </div>
-        </div>
-      </section>
-      <section className="images">
-        <div className="container">
-          <div className="images__header">
-            <h2 className="images__title">Общие зоны</h2>
-            <p className="images__descr">
-              Зоны отдыха BLACK оборудованы всеми необходимыми удобствами. Вы
-              можете отдохнуть в мягких креслах и диванах, воспользоваться
-              кухнями с зерновыми кофе-машинами или душевыми после рабочего дня.
-            </p>
-          </div>
-          <div className="images__wrapper" style={{ userSelect: "none" }}>
-            {windowInnerWidth < 560 ? (
-              <>
-                <Slider {...settings}>{images2}</Slider>
-                <Slider {...settings2}>{images2}</Slider>
-              </>
-            ) : (
-              <Slider {...settings}>{images}</Slider>
-            )}
-          </div>
-        </div>
-        <div className="container">
-          <div className="meeting-rooms__header">
-            <div className="meeting-rooms__header-left">
-              <h2 className="meeting-rooms__title">переговорные</h2>
-              <p className="meeting-rooms__descr">
-                Комфортабельные ПК со всем необходимым для продуктивных встреч
-              </p>
-            </div>
-            <div className="meeting-rooms__header-right">
-              <FilterRooms onClick={newFilter} option={option} />
-            </div>
-          </div>
-        </div>
-        <SliderRooms
-          styles={""}
-          color={""}
-          border={""}
-          arr={filter}
-          roomsType={"Black"}
-          setForm={setForm}
-          setActiveMail={setActiveMail}
-          setDefaultRate={setDefaultRate}
-          setActiveRate={setActiveRate}
-        />
-      </section>
-      <Footer />
+      	<Footer />
     </>
   );
 };
