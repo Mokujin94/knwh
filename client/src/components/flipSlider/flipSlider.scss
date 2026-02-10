@@ -130,27 +130,18 @@
     filter: brightness(10%) invert(100%);
 }
 
-.black .flip__progress {
-    background: #E8E8E8;
-}
 
-.black .flip__progress-25::before {
-    background: #464646;
-}
-
-.black .flip__progress-50::before {
-    background: #464646;
-}
-
-.black .flip__progress-75::before {
-    background: #464646;
-}
-
+.black .flip__progress-25::before,
+.black .flip__progress-50::before,
+.black .flip__progress-75::before,
 .black .flip__progress-100::before {
     background: #464646;
 }
 
-.black .flip__control .flip__control-item {
+.black .flip__progress,
+.black .flip__control .flip__control-item,
+.simonov .flip__progress,
+.simonov .flip__control .flip__control-item {
     background: #E8E8E8;
 }
 
@@ -160,4 +151,11 @@
 
 .black .flip__control .flip__control-item:hover img {
     filter: brightness(10%);
+}
+
+.simonov .flip__progress-25::before,
+.simonov .flip__progress-50::before,
+.simonov .flip__progress-75::before,
+.simonov .flip__progress-100::before {
+    background: #222222;
 }

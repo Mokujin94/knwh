@@ -53,6 +53,18 @@
 
         .slick-list {
             overflow: unset;
+
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide img {
+                height: 625px;
+
+                @media (max-width: 560px) {
+                    height: 182px;
+                }
+            }
         }
     }
 }

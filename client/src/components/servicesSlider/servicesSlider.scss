@@ -2,16 +2,16 @@
     padding-top: 113px;
     width: 100%;
     // background: #E8E8E8;
-    color: #222;
+    // color: #222;
     overflow: hidden;
 
     @media (max-width: 560px) {
         padding-top: 50px;
     }
 
-    &.black {
-        color: #e8e8e8;
-    }
+    // &.black {
+    //     color: #e8e8e8;
+    // }
 
     &.home {
         background-color: #e8e8e8;

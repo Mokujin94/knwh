@@ -15,7 +15,7 @@ const Header = ({burger, onClick}) => {
         { link: '/', name: 'ГЛАВНАЯ', isActive: false, },
         { link: '/black', name: 'BLACK', isActive: false, },
         { link: '/balchug', name: 'BALCHUG', isActive: false, },
-        { link: 'javascript:void(0)', name: ['SIMONOV', <br/>, '(скоро открытие)'], isUnactive: true, isActive: false, },
+        { link: '/simonov', name: ['SIMONOV', <br/>, '(скоро открытие)'], isUnactive: true, isActive: false, },
         { link: '/rooms', name: 'ПЕРЕГОВОРКИ', isActive: false, },
         { link: '/gallery', name: 'ГАЛЕРЕЯ', isActive: false, },
         { link: '/services', name: 'УСЛУГИ', isActive: false, },

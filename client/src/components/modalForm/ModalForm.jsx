@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 
-import './modalForm.scss'
+import './modalForm.scss';
 import { sendForm } from '../../http/sendAPI';
 
 const ModalForm = ({ formActive, setForm, mailTo, setActiveMail, defaultRate, setDefaultRate, setActiveRate, activeRate }) => {

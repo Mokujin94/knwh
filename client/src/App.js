@@ -13,6 +13,7 @@ import Black from "./pages/black/Black";
 
 import './ui/styles/app.scss';
 import Balchug from './pages/balchug/Balchug';
+import Simonov from './pages/simonov/Simonov';
 import Rooms from './pages/rooms/Rooms';
 import Gallery from './pages/gallery/Gallery';
 import GalleryBalchug from './pages/galleryBalchug/GalleryBalchug';
@@ -25,6 +26,7 @@ import ScrollToTop from './components/scrollToTop/ScrollToTop';
 import useScript from './components/useScript/UseScript';
 import Polityc from './pages/polytic/Polityc';
 import ModalForm from './components/modalForm/ModalForm';
+import ModalFormNew from './components/modalFormNew/ModalFormNew';
 import PaymentBalchug from './pages/payment/PaymentBalchug';
 import PaymentBlack from './pages/payment/PaymentBLack';
 import CookiesWindow from './components/cookiesWindow/CookiesWindow';
@@ -61,9 +63,6 @@ function App() {
     const [defaultRate, setDefaultRate] = useState(false);
 
 
-
-
-
     return transitions((props, item) => (
         <div className="App" style={{ position: 'relative' }}>
 
@@ -73,12 +72,22 @@ function App() {
                     <Header burger={burgerActive} onClick={() => burgerOpen()} />
                     <BurgerMenu onClick={() => burgerOpen()} />
                     <ModalForm formActive={formActive} setForm={setFormActive} mailTo={activeMail} setActiveMail={setActiveMail} defaultRate={defaultRate} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} activeRate={activeRate} />
+                    {/* <ModalFormNew 
+                    formActive={formActive} 
+                    setForm={setFormActive} 
+                    mailTo={activeMail} 
+                    setActiveMail={setActiveMail} 
+                    defaultRate={defaultRate} 
+                    setDefaultRate={setDefaultRate} 
+                    setActiveRate={setActiveRate} 
+                    activeRate={activeRate} /> */}
                     <ScrollToTop />
                     <CookiesWindow />
                     <Routes location={item}>
                         <Route exact path="/" element={<Home setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/black" element={<Black setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/balchug" element={<Balchug setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
+                        <Route path="/simonov" element={<Simonov setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/rooms" element={<Rooms setForm={setFormActive} setActiveMail={setActiveMail} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} />} />
                         <Route path="/gallery" element={<Gallery />} />
                         <Route path="/gallery-balchug" element={<GalleryBalchug />} />

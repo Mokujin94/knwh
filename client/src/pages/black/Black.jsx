@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficePage";
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
@@ -206,7 +206,6 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 			setActiveRate={setActiveRate}
 		/>
       </main>
-
       	<Footer />
     </>
   );
