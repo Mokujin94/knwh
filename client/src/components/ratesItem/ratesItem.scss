@@ -425,3 +425,30 @@
         }
     }
 }
+
+.rates__simonov {
+  .rates__item {
+    background: #454545;
+
+    .tarif__price-number {
+      text-transform: none;
+
+      @media (max-width: 1440px) {
+        font-size: 24px;
+        line-height: normal;
+      }
+      
+    }
+  }
+
+      .applications__left {
+          .applications__left-top,
+          .applications__left-bottom {
+              color: $kw-black-color;
+          }
+      } 
+
+      .applicationsButton .applicationsButton__title {
+          color: $kw-black-color;
+      } 
+}

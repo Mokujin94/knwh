@@ -56,7 +56,7 @@
             z-index: 9;
             
             &:hover span {
-                background-color: #3e3e3e;
+                background-color: $kw-primary-color;
             }
 
             @media (max-width: 560px) {
@@ -261,6 +261,11 @@
                     .modal-form__input-error {
                         opacity: 1;
                     }
+
+                    .modal-form__label::before {
+                        border-color: #B32937;
+                        background-color: rgba(179, 41, 55, .2);
+                    }
                 }
 
                 &.list {
@@ -289,11 +294,7 @@
                         pointer-events: fill;
                     }
                 }
-            }
 
-            .modal-form__checkbox-wrap {
-                margin-bottom: 20px;
-                
                 .modal-form__checkbox {
                     display: none;
                 }
@@ -348,6 +349,7 @@
                     }
                 }
             }
+
 
             .modal-form__button {
                 margin: 0 auto;

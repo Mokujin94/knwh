@@ -1,8 +1,10 @@
+@import '../../ui/styles/reboot.scss';
+
 .faq {
     padding-top: 113px;
     padding-bottom: 130px;
     width: 100%;
-    color: #222;
+    color: $kw-black-color;
     overflow: hidden;
 
     @media (max-width: 1440px) {
@@ -15,7 +17,7 @@
 
     &.home {
         margin-top: -130px;
-        background-color: #e8e8e8;
+        background-color: $kw-white-color;
 
         @media (max-width: 1440px) {
             margin-top: -76px;
@@ -54,5 +56,20 @@
                 margin: 0;
             }
         }
+    }
+
+    @media (max-width: 560px) {
+        .apliHome {
+            .applications__left {
+                .applications__left-top,
+                .applications__left-bottom {
+                    color: $kw-black-color;
+                }
+            } 
+
+            .applicationsButton .applicationsButton__title {
+                color: $kw-black-color;
+            }
+        } 
     }
 }

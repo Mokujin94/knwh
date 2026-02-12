@@ -6,18 +6,16 @@ import { balchugTarif, blackTarif } from "../../data/tariffs";
 import { bulchugRoomsArr, blackRoomsArr } from "../../data/rooms";
 
 const ModalFormNew = ({  formActive, setForm, mailTo, setActiveMail, defaultRate, setDefaultRate, setActiveRate, activeRate }) => {
-    const [name, setName] = useState('');
-    const [nameError, setNameError] = useState('');
-    const [number, setNumber] = useState('');
-    const [numberError, setNumberError] = useState('');
-    const [email, setEmail] = useState('');
-    const [emailError, setEmailError] = useState('');
+
     const [rate, setRate] = useState('');
     const [policy, setPolicy] = useState(true);
     const [isOpenRateList, openRateList] = useState(false);
     const [isLoading, setLoading] = useState(false);
-    const [isValid, checkValidation] = useState(true);
     const [isOpenedForm, setOpenedForm] = useState(true); //  ЗАМЕНИТЬ НА formActive!!!!!!!!!!!!!!!!!
+
+    const [ values, setValues ] = useState({});
+    const [ errors, setErrors ] = useState({});
+    const [ isValid, setIsValid ] = useState(true);
     let rateListArr = [];
 
     balchugTarif.forEach((elem) => elem.categories.forEach((category) => rateListArr = [...rateListArr, category.orderBtnText]));
@@ -28,53 +26,54 @@ const ModalFormNew = ({  formActive, setForm, mailTo, setActiveMail, defaultRate
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if (name == '' || number == '' || email == '' || (rate == '' && !defaultRate)) {
-            alert('Заполните все поля!');
-        } else if(!policy) {
-            alert('Подтвердите согласие с обработкой персональных данных и с политикой конфиденциальности');
-        } else {
-            setLoading(true);
-            sendForm(name, number, email, rate, mailTo, activeRate)
-                .then((response) => {
-                    // console.log(response);
-                    alert('Заявка успешно отправлена')
-                    setForm(false)
-                })
-                .catch((err) => {
-                    console.log('FAILED...', err);
-                })
-                .finally(() => setLoading(false));
-        }
+
+        e.target.querySelectorAll('input').forEach((input) => checkValidation(input));
+        // if (name == '' || number == '' || email == '' || (rate == '' && !defaultRate)) {
+        //     alert('Заполните все поля!');
+        // } else if(!policy) {
+        //     alert('Подтвердите согласие с обработкой персональных данных и с политикой конфиденциальности');
+        // } else {
+        //     setLoading(true);
+        //     sendForm(name, number, email, rate, mailTo, activeRate)
+        //         .then((response) => {
+        //             // console.log(response);
+        //             alert('Заявка успешно отправлена')
+        //             setForm(false)
+        //         })
+        //         .catch((err) => {
+        //             console.log('FAILED...', err);
+        //         })
+        //         .finally(() => setLoading(false));
+        // }
     };
 
-    const handleChange = (e) => {
-        const input = e.target;
-        const wrapper = input.closest('.modal-form__input-wrap');
-        const errorBlock = wrapper.querySelector('.modal-form__input-error');
+    const checkValidation = (input) => {
+        setValues({...values, [input.name]: input.value });
+        setErrors({...errors, [input.name]: input.validationMessage});
+        setIsValid(input.closest('form').checkValidity());
 
-        if(input.value == '') {
-            errorBlock.textContent = "Заполните данное поле";
-            wrapper.classList.add('error');
-            
+        console.log(errors)
+    }
+
+
+    const handleChange = (e) => {
+        checkValidation(e.target);
+    };
+
+    const handleChangeCheckbox = (e) => {
+        setPolicy(!policy);
+
+        if(!policy) {
+            setIsValid(false);
+        } else {
+            setIsValid(e.target.closest('form').checkValidity());
         }
 
-
-        // // регулярное выражение на проверку email
-        // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // // устанавливаем новое значение
-        // setEmail(e.target.value);
-        // // проверяем соответствие введенных данных регулярному выражению
-        // if (!emailRegex.test(email)) {
-        //     // если не соответствует, устанавливаем ошибку
-        //     setError("Invalid email address");
-        // }
-        // // иначе сбрасываем ошибку
-        // else setError(""); 
     };
 
     const chooseRate = (e) => {
         const listItem = e.target;
-        setRate(listItem.textContent);
+        values.message = listItem.textContent;
         openRateList(false);
     }
 
@@ -85,52 +84,55 @@ const ModalFormNew = ({  formActive, setForm, mailTo, setActiveMail, defaultRate
     });
 
     return(
-        <div className={isOpenedForm ? "modal-form-bg modal-form-bg_opened" : "modal-form-bg"}>
-            <form className="modal-form" onSubmit={onSubmit}>
+        <div className={`modal-form-bg ${isOpenedForm && "modal-form-bg_opened"}`}>
+            <form className="modal-form" onSubmit={onSubmit} noValidate>
                 <button class="modal-form__close-button" type="button" onClick={() => setOpenedForm(false)}>
                     <span></span>
                     <span></span>
                 </button>
                 <div className="modal-form__wrapper">
                     <fieldset className="modal-form__fieldset">
-                        <div className="modal-form__input-wrap">
+                        <div className={`modal-form__input-wrap ${errors.from_name ? 'error'  : ''}`}>
                             <input
                                 type='text'
                                 name='from_name'
                                 placeholder='ФИО'
-                                value={name}
+                                value={values.from_name || ''}
                                 onChange={handleChange}
+                                required
                             />                            
-                            <div className="modal-form__input-error"></div>
+                            <div className="modal-form__input-error">{errors.from_name || ''}</div>
                         </div>
-                        <div className="modal-form__input-wrap">
+                        <div className={`modal-form__input-wrap ${errors.to_name ? 'error' : ''}`}>
                             <input
                                 type='tel'
                                 name='to_name'
                                 placeholder='Номер телефона'
                                 mask="+{1}(000)000-00-00"
-                                value={number}
-                                onChange={(e) => setNumber(e.target.value)}
+                                value={values.to_name || ''}
+                                onChange={handleChange}
+                                required
                             />
-                            <div className="modal-form__input-error"></div>
+                            <div className="modal-form__input-error">{errors.to_name || ''}</div>
                         </div>
-                        <div className="modal-form__input-wrap">
+                        <div className={`modal-form__input-wrap ${errors.reply_to ? 'error' : ''}`}>
                             <input
                                 type='email'
                                 name='reply_to'
                                 placeholder='Почта'
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={values.reply_to || ''}
+                                onChange={handleChange}
+                                required
                             />
-                            <div className="modal-form__input-error"></div>
+                            <div className="modal-form__input-error">{errors.reply_to || ''}</div>
                         </div>
-                        <div className={isOpenRateList ? "modal-form__input-wrap list list_opened" : "modal-form__input-wrap list"}>
+                        <div className={`modal-form__input-wrap list ${isOpenRateList ? "list_opened" : ''}`}>
                             <input
                                 type='text'
                                 name='message'
                                 placeholder='Интересующий тариф'
-                                value={defaultRate ? activeRate : rate}
-                                onChange={(e) => setRate(e.target.value)}
+                                value={defaultRate ? activeRate : values.message}
+                                onChange={handleChange}
                                 readOnly
                             />
                             <div className="modal-form__list-button" onClick={(e) => openRateList(!isOpenRateList)}>
@@ -142,18 +144,20 @@ const ModalFormNew = ({  formActive, setForm, mailTo, setActiveMail, defaultRate
                                 <ul className="modal-form__list">{setRates}</ul>
                             </div>
                         </div>
-                        <div className='modal-form__checkbox-wrap'>
+                        <div className={`modal-form__input-wrap ${!policy && 'error'}`}>
                             <input 
                                 className="modal-form__checkbox"  
                                 type="checkbox" 
-                                name="policy-checkbox" 
+                                name="policyCheckbox" 
                                 id="policy-checkbox-modal" 
-                                onChange={(e) => setPolicy(item => !item)}
+                                onChange={handleChangeCheckbox}
                                 checked={policy}
+                                required
                             />
                             <label className='modal-form__label' for='policy-checkbox-modal'>
                                 Оставляя заявку, я даю согласие на обработку персональных данных и согласен с <a href='/polytics'>политикой конфиденциальности</a>
                             </label>
+                            <div className="modal-form__input-error">Подтвердите согласие с обработкой персональных данных и с политикой конфиденциальности</div>
                         </div>
                     </fieldset>
                     <button  className={isLoading ? "modal-form__button loading" : "modal-form__button"} type='submit' disabled={!isValid}>Отправить</button>

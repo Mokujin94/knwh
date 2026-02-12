@@ -20,10 +20,11 @@ import "./home.scss";
 import { balchugTarif, blackTarif } from "../../data/tariffs";
 import { servicesArray } from "../../data/services";
 import { homePageFAQ } from "../../data/faq";
+import { officeCategories } from "../../data/officeCategories";
 
 import logo from "../../ui/icons/logo.svg";
 import blackCategory from "./img/blackCategory.jpg";
-import balchugCategory from "./img/balchugCategory.png";
+import balchugCategory from "./img/balchugCategory.jpg";
 import roomsCategory from "./img/rooms.jpg";
 
 import news1 from "./img/news/1.png";
@@ -53,7 +54,7 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flipNews, setFlipNews] = useState(0);
 
     const windowInnerWidth = document.documentElement.clientWidth;
-
+ 
     const category = [
         {
             path: "/black",

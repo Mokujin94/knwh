@@ -4,9 +4,14 @@ import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficeP
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
+import RatesItem from "../../components/ratesItem/RatesItem";
+import Applications from "../../components/applications/Applications";
+
 import Footer from "../../components/footer/Footer";
 
 import { servicesArray } from "../../data/services";
+import { simonovTarif } from "../../data/tariffs";
+
 
 import image1 from "./img/kitchen1.jpeg";
 import image2 from "./img/kitchen2.jpeg";
@@ -57,7 +62,9 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
     const headingContent = {
 		title: "Simonov",
-		descr: "Скоро открытие!",
+		descr: ["Развитая инфраструктура «Симонов» включает ресепшн, гардеробы, кухни и зоны отдыха. Идеальный баланс между эффективной работой и вдохновляющими видами.", 
+                <br/>, <br/>, 
+                "Общая вместимость 360 рабочих мест. Просторные open-space и кабинеты с панорамным остеклением и великолепным видом на Москва-реку."],
 		address: ["м. Автозаводская", <br/>, 
 				"Ленинская Слобода, 26с5", <br/>, 
 				<a href="tel:+74996478563">+7 (499) 647-85-63</a>],
@@ -66,10 +73,25 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
 	const galleryContent = {
 		title: "Общие зоны",
-		descr: "",
+		descr: "Зоны отдыха SIMONOV оборудованы мягкой мебелью для вашего комфорта.",
 		deskImagesArr: deskImagesGalleryArr,
 		mobImagesArr: mobImagesGalleryArr,
 	};
+
+    const tarifs = simonovTarif.map(
+        ( tariff, i ) => {
+            return (
+                <RatesItem
+                   tariff={tariff}
+                    setForm={setForm}
+                    setActiveMail={setActiveMail}
+                    setDefaultRate={setDefaultRate}
+                    setActiveRate={setActiveRate}
+                    key={i}
+                />
+            );
+        }
+    );
 
     return (
         <>
@@ -85,6 +107,27 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     services={servicesArray} 
                     pagesStyle={"simonov"} 
                 />
+
+                <section className="rates rates__simonov">
+                    <div className="container">
+                        <div className="rates__header rates__header__simonov">
+                            <div className="rates__header-left">
+                                <h2 className="rates__header-title">ТАРИФЫ</h2>
+                                <p className="rates__header-descr">Найдите ваш идеальный тариф</p>
+                            </div>
+                        </div>
+                        <div className="rates__wrapper">{tarifs}</div>
+                        <div style={{ display: "flex", alignItems: "center" }}>
+                            <Applications
+                                title="посмотрите вживую"
+                                descr="Выберите вариант, который подойдёт именно вашей команде"
+                                button="Записаться"
+                                setForm={setForm}
+                            />
+                        </div>
+                    </div>
+                </section>
+
                 <GalleryOfficePage 
                     title={galleryContent.title} 
                     descr={galleryContent.descr} 
