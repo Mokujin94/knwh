@@ -112,8 +112,8 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     <div className="container">
                         <div className="rates__header rates__header__simonov">
                             <div className="rates__header-left">
-                                <h2 className="rates__header-title">ТАРИФЫ</h2>
-                                <p className="rates__header-descr">Найдите ваш идеальный тариф</p>
+                                <h2 className="rates__header-title">Предложения</h2>
+                                <p className="rates__header-descr">Найдите ваш идеальный вариант</p>
                             </div>
                         </div>
                         <div className="rates__wrapper">{tarifs}</div>

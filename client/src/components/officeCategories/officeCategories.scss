@@ -1,0 +1,176 @@
+@import "../../ui/styles/reboot.scss";
+
+.categories {
+    padding: 113px 0;
+    background-color: $kw-black-color;
+
+    @media(max-width: 1440px) {
+        padding: 80px 0 113px;
+    }
+
+    @media(max-width: 560px) {
+        padding: 80px 0 50px;
+    }
+
+    .categories__text {
+        max-width: 808px;
+        margin: 0 auto 113px;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: $kw-white-color;
+
+        @media(max-width: 1440px) {
+            max-width: 630px;
+            margin-bottom: 80px;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+
+    .categories__grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 423px));
+        grid-gap: 30px;
+        justify-content: center;
+
+        @media (max-width: 920px) {
+            grid-gap: 20px;
+        }
+
+        @media (max-width: 720px) {
+            grid-template-columns: minmax(0, 423px);
+        }
+
+        @media (max-width: 560px) {
+            display: none;
+        }
+    }
+
+    .categories__slider {
+        width: 100%;
+        display: none;
+
+        @media (max-width: 560px) {
+            display: block;
+        }
+
+
+        .categories__slider-inner {
+            width: 100%;
+            height: 512px;
+            position: relative;
+            border: 1px solid $kw-grey-color;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .categories__pagination {
+            width: 100%;
+            height: 5px;
+            margin-top: 30px;
+            background-color: $kw-grey-color;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .categories__pagination-runner {
+                width: 0;
+                height: 100%;
+                background-color: $kw-white-color;
+                transition: .5s;
+            }
+        }
+    }
+
+    .category-card {
+        width: 100%;
+        aspect-ratio: .8;
+        border: 1px solid $kw-grey-color;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        color: $kw-white-color;
+        text-decoration: none;
+
+        @media (max-width: 720px) {
+            aspect-ratio: 1.2;
+        }
+
+        @media (max-width: 560px) {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: unset;
+            border: none;
+            border-radius: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .5s;
+
+            &_active {
+                opacity: 1;
+            }
+        }
+
+        .category-card__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .category-card__text-block {
+            max-width: 423px;
+            padding: 16px;
+            position: relative;
+            z-index: 3;
+
+            .category-card__title {
+                margin: 0 0 10px;
+                font-weight: 500;
+                font-size: 32px;
+                line-height: normal;
+                text-transform: uppercase;
+                color: $kw-white-color;
+                display: block;
+
+                @media (max-width: 1440px) {
+                    font-size: 26px;
+                    line-height: 31px;
+                }
+            }
+
+            .category-card__descr {
+                margin: 0;
+                font-size: 20px;
+                line-height: 24px;
+                text-decoration: none;
+
+                @media (max-width: 1440px) {
+                    font-size: 15px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            content: "";
+            background: linear-gradient(0deg, #222222 20%, rgba(34, 34, 34, 0) 60%);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transition: 0.3s;
+        }
+    }
+}

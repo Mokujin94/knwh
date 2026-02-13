@@ -4,14 +4,13 @@ import postscribe from "postscribe";
 import { useLocation } from "react-router-dom";
 
 import SliderHome from "../../components/sliderHome/SliderHome";
-import HomeCategory from "../../components/homeCategory/HomeCategory";
 import RatesItem from "../../components/ratesItem/RatesItem";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import FaqBlock from "../../components/faqBlock/FaqBlock";
-import Questions from "../../components/questions/Questions";
 import AboutBlock from "../../components/aboutBlock/AboutBlock";
 import ApplicationsButton from "../../components/applicationsButton/ApplicationsButton";
 import Applications from "../../components/applications/Applications";
+import OfficeCategories from "../../components/officeCategories/OfficeCategories";
 
 import useScript from "../../components/useScript/UseScript";
 
@@ -54,30 +53,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [flipNews, setFlipNews] = useState(0);
 
     const windowInnerWidth = document.documentElement.clientWidth;
- 
-    const category = [
-        {
-            path: "/black",
-            img: blackCategory,
-            title: "BLACK",
-            descr:
-                "Гибкий офис BLACK расположен в пешей доступности от метро Павелецкая в БЦ класса В+ на 4 этажах. Полностью оборудованные офисы с высокими потолками, панорамным остеклением и мебелью",
-        },
-        {
-            path: "/balchug",
-            img: balchugCategory,
-            title: "BALCHUG",
-            descr:
-                "Гибкий офис BALCHUG сочетает в себе все преимущества отдельностоящего здания, эстетику тихой набережной Москвы-реки и качественный сервис. Расположен в пешей доступности от метро Новокузнецкая",
-        },
-        {
-            path: "/rooms",
-            img: roomsCategory,
-            title: "ПЕРЕГОВОРНЫЕ",
-            descr:
-                "Удобные переговорные комнаты для бизнес встреч и важных дел, оборудованные всем необходимым",
-        },
-    ];
 
     const aboutBlock = [
         {
@@ -161,11 +136,6 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const [activeRatesHeader, setActiveRatesHeader] = useState(0);
     const [swicherTarifs, setSwicherTarifs] = useState(false);
 
-    const categoryes = category.map(({ path, img, title, descr }, i) => {
-        return (
-            <HomeCategory path={path} img={img} title={title} descr={descr} key={i} />
-        );
-    });
 
     const tarifs = blackTarif.map(
         ( tariff, i ) => {
@@ -245,59 +215,8 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const countPounts2 = windowInnerWidth / 283;
     const countPounts3 = windowInnerWidth / 502;
 
-    const [categoryActive, setCategoryActive] = useState([
-        {
-            title: "black",
-            descr:
-                "Гибкий офис BLACK расположен в пешей доступности от метро Павелецкая в БЦ класса В+ на 4 этажах. Полностью оборудованные офисы с высокими потолками, панорамным остеклением и мебелью",
-            active: true,
-            path: "/black",
-            img: blackCategory,
-        },
-        {
-            title: "balchug",
-            descr:
-                "Гибкий офис BALCHUG сочетает в себе все преимущества отдельностоящего здания, эстетику тихой набережной Москвы-реки и качественный сервис",
-            active: false,
-            path: "/balchug",
-            img: balchugCategory,
-        },
-        {
-            title: "Переговорные",
-            descr:
-                "Удобные переговорные комнаты для бизнес встреч и важных дел, оборудованные всем необходимым",
-            active: false,
-            path: "/rooms",
-            img: roomsCategory,
-        },
-    ]);
-    const [as, setAs] = useState(3);
-    const [as1, setAs1] = useState(true);
 
-    const changeSlideCategory = () => {
-        setCategoryActive((item) => {
-            if (item[0].active === true) {
-                item[0].active = false;
-                item[1].active = true;
-                return item;
-            } else if (item[1].active === true) {
-                item[1].active = false;
-                item[2].active = true;
-                return item;
-            } else if (item[2].active === true) {
-                item[2].active = false;
-                item[0].active = true;
-                return item;
-            }
-        });
-        setAs((prev) => {
-            if (prev <= 1) {
-                return 3;
-            }
-            return prev - 1;
-        });
-        setAs1((prev) => !prev);
-    };
+  
 
     let itemsNewsAll = aboutBlock.length;
     let newsItem = 512;
@@ -394,35 +313,9 @@ const Home = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
           </div> */}
                 </div>
             </section>
-            <section className="category__block">
-                <div className="container">
-                    <h1 className="category__title">
-                        KNOW WHERE — это сеть премиальных гибких офисных пространств в самом
-                        сердце столицы, куда входят локации BLACK и BALCHUG, которые
-                        оборудованы рабочими местами в формате open space, а также
-                        переговорными комнатами.
-                    </h1>
-                    <div className="category__wrapper">
-                        <div className="category__mobile">
-                            {categoryActive.map(({ title, descr, active, path, img }, i) => {
-                                return (
-                                    <CategoryMobile
-                                        title={title}
-                                        descr={descr}
-                                        onClick={changeSlideCategory}
-                                        active={active}
-                                        path={path}
-                                        img={img}
-                                        key={i}
-                                    />
-                                );
-                            })}
-                            <div className={`category__mobile-indicator ${"w" + as}`}></div>
-                        </div>
-                        {categoryes}
-                    </div>
-                </div>
-            </section>
+
+            <OfficeCategories categories={officeCategories} />
+
             <section className="rates">
                 <div className="container">
                     <div className="rates__header">
