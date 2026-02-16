@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficePage";
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
-import RatesItem from "../../components/ratesItem/RatesItem";
-import Applications from "../../components/applications/Applications";
+import RatesBlock from "../../components/ratesBlock/RatesBlock";
 import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
 import MeetingRoomsOfficePage from "../../components/meetingRoomsOfficePage/MeetingRoomsOfficePage";
+import Footer from "../../components/footer/Footer";
 
 import "./balchug.scss";
 
-import { balchugTarif } from "../../data/tariffs";
 import { bulchugRoomsArr } from "../../data/rooms";
 import { servicesArray } from "../../data/services";
 
@@ -33,15 +32,8 @@ import bulchugSliderImg1 from "./img/slider/1.jpg";
 import bulchugSliderImg2 from "./img/slider/2.jpg";
 import bulchugSliderImg3 from "./img/slider/3.jpg";
 
-import logoBg from "../../ui/icons/logoBgFront.png";
-
-import FlipSlider from "../../components/flipSlider/FlipSlider";
-import FilterRooms from "../../components/filterRooms/FilterRooms";
-import Footer from "../../components/footer/Footer";
 
 const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
-    const windowInnerWidth = document.documentElement.clientWidth;
-
     const deskImagesGalleryArr = [
         { img: imagesSlides1 },
         { img: imagesSlides2 },
@@ -68,28 +60,6 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
         { img: bulchugSliderImg3 },
     ];
 
-    const tarifs = balchugTarif.map(
-        ( tariff, i ) => {
-            return (
-                <RatesItem
-                   tariff={tariff}
-                    setForm={setForm}
-                    setActiveMail={setActiveMail}
-                    setDefaultRate={setDefaultRate}
-                    setActiveRate={setActiveRate}
-                    key={i}
-                />
-            );
-        }
-    );
-
-    const option = [
-        { name: "Все" },
-        { name: "до 65 мест" },
-        { name: "до 12 мест" },
-        { name: "до 8 мест" },
-        { name: "до 6 мест" },
-    ];
 
     const headingContent = {
         title: "balchug",
@@ -143,31 +113,17 @@ const Balchug = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     svgHEX={headingContent.svgHEX}
                 />
                 <SliderBlack bg={sliderBulchugImg} />
-                <ServicesSlider services={servicesArray} pagesStyle={"news"} />
+                <ServicesSlider services={servicesArray} pagesStyle={"news"} sliderStyle={"beige"} />
 
-                <section className="rates rates__balchug">
-                    <div className="container">
-                        <div className="rates__header rates__header__balchug">
-                            <div className="rates__header-left">
-                                <h2 className="rates__header-title">ТАРИФЫ</h2>
-                                <p className="rates__header-descr">Найдите ваш идеальный тариф</p>
-                            </div>
-                        </div>
-                        <div className="rates__wrapper">{tarifs}</div>
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                            <Applications
-                                title="посмотрите вживую"
-                                descr="Выберите кабинет, который подойдёт именно вашей команде"
-                                // additionally={"Будьте в числе первых!"}
-                                // additionally2={
-                                //   "*акция действует до 31.01 включительно. *при единовременной оплате 2-х месяцев."
-                                // }
-                                button="Записаться"
-                                setForm={setForm}
-                            />
-                        </div>
-                    </div>
-                </section>
+                <RatesBlock 
+                    setForm={setForm} 
+                    setActiveMail={setActiveMail} 
+                    setDefaultRate={setDefaultRate} 
+                    setActiveRate={setActiveRate} 
+                    style={'balchug'} 
+                    activeRate={'balchug'}
+                    showSwitchBtns={false} 
+                />
 
                 <div style={{background: "#e8e8e8"}}>
                     <GalleryOfficePage 

@@ -1,3 +1,5 @@
+@import '../../ui/styles/reboot.scss';
+
 .meeting-rooms_simonov {
     min-height: unset;
     background-color: #454545;
@@ -7,32 +9,6 @@
 
         @media (max-width: 920px) {
             padding-bottom: 100px;
-        }
-    }
-
-    @media (max-width: 560px) {
-        .rates {
-            padding-top: 50px;
-            background: #D2C7B6;
-
-
-            .rates__header {
-                margin-bottom: 56px;
-
-                @media (max-width: 1440px) {
-                    margin-bottom: 40px;
-                }
-
-                .rates__header-left {
-                    margin: 0;
-                    .rates__header-descr {
-                        color: #222;
-                    }
-                }
-
-                
-            }
-
         }
     }
 }

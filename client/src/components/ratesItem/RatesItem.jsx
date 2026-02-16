@@ -41,7 +41,7 @@ const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRa
 
         if(labelText) {
             return(
-                <div className="rates__item-sticker">{labelText}</div>
+                <div className="tarif__sticker">{labelText}</div>
             );
         }
     }
@@ -81,7 +81,7 @@ const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRa
 
     return (
 
-        <div className='rates__item'>
+        <div className='tarif'>
             {setLabel(tariff.categories[activeCategories])}
             <div className="tarif__top">
                 <h2 className="tarif__title">{tariff.title}</h2>

@@ -4,14 +4,10 @@ import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficeP
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
-import RatesItem from "../../components/ratesItem/RatesItem";
-import Applications from "../../components/applications/Applications";
-
+import RatesBlock from "../../components/ratesBlock/RatesBlock";
 import Footer from "../../components/footer/Footer";
 
 import { servicesArray } from "../../data/services";
-import { simonovTarif } from "../../data/tariffs";
-
 
 import image1 from "./img/kitchen1.jpeg";
 import image2 from "./img/kitchen2.jpeg";
@@ -78,21 +74,6 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		mobImagesArr: mobImagesGalleryArr,
 	};
 
-    const tarifs = simonovTarif.map(
-        ( tariff, i ) => {
-            return (
-                <RatesItem
-                   tariff={tariff}
-                    setForm={setForm}
-                    setActiveMail={setActiveMail}
-                    setDefaultRate={setDefaultRate}
-                    setActiveRate={setActiveRate}
-                    key={i}
-                />
-            );
-        }
-    );
-
     return (
         <>
             <main id="meetingRooms" className="meeting-rooms meeting-rooms_simonov">
@@ -106,27 +87,18 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                 <ServicesSlider 
                     services={servicesArray} 
                     pagesStyle={"simonov"} 
+                    sliderStyle={"grey"}
                 />
 
-                <section className="rates rates__simonov">
-                    <div className="container">
-                        <div className="rates__header rates__header__simonov">
-                            <div className="rates__header-left">
-                                <h2 className="rates__header-title">Предложения</h2>
-                                <p className="rates__header-descr">Найдите ваш идеальный вариант</p>
-                            </div>
-                        </div>
-                        <div className="rates__wrapper">{tarifs}</div>
-                        <div style={{ display: "flex", alignItems: "center" }}>
-                            <Applications
-                                title="посмотрите вживую"
-                                descr="Выберите вариант, который подойдёт именно вашей команде"
-                                button="Записаться"
-                                setForm={setForm}
-                            />
-                        </div>
-                    </div>
-                </section>
+                <RatesBlock 
+                    setForm={setForm} 
+                    setActiveMail={setActiveMail} 
+                    setDefaultRate={setDefaultRate} 
+                    setActiveRate={setActiveRate} 
+                    style={'simonov'} 
+                    activeRate={'simonov'}
+                    showSwitchBtns={false} 
+                />
 
                 <GalleryOfficePage 
                     title={galleryContent.title} 

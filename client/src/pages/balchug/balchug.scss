@@ -58,64 +58,6 @@
 
 }
 
-.rates {
-    &__balchug {
-        background: $kw-soft-gold-color;
-    }
-}
-
-.rates__balchug .container .rates__header .rates__header-title {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .rates__wrapper .rates__item {
-    background: $kw-white-color;
-}
-
-.rates__balchug .container .rates__wrapper .rates__item .tarif__top .tarif__title {
-    color: $kw-black-color;
-}
-
-.rates__balchug .rates__item .tarif__bottom .tarif__buttons .tarif__hint {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .rates__wrapper .rates__item .tarif__top .tarif__list {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .rates__wrapper .rates__item .tarif__bottom .tarif__price .tarif__price-number {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .rates__wrapper .rates__item .tarif__bottom .tarif__pay-button {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .applications .applications__left .applications__left-top {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .applications .applications__left .applications__left-bottom {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .applications .applicationsButton .applicationsButton__title {
-    color: $kw-black-color;
-}
-
-.rates__balchug .container .applications .applicationsButton {
-    border: 1px solid $kw-black-color;
-}
-
-.rates__balchug .container .applications .applicationsButton:hover {
-    background: $kw-black-color;
-}
-
-.rates__balchug .container .applications .applicationsButton:hover .applicationsButton__title{
-    color: $kw-white-color;
-}
-
 .images__balchug {
     background: $kw-white-color;
 }
@@ -228,13 +170,5 @@
         min-height: 1100px;
     }
 }
-
-@media (max-width: 560px) {
-    .rates__header__balchug {
-        padding-top: 50px;
-        margin-bottom: 0;
-    }
-}
-
 
 

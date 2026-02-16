@@ -1,0 +1,166 @@
+@import '../../ui/styles/reboot.scss';
+
+.custom-slider {
+    width: 100%;
+    padding-bottom: 100px;
+    position: relative;
+
+    @media (max-width: 900px) {
+        padding-bottom: 0;
+    }
+
+    .swiper-pagination-progressbar {
+        max-width: 1280px;
+        width: calc(100% - 210px);
+        height: 5px;
+        background-color: $kw-grey-color;
+        border-radius: 5px;
+        overflow: hidden;
+        top: calc(100% + 65px);
+
+        .swiper-pagination-progressbar-fill {
+            background-color: $kw-white-color;
+        }
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        opacity: 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
+        background-color: $kw-grey-color;
+        top: calc(100% + 60px);
+        transition: .3s;
+
+        &::after {
+            display: none;
+        }
+
+        &.swiper-button-disabled {
+            opacity: .6;
+        }
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev {
+        left: unset;
+        right: 80px;
+        background-image: url('../../images/swiper-btn-prev-white.png');
+
+        &:hover {
+            background-color: $kw-primary-color;  
+            background-image: url('../../images/swiper-btn-prev-black.png');
+        }
+    }
+
+    .swiper-button-next {
+        right: 0;
+        background-image: url('../../images/swiper-btn-next-white.png');
+
+        &:hover {
+            background-color: $kw-primary-color;
+            background-image: url('../../images/swiper-btn-next-black.png');
+        }
+    }
+
+    &.custom-slider_white {
+        .swiper-pagination-progressbar {
+            background-color: #d9d9d9;
+
+            .swiper-pagination-progressbar-fill {
+                background-color: $kw-indicator-color;
+            }
+        }
+
+        .swiper-button-prev {
+            background-color: #d9d9d9;
+            background-image: url('../../images/swiper-btn-prev-grey.png');
+
+            &:hover {
+                background-color: $kw-primary-color;  
+                background-image: url('../../images/swiper-btn-prev-black.png');
+            }
+        }
+
+        .swiper-button-next {
+            background-color: #d9d9d9;
+            background-image: url('../../images/swiper-btn-next-grey.png');
+
+            &:hover {
+                background-color: $kw-primary-color;
+                background-image: url('../../images/swiper-btn-next-black.png');
+            }
+        }
+    }
+
+    &.custom-slider_beige {
+        .swiper-pagination-progressbar {
+            background-color: $kw-indicator-color;
+
+            .swiper-pagination-progressbar-fill {
+                background-color: $kw-white-color;
+            }
+        }
+
+        .swiper-button-prev {
+            background-color: $kw-indicator-color;
+            background-image: url('../../images/swiper-btn-prev-white.png');
+
+            &:hover {
+                background-color: $kw-primary-color;  
+                background-image: url('../../images/swiper-btn-prev-black.png');
+            }
+        }
+
+        .swiper-button-next {
+            background-color: $kw-indicator-color;
+            background-image: url('../../images/swiper-btn-next-white.png');
+
+            &:hover {
+                background-color: $kw-primary-color;
+                background-image: url('../../images/swiper-btn-next-black.png');
+            }
+        }
+    }
+
+    &.custom-slider_grey {
+        .swiper-pagination-progressbar {
+            background-color: $kw-white-color;
+
+            .swiper-pagination-progressbar-fill {
+                background-color: $kw-black-color;
+            }
+        }
+
+        .swiper-button-prev {
+            background-color: $kw-white-color;
+            background-image: url('../../images/swiper-btn-prev-black.png');
+
+            &:hover {
+                background-color: $kw-primary-color;  
+                background-image: url('../../images/swiper-btn-prev-black.png');
+            }
+        }
+
+        .swiper-button-next {
+            background-color: $kw-white-color;
+            background-image: url('../../images/swiper-btn-next-black.png');
+
+            &:hover {
+                background-color: $kw-primary-color;
+                background-image: url('../../images/swiper-btn-next-black.png');
+            }
+        }
+    }
+}

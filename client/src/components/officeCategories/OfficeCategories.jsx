@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./officeCategories.scss";
 
 const OfficeCategories = ({ categories }) => {
@@ -7,13 +8,13 @@ const OfficeCategories = ({ categories }) => {
 
     const categoriesCardsDesk =  categories.map((item, i) => {
         return(
-            <a className="category-card" href={item.path} key={i}>
+            <Link className="category-card" to={item.path} key={i}>
                 <img className="category-card__img"  src={item.img} alt={item.title}/>
                 <div className="category-card__text-block">
                     <h3 className="category-card__title">{item.title}</h3>
                     <p className="category-card__descr">{item.descr}</p>
                 </div>
-            </a>
+            </Link>
         );
     });
 
@@ -22,7 +23,7 @@ const OfficeCategories = ({ categories }) => {
             <div className={i == activeSlide ? "category-card category-card_active" : "category-card"} href={item.path} key={i}>
                 <img className="category-card__img"  src={item.img} alt={item.title}/>
                 <div className="category-card__text-block">
-                    <a className="category-card__title">{item.title}</a>
+                    <Link className="category-card__title" to={item.path}>{item.title}</Link>
                     <p className="category-card__descr">{item.descr}</p>
                 </div>
             </div>

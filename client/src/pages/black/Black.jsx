@@ -3,14 +3,13 @@ import { useEffect } from "react";
 import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficePage";
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
-import RatesItem from "../../components/ratesItem/RatesItem";
-import Applications from "../../components/applications/Applications";
+import RatesBlock from "../../components/ratesBlock/RatesBlock";
 import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
 import MeetingRoomsOfficePage from "../../components/meetingRoomsOfficePage/MeetingRoomsOfficePage";
+import Footer from "../../components/footer/Footer";
 
 import "./black.scss";
 
-import { blackTarif } from "../../data/tariffs";
 import { blackRoomsArr } from "../../data/rooms";
 import { servicesArray } from "../../data/services";
 
@@ -30,11 +29,7 @@ import blackSliderImg1 from "./img/slider/4.jpg";
 import blackSliderImg2 from "./img/slider/5.jpg";
 import blackSliderImg3 from "./img/slider/6.jpg";
 
-import Footer from "../../components/footer/Footer";
-
 const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
-	const windowInnerWidth = document.documentElement.clientWidth;
-
 	const deskImagesGalleryArr = [
 		{ img: imagesSlides1 },
 		{ img: imagesSlides2 },
@@ -58,19 +53,6 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		{ img: blackSliderImg2 },
 		{ img: blackSliderImg3 },
 	];
-
-	const tarifs = blackTarif.map((tariff, i) => {
-		return (
-			<RatesItem
-				tariff={tariff}
-				setForm={setForm}
-				setActiveMail={setActiveMail}
-				setDefaultRate={setDefaultRate}
-				setActiveRate={setActiveRate}
-				key={i}
-			/>
-		);
-	});
 
 	const headingContent = {
 		title: "Black",
@@ -150,42 +132,16 @@ const Black = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 			services={servicesArray} 
 			pagesStyle={"black"} 
 		/>
-		<section className="rates">
-			<div className="container">
-			<div
-				className={
-				windowInnerWidth < 560
-					? "rates__header rates__header__black"
-					: "rates__header"
-				}
-			>
-				<div className="rates__header-left">
-				<h2 className="rates__header-title">ТАРИФЫ</h2>
-				<p className="rates__header-descr">Найдите ваш идеальный тариф</p>
-				</div>
-			</div>
-			<div className="rates__wrapper">{tarifs}</div>
-			<div style={{ display: "flex", alignItems: "center" }}>
-				<Applications
-				title="посмотрите вживую"
-				descr="Выберите кабинет, который подойдёт именно вашей команде"
-				// additionally={"Будьте в числе первых!"}
-				// additionally2={
-				//   "*акция действует до 31.01 включительно. *при единовременной оплате 2-х месяцев."
-				// }
-				style={windowInnerWidth > 560 ? "apliHome" : false}
-				button="Записаться"
-				setForm={setForm}
-				/>
-				<script
-				id="amoforms_script_947509"
-				async="async"
-				charset="utf-8"
-				src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1678781638"
-				></script>
-			</div>
-			</div>
-		</section>
+		<RatesBlock 
+			setForm={setForm} 
+			setActiveMail={setActiveMail} 
+			setDefaultRate={setDefaultRate} 
+			setActiveRate={setActiveRate} 
+			style={'black'} 
+			activeRate={'black'}
+			showSwitchBtns={false} 
+		/>
+
 		<GalleryOfficePage 
 			title={galleryContent.title} 
 			descr={galleryContent.descr} 
