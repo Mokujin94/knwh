@@ -11,7 +11,7 @@ import { servicesArray } from "../../data/services";
 
 import image1 from "./img/kitchen1.jpeg";
 import image2 from "./img/kitchen2.jpeg";
-import image3 from "./img/phones1.jpg";
+// import image3 from "./img/phones1.jpg";
 import image4 from "./img/pk1.jpeg";
 import image5 from "./img/pk2.jpeg";
 import image6 from "./img/pk3.jpeg";
@@ -27,7 +27,7 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const deskImagesGalleryArr = [
         { img: image1 },
         { img: image2 },
-        { img: image3 },
+        // { img: image3 },
         { img: image4 },
         { img: image5 },
         { img: image6 },
@@ -40,7 +40,7 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     const mobImagesGalleryArr = [
         { img: image1 },
         { img: image2 },
-        { img: image3 },
+        // { img: image3 },
         { img: image4 },
         { img: image5 },
         { img: image6 },
@@ -51,9 +51,9 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
     ];
     
     const sliderBlackImg = [
-        { img: image2 },
-        { img: image3 },
-        { img: image10 },
+        { img: image4 },
+        { img: image9 },
+        { img: image1 },
     ];
 
     const headingContent = {

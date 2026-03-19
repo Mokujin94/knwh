@@ -98,6 +98,15 @@
                 padding: 30px 20px;
             }
 
+            .modal-form__title {
+                margin: 0 0 20px;
+                color: $kw-black-color;
+                font-size: 26px;
+                line-height: 32px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
             .modal-form__fieldset {
                 width: 100%;
             }
@@ -146,7 +155,6 @@
                     top: 5px;
                     z-index: 10;
                     opacity: 0;
-                    transition: .3s;
 
                     @media (max-width: 920px) {
                         top: unset;
@@ -429,7 +437,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                z-index: 2;
+                z-index: 3;
                 opacity: 0;
                 pointer-events: none;
                 transition: .3s;

@@ -53,7 +53,7 @@ const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRa
             );
         } else {
             return (
-                <div onClick={onForm} className="tarif__pay-button">Оставить заявку</div>
+                <div onClick={onForm} className={tariff.disabledBtn == true ? "tarif__pay-button tarif__pay-button_disabled" : "tarif__pay-button"}>{tariff.btnText ? tariff.btnText : 'Оставить заявку'}</div>
             );
         };
     }

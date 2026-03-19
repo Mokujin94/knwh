@@ -71,7 +71,17 @@ function App() {
                 <div style={{ position: 'absolute', width: '100%' }}>
                     <Header burger={burgerActive} onClick={() => burgerOpen()} />
                     <BurgerMenu onClick={() => burgerOpen()} />
-                    <ModalForm formActive={formActive} setForm={setFormActive} mailTo={activeMail} setActiveMail={setActiveMail} defaultRate={defaultRate} setDefaultRate={setDefaultRate} setActiveRate={setActiveRate} activeRate={activeRate} />
+
+                    <ModalForm 
+                    formActive={formActive} 
+                    setForm={setFormActive} 
+                    mailTo={activeMail} 
+                    setActiveMail={setActiveMail} 
+                    defaultRate={defaultRate} 
+                    setDefaultRate={setDefaultRate} 
+                    setActiveRate={setActiveRate} 
+                    activeRate={activeRate} />
+                    
                     {/* <ModalFormNew 
                     formActive={formActive} 
                     setForm={setFormActive} 

@@ -5,16 +5,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './sliderRooms.scss';
 
-import background from '../sliderHome/img/background.png';
-import background2 from '../sliderHome/img/bg2.png';
-// import background3 from './img/bg3.png';
-// import background4 from './img/bg4.png';
-// import background5 from './img/bg5.png';
-
-import tv from './icons/tv.svg';
-import places from './icons/places.svg';
-import table from './icons/table.svg';
-import flipchart from './icons/flipchart.svg';
 import nextIcon from '../../ui/icons/sliderBlack/nextIcon.svg';
 import prevIcon from '../../ui/icons/sliderBlack/prevIcon.svg';
 
@@ -41,7 +31,7 @@ const SliderRooms = ({ styles, color, border, arr, clame, roomsType, setForm, se
     return;
   }
 
-  const items = arr.map(({ img, name, list, price, href, available }, i) => {
+  const items = arr.map(({ img, name, list, price, href, available, btnText }, i) => {
     return (
       <Carousel.Item key={i}>
         <div className='container'>
@@ -78,23 +68,7 @@ const SliderRooms = ({ styles, color, border, arr, clame, roomsType, setForm, se
                   </ul>
                 </div>
                 <div className={`rooms__price ${color}`}>{price}</div>
-                {/* {available == false ? (
-                  <a
-                    href='javascript:void(0)'
-                    className={`rooms__btn rooms__btn_disabled ${color}`}
-                  >
-                    Недоступно
-                  </a>
-                ) : (
-                  <a
-                    href='javascript:void(0)'
-                    onClick={() => eval(href)}
-                    className={`rooms__btn ${color}`}
-                  >
-                    Забронировать
-                  </a>
-                )} */}
-                <div onClick={() => onForm(name)} className={`rooms__btn ${color}`}>Оставить заявку</div>
+                <div onClick={() => onForm(name)} className={available == false ? `rooms__btn rooms__btn_disabled ${color}` : `rooms__btn ${color}`}>{btnText ? btnText : 'Оставить заявку'}</div>
               </div>
             </div>
           </div>

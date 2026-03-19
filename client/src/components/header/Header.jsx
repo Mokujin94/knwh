@@ -37,7 +37,7 @@ const Header = ({burger, onClick}) => {
         if(listItem.isUnactive) itemClassName += ' unactive';
 
         return (
-            <li className="menu__list-item" key={i}><NavLink to={listItem.link} activeClassName="active" className={itemClassName}>{listItem.name}</NavLink></li>
+            <li className="menu__list-item" key={i}><NavLink to={listItem.link} className={itemClassName}>{listItem.name}</NavLink></li>
         );
     });
 

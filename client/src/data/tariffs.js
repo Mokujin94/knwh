@@ -2,6 +2,8 @@ export const balchugTarif = [
     {
         title: "День",
         label: "Количество мест ограничено",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "1 день",
@@ -50,9 +52,11 @@ export const balchugTarif = [
             // },
         ]
     },
-     {
+    {
         title: "25 дней",
         label: "",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "25 дней",
@@ -113,6 +117,8 @@ export const balchugTarif = [
     {
         title: "Резидент",
         label: "",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "1 месяц",
@@ -156,6 +162,8 @@ export const blackTarif = [
     {
         title: "День",
         label: "",
+        disabledBtn: true,
+        btnText: 'Нет мест',
         categories: [
             {
                 button: "1 день",
@@ -207,6 +215,8 @@ export const blackTarif = [
     {
         title: "25 дней",
         label: "",
+        disabledBtn: true,
+        btnText: 'Нет мест',
         categories: [
             {
                 button: "25 дней",
@@ -267,6 +277,8 @@ export const blackTarif = [
     {
         title: "Резидент",
         label: "",
+        disabledBtn: true,
+        btnText: 'Нет мест',
         categories: [
             {
                 button: "1 месяц",
@@ -312,6 +324,8 @@ export const simonovTarif = [
     {
         title: "126 рабочих мест",
         label: "",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "126 рабочих мест",
@@ -334,6 +348,8 @@ export const simonovTarif = [
     {
         title: "234 рабочих места",
         label: "",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "234 рабочих места",
@@ -356,6 +372,8 @@ export const simonovTarif = [
     {
         title: "360 рабочих мест",
         label: "",
+        disabledBtn: false,
+        btnText: 'Оставить заявку',
         categories: [
             {
                 button: "360 рабочих мест",

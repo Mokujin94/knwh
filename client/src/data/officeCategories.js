@@ -1,6 +1,6 @@
 import blackCategory from '../images/categories/blackCategory.jpg';
 import balchugCategory from '../images/categories/balchugCategory.jpg';
-import simonovCategory from '../images/categories/simonovCategory.jpg';
+import simonovCategory from '../images/categories/simonovCategory.jpeg';
 import roomsCategory from '../images/categories/rooms.jpg';
 
 

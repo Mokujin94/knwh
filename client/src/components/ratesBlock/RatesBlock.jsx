@@ -9,8 +9,8 @@ import './ratesBlock.scss';
 
 const RatesBlock = ({ setForm, setActiveMail, setDefaultRate, setActiveRate, style='beige', activeRate='black', showSwitchBtns=false }) => {
     const ratesHeaderButtons = [
-        { name: "black", array: blackTarif, title: 'Тарифы', descr: 'Найдите ваш идеальный тариф', }, 
         { name: "balchug", array: balchugTarif, title: 'Тарифы', descr: 'Найдите ваш идеальный тариф', }, 
+        { name: "black", array: blackTarif, title: 'Тарифы', descr: 'Найдите ваш идеальный тариф', }, 
         { name: "simonov", array: simonovTarif, title: 'Предложения', descr: 'Найдите ваш идеальный вариант', }];
 
     let activeRateIndex = 0;
