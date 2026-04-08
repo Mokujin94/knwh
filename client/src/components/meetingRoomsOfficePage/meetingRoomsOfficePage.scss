@@ -16,9 +16,21 @@
         @media (max-width: 1440px) {
             margin-bottom: 40px;
         }
+
+        @media (max-width: 560px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }    
     }
 
     .rooms-section__heading {
+        margin-right: 50px;
+
+        @media (max-width: 560px) {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        
         .rooms-section__title {
             margin-bottom: 10px;
             font-weight: 500;

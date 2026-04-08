@@ -50,6 +50,10 @@ const Contact = () => {
                                 <h2 className="black-contact__numberFor">почта BALCHUG</h2>
                                 <a className="black-contact__number" href="mailto:balchug@knwh.ru">balchug@knwh.ru</a>
                             </div>
+                            <div className="black-contact__left-item">
+                                <h2 className="black-contact__numberFor">почта SIMONOV</h2>
+                                <a className="black-contact__number" href="mailto:simonov@knwh.ru">simonov@knwh.ru</a>
+                            </div>
                         </div>
                         <div className="black-contact__social">
                             <div className="black-contact__social-img">

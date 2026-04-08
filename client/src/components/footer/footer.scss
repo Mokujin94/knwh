@@ -159,6 +159,61 @@
     color: $kw-white-color;
 }
 
+.requisites {
+    max-width: 350px;
+    padding-bottom: 20px;
+    color: $kw-white-color;
+
+    .requisites__title {
+        margin: 0 0 15px;
+        font-size: 19px;
+        line-height: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .requisites__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        .requisites__item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(232, 232, 232, .6);
+            
+
+            &:first-of-type {
+                padding-top: 0;
+            }
+
+            &:last-of-type {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+
+            .requisites__item-point {
+                margin: 0;
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: 400;
+                opacity: .8;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.footer__white .requisites {
+    color: $kw-black-color;
+
+    .requisites__item {
+        border-color: rgba(34, 34, 34, .6);
+    }
+}
+
 .footer__white {
     background: $kw-white-color;
     border-top: 1px solid $kw-black-color;
@@ -292,9 +347,7 @@
             justify-content: space-around;
             border: none;
         }
-        .rekvisits {
-            margin-bottom: 40px;
-        }
+
     }
 }
 
@@ -307,17 +360,24 @@
         &__right {
             display: flex;
             flex-direction: row-reverse;
-            padding: 0 20px;
+            justify-content: space-between;
+            padding: 0 20px 130px;
         }
     }
 
     .cards {
+        margin-left: 40px;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
 
     .cards img {
         margin-right: 0;
+        margin-bottom: 40px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     .knwh {
@@ -336,14 +396,6 @@
         &:last-child {
             bottom: 59px;
         }
-    }
-
-    .footer .rekvisits {
-        margin-bottom: 200px;
-    }
-
-    .footer .cards {
-        margin-bottom: 200px;
     }
 }
 

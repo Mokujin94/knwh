@@ -7,7 +7,7 @@ import Applications from '../applications/Applications';
 import './ratesBlock.scss';
 
 
-const RatesBlock = ({ setForm, setActiveMail, setDefaultRate, setActiveRate, style='beige', activeRate='black', showSwitchBtns=false }) => {
+const RatesBlock = ({ setForm, setActiveMail, setDefaultRate, setActiveRate, style='beige', activeRate='balchug', showSwitchBtns=false }) => {
     const ratesHeaderButtons = [
         { name: "balchug", array: balchugTarif, title: 'Тарифы', descr: 'Найдите ваш идеальный тариф', }, 
         { name: "black", array: blackTarif, title: 'Тарифы', descr: 'Найдите ваш идеальный тариф', }, 
