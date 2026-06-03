@@ -85,9 +85,7 @@ const Rooms = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                         <div className="rooms-balchug__header-wrapper">
                             <h2 className="rooms-balchug__title">переговорные BALCHUG</h2>
                             <p className="rooms-balchug__descr">
-                                На территории пространства вы можете забронировать как
-                                переговорные комнаты, так и просторный конференц-зал на 65
-                                посадочных мест
+                                На территории пространства вы можете забронировать переговорные комнаты
                             </p>
                         </div>
                         <div className="rooms-balchug__header-right">

@@ -105,22 +105,22 @@ export const bulchugRoomsArr = [
         available: false,
         btnText: 'Оставить заявку',
     },
-    {
-        img: bulchugImgKonferentsZal,
-        name: "Конференц зал",
-        adress: "м. Новокузнецкая Садовническая набережная, 9",
-        list: [
-            { icon: houseIcon, title: "65 посадочных мест" },
-            { icon: unionIcon, title: "Проектор и звуковая система" },
-            { icon: chairIcon, title: "Кресла для выступающих" },
-            { icon: projectorIcon, title: "Флипчарт с маркерами " },
-        ],
-        price: "12000 ₽ / час",
-        href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
-        places: "65",
-        available: true,
-        btnText: 'Оставить заявку',
-    },
+    // {
+    //     img: bulchugImgKonferentsZal,
+    //     name: "Конференц зал",
+    //     adress: "м. Новокузнецкая Садовническая набережная, 9",
+    //     list: [
+    //         { icon: houseIcon, title: "65 посадочных мест" },
+    //         { icon: unionIcon, title: "Проектор и звуковая система" },
+    //         { icon: chairIcon, title: "Кресла для выступающих" },
+    //         { icon: projectorIcon, title: "Флипчарт с маркерами " },
+    //     ],
+    //     price: "12000 ₽ / час",
+    //     href: "SpaceinWidget.run('9e0fe44c-8f7f-4463-9c55-20388f7c06db');",
+    //     places: "65",
+    //     available: true,
+    //     btnText: 'Оставить заявку',
+    // },
 ];
 
 export const blackRoomsArr = [
