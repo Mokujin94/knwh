@@ -2,69 +2,100 @@ import React from 'react';
 import { useState } from 'react';
 import './ratesItem.scss';
 import arrow from '../../ui/icons/arrow.svg';
+import action from '../../ui/action.png';
 
-const RatesItem = ({title, list, listTwo, buttons, price, price1, price2, href, href1, href2, hint, hint1, hint2}) => {
+const RatesItem = ({ tariff, setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 
-    const [activeButton, setActiveButton] = useState(0);
-
-    let tarifListTwo = listTwo.map(({title}, i) => {
-        return (
-            <div className="tarif__list-wrapper">
-                <img src={arrow} className="tarif__list-marker"/>
-                <li className="tarif__list-item" key={i}>{title}</li>
-            </div>
-            
-        )
-    })
-
-    const tarifList = list.map(({title}, i) => {
-        return (
-            <div className="tarif__list-wrapper">
-                <img src={arrow} className="tarif__list-marker"/>
-                <li className="tarif__list-item" key={i}>{title}</li>
-            </div>
-            
-        )
-    })
-
-
-    function changeBtn() {
-        const str = 'href';
-        let result = str + activeButton;
-        eval('href'+ activeButton);
-    }
-
-    const swither = (i) => {
-        setActiveButton(i);
-    }
-
-
-    const tarifButtons = buttons.map(({title}, i) => {
-        return (
-            <div key={i} onClick={() => swither(i)} className={activeButton === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{title}</div>
-        )
-    })
+    const [activeCategories, setActiveCategories] = useState(0);
 
     
+    let setList = tariff.categories[activeCategories].list.map((listItem, i) => {
+        return (
+            <div className="tarif__list-wrapper">
+                <img src={arrow} className="tarif__list-marker" />
+                <li className="tarif__list-item" key={i}>{listItem.title}</li>
+            </div>
+        );
+    });
+
+    const setPrice = (category) => {
+        if(category.price) {
+            return (
+                <div className="tarif__price">
+                    {category.priceBeforeSale ? <p className="tarif__price-number tarif__price-number_before">{category.priceBeforeSale}</p> : ""}
+                    <p className="tarif__price-number">{category.price}</p>
+                </div>
+            );
+        }
+    }
+
+    const setHint = (category) => {
+        return (
+            <p className="tarif__hint">{category.hint ? category.hint : false}</p>
+        );
+    }
+
+    const setLabel = (category) => {
+        let labelText = tariff.label ? tariff.label : "";
+        labelText = category.label ? category.label : labelText;
+
+        if(labelText) {
+            return(
+                <div className="tarif__sticker">{labelText}</div>
+            );
+        }
+    }
+
+    const setOrderBtn = (category) => {
+        if(category.isPay && category.href) {
+            return(
+                <a href='javascript:void(0)' onClick={() => (eval(category.href))} className="tarif__pay-button">Купить</a>
+            );
+        } else {
+            return (
+                <div onClick={onForm} className={tariff.disabledBtn == true ? "tarif__pay-button tarif__pay-button_disabled" : "tarif__pay-button"}>{tariff.btnText ? tariff.btnText : 'Оставить заявку'}</div>
+            );
+        };
+    }
+
+    const onForm = () => {
+        setActiveMail("tickets@knwh.ru");
+        setActiveRate(tariff.categories[activeCategories].orderBtnText ? tariff.categories[activeCategories].orderBtnText : "");
+        setDefaultRate(true)
+        setForm(true);
+        return;
+    }
+
+    function handleClick(i) {
+        setActiveCategories(i);
+    }
+
+    const tarifButtons = tariff.categories.length > 1 
+        ? tariff.categories.map((category, i) => {
+            return (
+                <div key={i} onClick={() => handleClick(i)} className={activeCategories === i ? `tarif__button  tarif__button__active` : `tarif__button`} >{category.button}</div>
+            )
+        })
+        : null;
+
 
     return (
-        
-        <div className='rates__item'>
+
+        <div className='tarif'>
+            {setLabel(tariff.categories[activeCategories])}
             <div className="tarif__top">
-                <h2 className="tarif__title">{title}</h2>
+                <h2 className="tarif__title">{tariff.title}</h2>
                 <ul className="tarif__list">
-                    {activeButton === 0 ? tarifList : tarifListTwo}
+                    {setList}
                 </ul>
             </div>
             <div className="tarif__bottom">
                 <div className="tarif__buttons">
                     {tarifButtons}
-                    <p className="tarif__hint">{activeButton === 0 ? hint : activeButton === 1 ? hint1 : activeButton === 2 ? hint2 : false}</p>
+                    {setHint(tariff.categories[activeCategories])}
                 </div>
-                <div className="tarif__price">
-                    <h2 className="tarif__price-number">{activeButton !== 0 ? eval('price'+activeButton) : price} </h2>
-                </div>
-                <a href='javascript:void(0)' onClick={() => (activeButton === 0 ? eval(href) : activeButton === 1 ? eval(href1) : activeButton === 2 ? eval(href2) : console.log('error'))} className="tarif__pay-button">Купить</a>
+                {setPrice(tariff.categories[activeCategories])}
+                {setOrderBtn(tariff.categories[activeCategories])}
             </div>
         </div>
     );

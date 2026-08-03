@@ -1,0 +1,80 @@
+@import '../../ui/styles/reboot.scss';
+
+.modal-cookies {
+    width: 100%;
+    padding: 0 12px 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    
+    &_opened {
+        opacity: 1;
+        pointer-events: fill;
+    }
+
+    @media (max-width: 1440px) {
+        padding-bottom: 12px;
+    }
+
+    .modal-cookies__container {
+        max-width: 1496px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: $kw-primary-color;
+        border-radius: 15px;
+
+        @media (max-width: 1440px) {
+            max-width: 1110px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+
+    .modal-cookies__text {
+        margin: 0 0 30px;
+
+        a {
+            color: inherit;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .modal-cookies__btn {
+        max-width: max-content;
+        padding: 18px 68px;
+        border: 1px solid $kw-black-color;
+        border-radius: 5px;
+        background-color: transparent;
+        color: $kw-black-color;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: normal;
+        text-align: center;
+        transition: .3s;
+
+        &:hover {
+            background-color: $kw-black-color;
+            color: #fff;
+        }
+
+        @media (max-width: 576px) {
+            max-width: unset;
+            width: 100%;
+            font-size: 16px;
+            line-height: normal;
+        }
+    }
+}

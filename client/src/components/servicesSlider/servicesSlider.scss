@@ -1,0 +1,118 @@
+@import '../../ui/styles/reboot.scss';
+
+.services {
+    padding-top: 113px;
+    width: 100%;
+    // background: #E8E8E8;
+    // color: #222;
+    overflow: hidden;
+
+    @media (max-width: 560px) {
+        padding-top: 70px;
+    }
+
+    // &.black {
+    //     color: #e8e8e8;
+    // }
+
+    &.home {
+        background-color: #e8e8e8;
+    }
+
+    .services__heading {
+        margin-bottom: 56px;
+
+        @media (max-width: 1440px) {
+            margin-bottom: 40px;
+        }
+
+        .services__title {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 104%;
+            text-transform: uppercase;
+            color: inherit;
+
+            @media (max-width: 1440px) {
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 43px;
+            }
+        }
+
+        .services__descr {         
+            max-width: 472px;
+            margin: 0;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: inherit;
+
+            @media (max-width: 1440px) {
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            @media (max-width: 560px) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    .services__slider {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .services-item {
+        width: 344px;
+        aspect-ratio: .8;
+        padding: 40px 20px;
+        background: $kw-primary-color;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (max-width: 1440px) {
+            width: 254px;
+            aspect-ratio: .9;
+            padding: 30px 20px;
+        }
+
+        @media (max-width: 560px) {
+            width: 210px;
+            aspect-ratio: 1;
+            padding: 20px 10px;
+        }
+
+        .services-item__img {
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            object-fit: contain;
+            object-position: center;
+
+            @media (max-width: 1440px) {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .services-item__title {
+            margin: 0;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+            color: $kw-black-color;
+
+            @media (max-width: 1440px) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+}

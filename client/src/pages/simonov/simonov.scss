@@ -1,0 +1,14 @@
+@import '../../ui/styles/reboot.scss';
+
+.meeting-rooms_simonov {
+    min-height: unset;
+    background-color: #454545;
+
+    .gallery__slider {
+        padding-bottom: 150px;
+
+        @media (max-width: 920px) {
+            padding-bottom: 100px;
+        }
+    }
+}

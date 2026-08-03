@@ -1,0 +1,715 @@
+/*! ./utils.js */
+
+/*! @react-spring/shared */
+
+/*! ./triggerEvent */
+
+/*! ./MediaQueryDispatch */
+
+/*! ./onClick.js */
+
+/*! ../../shared/utils.js */
+
+/*! classnames */
+
+/*! lodash.debounce */
+
+/*! ../../shared/dom.js */
+
+/*! ../../shared/create-element-if-not-defined.js */
+
+/*! @babel/runtime/helpers/esm/extends */
+
+/*! ./slidePrev.js */
+
+/*! ssr-window */
+
+/*! ./useMounted */
+
+/*! ./modules/observer/observer.js */
+
+/*! ssr-window */
+
+/*! ./utils/reflow */
+
+/*! ./setTranslate.js */
+
+/*! ./get-support.js */
+
+/*! ../../shared/dom.js */
+
+/*! react */
+
+/*! invariant */
+
+/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
+
+/*! ../../shared/utils.js */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ./loopFix.js */
+
+/*! ssr-window */
+
+/*! react */
+
+/*! react */
+
+/*! react */
+
+/*! ./onTouchStart.js */
+
+/*! ../components-shared/get-params.js */
+
+/*! ./config */
+
+/*! @restart/hooks/useUpdateEffect */
+
+/*! ./onScroll.js */
+
+/*! ./unsetGrabCursor.js */
+
+/*! react */
+
+/*! react */
+
+/*! ./swiper.js */
+
+/*! ./updateProgress.js */
+
+/*! react */
+
+/*! ./onTouchMove.js */
+
+/*! ssr-window */
+
+/*! ./useImage */
+
+/*! ../../shared/dom.js */
+
+/*! react-dom */
+
+/*! ./useEventListener */
+
+/*! react */
+
+/*! ./updateSlidesProgress.js */
+
+/*! ./setBreakpoint.js */
+
+/*! react */
+
+/*! ./transition/index.js */
+
+/*! ssr-window */
+
+/*! resize-observer-polyfill */
+
+/*! ssr-window */
+
+/*! ./modules/lazy/lazy.js */
+
+/*! ./utils.js */
+
+/*! react/jsx-runtime */
+
+/*! ssr-window */
+
+/*! ../../shared/utils.js */
+
+/*! ./updateActiveIndex.js */
+
+/*! ./useCommittedRef */
+
+/*! ../../shared/utils.js */
+
+/*! ../components-shared/update-on-virtual-data.js */
+
+/*! ./loop/index.js */
+
+/*! ../../shared/dom.js */
+
+/*! react */
+
+/*! enquire.js */
+
+/*! ./transitionEmit.js */
+
+/*! ./config */
+
+/*! ./transitionEmit.js */
+
+/*! react */
+
+/*! ./transitionEndListener */
+
+/*! ../shared/calc-looped-slides.js */
+
+/*! ssr-window */
+
+/*! ../../shared/dom.js */
+
+/*! ./useMounted */
+
+/*! react-dom */
+
+/*! ./useCommittedRef */
+
+/*! ./canUseDOM */
+
+/*! react */
+
+/*! ../../shared/dom.js */
+
+/*! ./images/index.js */
+
+/*! ./useMergeState */
+
+/*! ../../shared/dom.js */
+
+/*! ./classes/index.js */
+
+/*! ./useCommittedRef */
+
+/*! @restart/ui/Anchor */
+
+/*! ./modules/zoom/zoom.js */
+
+/*! ./modules/free-mode/free-mode.js */
+
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+
+/*! ./listen */
+
+/*! react */
+
+/*! uncontrollable */
+
+/*! ./context.js */
+
+/*! ./loop.js */
+
+/*! react */
+
+/*! ./updateSlidesClasses.js */
+
+/*! invariant */
+
+/*! ./use-isomorphic-layout-effect.js */
+
+/*! @react-spring/shared */
+
+/*! ../components-shared/utils.js */
+
+/*! swiper */
+
+/*! dom7 */
+
+/*! ./inner-slider */
+
+/*! dom-helpers/transitionEnd */
+
+/*! ./updateSlidesOffset.js */
+
+/*! ./modules/mousewheel/mousewheel.js */
+
+/*! react */
+
+/*! ./Transition */
+
+/*! ./ThemeProvider */
+
+/*! ./slideToClosest.js */
+
+/*! ../components-shared/update-swiper.js */
+
+/*! ./modules/a11y/a11y.js */
+
+/*! ./useEventCallback */
+
+/*! react-dom */
+
+/*! ./getTranslate.js */
+
+/*! ./maxTranslate.js */
+
+/*! ssr-window */
+
+/*! react */
+
+/*! ./addClasses.js */
+
+/*! ./useResizeObserver */
+
+/*! react */
+
+/*! ./check-overflow/index.js */
+
+/*! ./Util */
+
+/*! ./utils */
+
+/*! ./slideReset.js */
+
+/*! ./events/index.js */
+
+/*! ./translateTo.js */
+
+/*! ./updateClickedSlide.js */
+
+/*! ./safeFindDOMNode */
+
+/*! ./grab-cursor/index.js */
+
+/*! ../shared/get-support.js */
+
+/*! react */
+
+/*! ssr-window */
+
+/*! ./get-children.js */
+
+/*! ./useMergeStateFromProps */
+
+/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
+
+/*! ./triggerBrowserReflow */
+
+/*! ./swiper-slide.js */
+
+/*! ssr-window */
+
+/*! react/jsx-runtime */
+
+/*! ./modules/effect-cards/effect-cards.js */
+
+/*! ssr-window */
+
+/*! ./loopDestroy.js */
+
+/*! ./ThemeProvider */
+
+/*! @react-spring/animated */
+
+/*! ./useMergeState */
+
+/*! react */
+
+/*! ../../shared/create-element-if-not-defined.js */
+
+/*! ./utils/innerSliderUtils */
+
+/*! ./utils.js */
+
+/*! ./getBreakpoint.js */
+
+/*! ./QueryHandler */
+
+/*! @restart/hooks/useCommittedRef */
+
+/*! react-lifecycles-compat */
+
+/*! ./modules/effect-coverflow/effect-coverflow.js */
+
+/*! ./onTouchEnd.js */
+
+/*! dom-helpers/css */
+
+/*! ./setGrabCursor.js */
+
+/*! swiper */
+
+/*! ../shared/get-browser.js */
+
+/*! ../../shared/utils.js */
+
+/*! ./utils/innerSliderUtils */
+
+/*! ./useEventCallback */
+
+/*! ./slide/index.js */
+
+/*! react */
+
+/*! ./getComputedStyle */
+
+/*! ./use-isomorphic-layout-effect.js */
+
+/*! react */
+
+/*! ./modules/effect-cube/effect-cube.js */
+
+/*! ./useCallbackRef */
+
+/*! ./utils/innerSliderUtils */
+
+/*! @react-spring/animated */
+
+/*! ssr-window */
+
+/*! ./hyphenateStyle */
+
+/*! ../../shared/utils.js */
+
+/*! ./updateSlides.js */
+
+/*! ./removeEventListener */
+
+/*! ssr-window */
+
+/*! ../shared/utils.js */
+
+/*! ./loadImage.js */
+
+/*! ./slideToClickedSlide.js */
+
+/*! ./useIsomorphicEffect */
+
+/*! ../../shared/dom.js */
+
+/*! ../shared/utils.js */
+
+/*! react */
+
+/*! @react-spring/core */
+
+/*! ./slider */
+
+/*! ../shared/dom.js */
+
+/*! ./transitionStart.js */
+
+/*! ../../shared/utils.js */
+
+/*! ../../shared/utils.js */
+
+/*! @babel/runtime/helpers/esm/inheritsLoose */
+
+/*! react */
+
+/*! ./onResize.js */
+
+/*! ../../shared/utils.js */
+
+/*! ../../shared/dom.js */
+
+/*! ssr-window */
+
+/*! react */
+
+/*! @react-spring/shared */
+
+/*! ./utils/innerSliderUtils */
+
+/*! ./translate/index.js */
+
+/*! ../../shared/create-element-if-not-defined.js */
+
+/*! classnames */
+
+/*! ./modules/thumbs/thumbs.js */
+
+/*! @react-spring/web */
+
+/*! react */
+
+/*! ./utils */
+
+/*! ./modules/pagination/pagination.js */
+
+/*! ./addEventListener */
+
+/*! ./isTransform */
+
+/*! ./slideNext.js */
+
+/*! ./breakpoints/index.js */
+
+/*! ./modules/virtual/virtual.js */
+
+/*! react */
+
+/*! @restart/hooks/useTimeout */
+
+/*! ../../shared/dom.js */
+
+/*! ./modules/scrollbar/scrollbar.js */
+
+/*! ../shared/get-device.js */
+
+/*! ./usePrevious */
+
+/*! ./dots */
+
+/*! ./utils.js */
+
+/*! react-transition-group/Transition */
+
+/*! ./update/index.js */
+
+/*! react */
+
+/*! ./params-list.js */
+
+/*! ./ElementChildren */
+
+/*! string-convert/camel2hyphen */
+
+/*! ./moduleExtendParams.js */
+
+/*! ./CarouselItem */
+
+/*! ../../shared/classes-to-selector.js */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react */
+
+/*! ../../shared/utils.js */
+
+/*! ./modules/keyboard/keyboard.js */
+
+/*! ./useCommittedRef */
+
+/*! ./arrows */
+
+/*! ./dom.js */
+
+/*! ./Button */
+
+/*! ./ownerWindow */
+
+/*! ../../shared/dom.js */
+
+/*! ./modules/parallax/parallax.js */
+
+/*! ../components-shared/mount-swiper.js */
+
+/*! ssr-window */
+
+/*! ./removeClasses.js */
+
+/*! classnames */
+
+/*! ./hyphenate */
+
+/*! @restart/hooks/useEventCallback */
+
+/*! react/jsx-runtime */
+
+/*! react */
+
+/*! react */
+
+/*! react */
+
+/*! ./minTranslate.js */
+
+/*! ./TransitionWrapper */
+
+/*! ../../shared/dom.js */
+
+/*! ./useWillUnmount */
+
+/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */
+
+/*! classnames */
+
+/*! ssr-window */
+
+/*! ./css */
+
+/*! classnames */
+
+/*! react */
+
+/*! @restart/hooks/useMergedRefs */
+
+/*! ../../shared/dom.js */
+
+/*! ./context.js */
+
+/*! react */
+
+/*! ../../shared/dom.js */
+
+/*! ssr-window */
+
+/*! ./default-props */
+
+/*! swiper */
+
+/*! ../components-shared/get-changed-params.js */
+
+/*! ./useGlobalListener */
+
+/*! ./utils/innerSliderUtils */
+
+/*! ../../shared/dom.js */
+
+/*! ./modules/effect-flip/effect-flip.js */
+
+/*! ../../shared/utils.js */
+
+/*! json2mq */
+
+/*! ./updateAutoHeight.js */
+
+/*! ../../shared/dom.js */
+
+/*! ../../shared/create-shadow.js */
+
+/*! ../components-shared/utils.js */
+
+/*! ./hook */
+
+/*! react */
+
+/*! react */
+
+/*! ./modules/hash-navigation/hash-navigation.js */
+
+/*! ../../shared/utils.js */
+
+/*! ../../shared/create-shadow.js */
+
+/*! ./uncontrollable */
+
+/*! ./defaults.js */
+
+/*! react */
+
+/*! ./virtual.js */
+
+/*! ./useEventListener */
+
+/*! ../../shared/create-shadow.js */
+
+/*! react */
+
+/*! classnames */
+
+/*! ../../shared/dom.js */
+
+/*! react */
+
+/*! react */
+
+/*! @restart/hooks */
+
+/*! react */
+
+/*! ./params-list.js */
+
+/*! ../../shared/dom.js */
+
+/*! ../../shared/dom.js */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! ../../shared/dom.js */
+
+/*! classnames */
+
+/*! ../../shared/utils.js */
+
+/*! ./useInterval */
+
+/*! ./core/core.js */
+
+/*! ./preloadImages.js */
+
+/*! ./updateSize.js */
+
+/*! @babel/runtime/helpers/esm/inheritsLoose */
+
+/*! react */
+
+/*! ../../shared/utils.js */
+
+/*! ./ownerDocument */
+
+/*! ssr-window */
+
+/*! ./slideTo.js */
+
+/*! react */
+
+/*! ./transitionEnd.js */
+
+/*! ./useRafInterval */
+
+/*! react */
+
+/*! ./context.js */
+
+/*! ./slideToLoop.js */
+
+/*! ../../shared/classes-to-selector.js */
+
+/*! react */
+
+/*! ../../shared/dom.js */
+
+/*! ./track */
+
+/*! ./Util */
+
+/*! ../../shared/dom.js */
+
+/*! ssr-window */
+
+/*! ./modules/effect-creative/effect-creative.js */
+
+/*! @react-spring/rafz */
+
+/*! ./useCommittedRef */
+
+/*! @babel/runtime/helpers/esm/extends */
+
+/*! ../../shared/create-shadow.js */
+
+/*! ../../shared/utils.js */
+
+/*! ./CarouselCaption */
+
+/*! react/jsx-runtime */
+
+/*! ./TransitionGroupContext */
+
+/*! ./setTransition.js */
+
+/*! ssr-window */
+
+/*! ./loopCreate.js */
+
+/*! ./useUpdatedRef */
+
+/*! ./modules/navigation/navigation.js */
+
+/*! ./ThemeProvider */
+
+/*! ./initial-state */
+
+/*! ./MediaQuery */
+
+/*! ./modules/resize/resize.js */
+
+/*! react */
+
+/*! react */
+
+/*! react */
+
+/*! ./events-emitter.js */

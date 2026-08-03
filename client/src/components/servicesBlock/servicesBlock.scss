@@ -2,7 +2,7 @@
 
 .services {
     &__item {
-        min-width: 344px;
+        width: 344px;
         height: 420px;
         padding: 40px 0;
         background: $kw-primary-color;
@@ -10,11 +10,30 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        flex-shrink: 0;
         margin-right: 40px;
         transition: 1s;
+
         &:last-child {
             margin-right: 0;
         }
+
+        @media (max-width: 1440px) {
+            width: 254px;
+            height: 286px;
+        }
+
+        @media (max-width: 980px) {
+            width: 290px;
+            height: 320px;
+        }
+        
+        @media (max-width: 560px) {
+            width: 210px;
+            height: 203px;
+            padding: 20px 0 20px 0;
+        }
+
         &-top {
             display: block;
             margin: 0 auto;
@@ -22,6 +41,28 @@
             width: 100%;
             display: flex;
             justify-content: flex-end;
+
+            @media (max-width: 1440px) {
+                max-width: 200px;
+            }
+
+            @media (max-width: 980px) {
+                margin: 0;
+            }
+
+            @media (max-width: 560px) {
+                padding-right: 10px;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+
+                @media (max-width: 1440px) {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
         }
         &-bottom {
             display: block;
@@ -29,6 +70,14 @@
             max-width: 264px;
             width: 100%;
             display: flex;
+
+            @media (max-width: 1440px) {
+                max-width: 200px;
+            }
+
+            @media (max-width: 560px) {
+                padding-left: 10px;
+            }
         }
         &-title {
             font-weight: 500;
@@ -36,6 +85,15 @@
             line-height: 29px;
             text-transform: uppercase;
             color: $kw-black-color;
+
+            @media (max-width: 1440px) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            @media (max-width: 560px) {
+                margin-bottom: 0;
+            }
         }
     }
 

@@ -9,7 +9,14 @@
     margin-bottom: 30px;
     overflow: hidden;
     transition: 0.6s ease-in-out;
-    
+
+    @media (max-width: 1440px) {
+        max-width: 439px;
+    }
+
+    @media (max-width: 560px) {
+        padding: 15px 0;
+    }
 
     &:last-child {
         margin-bottom: 0;
@@ -29,6 +36,11 @@
         color: $kw-black-color;
         margin-bottom: 0;
         word-break: break-word;
+
+        @media (max-width: 1440px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
     &__descr {
         position: relative;
@@ -42,6 +54,24 @@
         line-height: 24px;
         color: $kw-black-color;
         transition: 0.5s ease-in-out;
+
+        &.entering,
+        &.entered {
+            opacity: 1;
+            max-height: 500px;
+        }
+
+        &.exiting {
+            max-height: 0px;
+            margin: 0;
+        }
+
+        &.exited {
+            opacity: 0;
+            max-height: 0;
+            height: 0;
+            margin: 0;
+        }
     }
     &__icon {
         transition: 0.3s ease-in-out;

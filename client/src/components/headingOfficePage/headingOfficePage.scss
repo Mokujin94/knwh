@@ -1,0 +1,101 @@
+.heading {
+    width: 100%;
+    min-height: 300px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 920px) {
+        min-height: unset;
+    }
+
+    .heading__wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .heading__title {
+            margin-bottom: 13px;
+            font-weight: 500;
+            font-size: 48px;
+            line-height: 104%;
+            text-transform: uppercase;
+            color: inherit;
+    
+            @media (max-width: 560px) {
+                font-size: 32px;
+            }
+        }
+    
+        .heading__descr {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+    
+            @media (max-width: 1016px) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+    
+            .heading__text {
+                max-width: 683px;
+                margin-bottom: 0;
+                font-size: 20px;
+                line-height: 24px;
+                color: inherit;
+        
+                &_address {
+                    margin-left: 50px;
+                    align-self: flex-end;
+                    text-align: right;
+    
+                    @media (max-width: 1016px) {
+                        margin-left: 0;
+                        margin-bottom: 40px;
+                        align-self: flex-start;
+                        text-align: left;
+                    }
+                }
+        
+                @media (max-width: 560px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+        
+                a {
+                    color: inherit;
+                    text-decoration: none;
+        
+                    &:hover {
+                        color: #a557ad;
+                    }
+                }
+
+                .nowrap {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+
+    .heading__logo {
+        width: 265px;
+        position: absolute;
+        top: -15px;
+        right: 0;
+        z-index: 0;
+
+        @media (max-width: 1440px) {
+            width: 220px;
+        }
+
+        @media (max-width: 920px) {
+            display: none;
+        }
+    }
+
+}
