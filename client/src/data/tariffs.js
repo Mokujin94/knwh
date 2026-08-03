@@ -54,8 +54,8 @@ export const balchugTarif = [
     },
     {
         title: "25 дней",
-        label: "",
-        disabledBtn: false,
+        label: "Временно недоступен",
+        disabledBtn: true,
         btnText: 'Оставить заявку',
         categories: [
             {
