@@ -31,6 +31,16 @@ const MeetingRoomsOfficePage = ({ title, descr, roomsArr, filterArr, roomsType, 
                 return arr.places === "6";
             });
             setFilter(filtered);
+        }else if (name === "до 4 мест") {
+            const filtered = roomsArr.filter((arr) => {
+                return arr.places === "4";
+            });
+            setFilter(filtered);
+        }else if (name === "до 17 мест") {
+            const filtered = roomsArr.filter((arr) => {
+                return arr.places === "17";
+            });
+            setFilter(filtered);
         }
     };
 

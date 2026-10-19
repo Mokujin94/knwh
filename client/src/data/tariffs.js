@@ -320,76 +320,150 @@ export const blackTarif = [
     },
 ];
 
-export const simonovTarif = [
+// export const simonovTarif = [
+//     {
+//         title: "126 рабочих мест",
+//         label: "",
+//         disabledBtn: false,
+//         btnText: 'Оставить заявку',
+//         categories: [
+//             {
+//                 button: "126 рабочих мест",
+//                 price: "5 460 000 ₽/мес",
+//                 href: "",
+//                 isPay: false,
+//                 list: [
+//                     { title: "Свободное рабочее место" },
+//                     { title: "Вода, чай и кофе" },
+//                     { title: "Принтер и сканер" },
+//                     { title: "Кухня, лаунж-зоны" },
+//                     { title: "Доступ 24/7" },
+//                     { title: "Отдельный блок с собственной инфраструктурой" }
+//                 ],
+//                 hint: "*Цена без учета НДС",
+//                 orderBtnText: "Simonov - 126 рабочих мест"
+//             },
+//         ]
+//     },
+//     {
+//         title: "234 рабочих места",
+//         label: "",
+//         disabledBtn: false,
+//         btnText: 'Оставить заявку',
+//         categories: [
+//             {
+//                 button: "234 рабочих места",
+//                 price: "10 140 000 ₽/мес",
+//                 href: "",
+//                 isPay: false,
+//                 list: [
+//                     { title: "Свободное рабочее место" },
+//                     { title: "Вода, чай и кофе" },
+//                     { title: "Принтер и сканер" },
+//                     { title: "Кухня, лаунж-зоны" },
+//                     { title: "Доступ 24/7" },
+//                     { title: "Отдельный блок с собственной инфраструктурой" }
+//                 ],
+//                 hint: "*Цена без учета НДС",
+//                 orderBtnText: "Simonov -  234 рабочих места"
+//             },
+//         ]
+//     },
+//     {
+//         title: "360 рабочих мест",
+//         label: "",
+//         disabledBtn: false,
+//         btnText: 'Оставить заявку',
+//         categories: [
+//             {
+//                 button: "360 рабочих мест",
+//                 price: "15 600 000 ₽/мес",
+//                 href: "",
+//                 isPay: false,
+//                 list: [
+//                     { title: "Свободное рабочее место" },
+//                     { title: "Вода, чай и кофе" },
+//                     { title: "Принтер и сканер" },
+//                     { title: "Кухня, лаунж-зоны" },
+//                     { title: "Доступ 24/7" },
+//                     { title: "Вся площадь целиком" }
+//                 ],
+//                 hint: "*Цена без учета НДС",
+//                 orderBtnText: "Simonov -  360 рабочих мест"
+//             },
+//         ]
+//     },
+// ];
+
+export const simonovTarif = [    
     {
-        title: "126 рабочих мест",
+        title: "День",
         label: "",
-        disabledBtn: false,
-        btnText: 'Оставить заявку',
+        disabledBtn: true,
+        btnText: "Временно недоступен",
         categories: [
             {
-                button: "126 рабочих мест",
-                price: "5 460 000 ₽/мес",
+                button: "1 день",
+                price: "",
                 href: "",
                 isPay: false,
                 list: [
                     { title: "Свободное рабочее место" },
                     { title: "Вода, чай и кофе" },
                     { title: "Принтер и сканер" },
-                    { title: "Кухня, лаунж-зоны" },
+                    { title: "Кухня и душевые" },
                     { title: "Доступ 24/7" },
-                    { title: "Отдельный блок с собственной инфраструктурой" }
                 ],
-                hint: "*Цена без учета НДС",
-                orderBtnText: "Simonov - 126 рабочих мест"
+                hint: "",
+                orderBtnText: "Simonov - День (1 день)"
             },
         ]
     },
     {
-        title: "234 рабочих места",
+        title: "25 дней",
         label: "",
-        disabledBtn: false,
-        btnText: 'Оставить заявку',
+        disabledBtn: true,
+        btnText: "Временно недоступен",
         categories: [
             {
-                button: "234 рабочих места",
-                price: "10 140 000 ₽/мес",
+                button: "25 дней",
+                price: "",
                 href: "",
                 isPay: false,
                 list: [
                     { title: "Свободное рабочее место" },
                     { title: "Вода, чай и кофе" },
                     { title: "Принтер и сканер" },
-                    { title: "Кухня, лаунж-зоны" },
+                    { title: "Кухня и душевые" },
                     { title: "Доступ 24/7" },
-                    { title: "Отдельный блок с собственной инфраструктурой" }
                 ],
-                hint: "*Цена без учета НДС",
-                orderBtnText: "Simonov -  234 рабочих места"
+                hint: "",
+                orderBtnText: "Simonov - День (25 дней)"
             },
         ]
     },
     {
-        title: "360 рабочих мест",
+        title: "Резидент",
         label: "",
-        disabledBtn: false,
-        btnText: 'Оставить заявку',
+        disabledBtn: true,
+        btnText: "Временно недоступен",
         categories: [
             {
-                button: "360 рабочих мест",
-                price: "15 600 000 ₽/мес",
+                button: "1 месяц",
+                price: "",
                 href: "",
                 isPay: false,
                 list: [
-                    { title: "Свободное рабочее место" },
+                    { title: "Фиксированное рабочее место" },
                     { title: "Вода, чай и кофе" },
                     { title: "Принтер и сканер" },
-                    { title: "Кухня, лаунж-зоны" },
+                    { title: "Кухня и душевые" },
                     { title: "Доступ 24/7" },
-                    { title: "Вся площадь целиком" }
+                    { title: "10 часов любой переговорной комнаты" },
+                    { title: "50% скидка на аренду переговорных" },
                 ],
-                hint: "*Цена без учета НДС",
-                orderBtnText: "Simonov -  360 рабочих мест"
+                hint: "",
+                orderBtnText: "Simonov - Резидент (1 месяц)",
             },
         ]
     },
