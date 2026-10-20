@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 import HeadingOfficePage from "../../components/headingOfficePage/HeadingOfficePage";
 import SliderBlack from "../../components/sliderBlack/SliderBlack";
+import Route from "../../components/route/Route";
 import ServicesSlider from "../../components/servicesSlider/ServicesSlider";
 import GalleryOfficePage from "../../components/galleryOfficePage/GalleryOfficePage";
 import RatesBlock from "../../components/ratesBlock/RatesBlock";
@@ -24,6 +25,7 @@ import oz5 from "./img/oz-5.jpg";
 import oz6 from "./img/oz-6.jpg";
 import oz7 from "./img/oz-7.jpg";
 
+import map from "./img/simonov_map.png";
 
 import "./simonov.scss";
 
@@ -62,13 +64,6 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
             "Гибкий офис SIMONOV — это светлые офисные блоки с панорамным остеклением и видом на набережную и Москва-реку. Площадку можно разделить на автономные офисные блоки от 100 рабочих мест — практически под любой запрос.", 
             <br/>, <br/>, 
             "Внутри каждого блока — своя кухня, переговорные комнаты, локеры для личных вещей, лаунж-зоны, ресепшн, гардеробы и кроссовые. Рядом — развитая инфраструктура БЦ «Симонов Плаза»: столовая, кафе и кофейни.",
-            <br/>, <br/>, 
-            "м. Автозаводская (выход №3) — 5–7 мин пешком, МЦК — 15 мин пешком.",
-            <br/>,
-            "Прямой выезд на Крутицкую и Симоновскую набережные, рядом выезд на ТТК.",
-            <br/>,
-            "Доступна аренда парковочных мест (наземный и крытый паркинг).",
-
         ],
 		address: ["м. Автозаводская", <br/>, 
 				"Ленинская Слобода, 26с5", <br/>, 
@@ -82,6 +77,19 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
 		deskImagesArr: deskImagesGalleryArr,
 		mobImagesArr: mobImagesGalleryArr,
 	};
+
+    const routeContent = {
+        title: "Как добраться",
+        description: [
+            "м. Автозаводская (выход №3) — 5–7 мин пешком, МЦК — 15 мин пешком.",
+            <br/>,
+            "Прямой выезд на Крутицкую и Симоновскую набережные, рядом выезд на ТТК.",
+            <br/>,
+            "Доступна аренда парковочных мест (наземный и крытый паркинг).",
+        ],
+        img: map,
+        style: "simonov",
+    }
 
     const meetingRoomsContent = {
         title: "Переговорные",
@@ -103,6 +111,7 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     svgHEX={headingContent.svgHEX}
                 />
                 <SliderBlack bg={sliderBlackImg} />
+
                 <ServicesSlider 
                     services={servicesArray} 
                     pagesStyle={"simonov"} 
@@ -125,6 +134,7 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     deskImagesArr={galleryContent.deskImagesArr} 
                     mobImagesArr={galleryContent.mobImagesArr} 
                 />
+
                 <MeetingRoomsOfficePage 
                     title={meetingRoomsContent.title} 
                     descr={meetingRoomsContent.descr} 
@@ -137,6 +147,13 @@ const Simonov = ({ setForm, setActiveMail, setDefaultRate, setActiveRate }) => {
                     setActiveMail={setActiveMail} 
                     setDefaultRate={setDefaultRate} 
                     setActiveRate={setActiveRate}
+                />
+
+                <Route 
+                    title={routeContent.title}
+                    description={routeContent.description}
+                    img={routeContent.img}
+                    style={routeContent.style}
                 />
             </main>
             <Footer />

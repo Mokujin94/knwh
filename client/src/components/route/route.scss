@@ -1,0 +1,74 @@
+.route {
+    padding-top: 113px;
+    width: 100%;
+    overflow: hidden;
+
+    @media (max-width: 560px) {
+        padding-top: 70px;
+    }
+
+    
+    .route__wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media (max-width: 910px) {
+            flex-direction: column;
+        }
+
+        .route__text {
+            margin-right: 50px;
+
+            @media (max-width: 910px) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .route__title {
+                margin-bottom: 20px;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 104%;
+                text-transform: uppercase;
+                color: inherit;
+        
+                @media (max-width: 1440px) {
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 43px;
+                }
+            }
+
+            .route__description {
+                max-width: 472px;
+                margin: 0;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: inherit;
+    
+                @media (max-width: 560px) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+            }
+        }
+        
+
+        .route__img {
+            max-width: 600px;
+            object-fit: contain;
+            border-radius: 5px;
+
+            @media (max-width: 1440px) {
+                max-width: 500px;
+            }
+
+            @media (max-width: 910px) {
+                max-width: unset;
+                width: 100%;
+            }
+        }
+    }
+}

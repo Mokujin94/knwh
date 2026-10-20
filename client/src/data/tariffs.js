@@ -167,7 +167,7 @@ export const blackTarif = [
         categories: [
             {
                 button: "1 день",
-                price: "2 190 ₽",
+                price: "3 690 ₽",
                 href: "SpaceinWidget.run('d54d816a-eb47-481f-ad0d-2feaef9fefa3');",
                 isPay: false,
                 list: [
@@ -220,7 +220,7 @@ export const blackTarif = [
         categories: [
             {
                 button: "25 дней",
-                price: "48 250 ₽",
+                price: "82 250 ₽",
                 href: "SpaceinWidget.run('0a3e5956-7e70-47ed-89ab-5497a460eab9');",
                 isPay: false,
                 list: [
@@ -282,9 +282,9 @@ export const blackTarif = [
         categories: [
             {
                 button: "1 месяц",
-                price: "30 000 ₽",
-                priceBeforeSale: "42 600 ₽",
-                label: "АКЦИЯ",
+                price: "60 000 ₽",
+                priceBeforeSale: "",
+                label: "",
                 href: "SpaceinWidget.run('4aec3ed6-1105-4771-bc3b-1206b53fba4e');",
                 isPay: false,
                 list: [

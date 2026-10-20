@@ -3,4 +3,9 @@
 .meeting-rooms_simonov {
     min-height: unset;
     background-color: #454545;
+    padding-bottom: 117px;
+
+    @media (max-width: 560px) {
+        padding-bottom: 70px;
+    }
 }
