@@ -23,7 +23,6 @@ import simonov4 from '../images/rooms/simonov/pk-4.jpg';
 import simonov7 from '../images/rooms/simonov/pk-7.jpg';
 import simonov8 from '../images/rooms/simonov/pk-8.jpg';
 
-
 import houseIcon from '../images/rooms/icons/house.svg';
 import tableIcon from '../images/rooms/icons/table.svg';
 import projectorIcon from '../images/rooms/icons/projector.svg';
@@ -295,7 +294,7 @@ export const blackRoomsArr = [
 ];
 
 export const simonovRoomsArr = [
-     {
+  	{
         img: simonov1,
         name: "Переговорная №1",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -303,7 +302,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -311,7 +310,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov2,
         name: "Переговорная №2",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -319,7 +318,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -327,7 +326,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov3,
         name: "Переговорная №3",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -335,7 +334,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -343,7 +342,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov4,
         name: "Переговорная №4",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -351,7 +350,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -359,7 +358,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov1,
         name: "Переговорная №5",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -367,7 +366,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -375,7 +374,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov2,
         name: "Переговорная №6",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -383,7 +382,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "4 посадочных места" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -391,7 +390,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov7,
         name: "Переговорная №7",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -399,7 +398,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "8 посадочных мест" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -407,7 +406,7 @@ export const simonovRoomsArr = [
         available: false,
         btnText: 'Недоступно',
     },
- {
+	{
         img: simonov8,
         name: "Переговорная №8",
         adress: "м. Автозаводская, Ленинская Слобода, 26с5",
@@ -415,7 +414,7 @@ export const simonovRoomsArr = [
             { icon: houseIcon, title: "17 посадочных мест" },
             { icon: tableIcon, title: "Общий стол" },
             { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
-            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
         ],
         price: "",
         href: "",
@@ -424,4 +423,3 @@ export const simonovRoomsArr = [
         btnText: 'Недоступно',
     },
 ];
-
