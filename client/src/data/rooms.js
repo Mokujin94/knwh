@@ -16,6 +16,14 @@ import blackImgTrassa60 from '../images/rooms/black/trassa_60.jpg';
 import blackImgTyanmen from '../images/rooms/black/tyanmen.jpg';
 import blackImgGolian from '../images/rooms/black/golian.jpg';
 
+import simonov1 from '../images/rooms/simonov/pk-1.jpg';
+import simonov2 from '../images/rooms/simonov/pk-2.jpg';
+import simonov3 from '../images/rooms/simonov/pk-3.jpg';
+import simonov4 from '../images/rooms/simonov/pk-4.jpg';
+import simonov7 from '../images/rooms/simonov/pk-7.jpg';
+import simonov8 from '../images/rooms/simonov/pk-8.jpg';
+
+
 import houseIcon from '../images/rooms/icons/house.svg';
 import tableIcon from '../images/rooms/icons/table.svg';
 import projectorIcon from '../images/rooms/icons/projector.svg';
@@ -285,3 +293,135 @@ export const blackRoomsArr = [
       btnText: 'Нет мест',
     },
 ];
+
+export const simonovRoomsArr = [
+     {
+        img: simonov1,
+        name: "Переговорная №1",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov2,
+        name: "Переговорная №2",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov3,
+        name: "Переговорная №3",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov4,
+        name: "Переговорная №4",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov1,
+        name: "Переговорная №5",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov2,
+        name: "Переговорная №6",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "4 посадочных места" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "4",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov7,
+        name: "Переговорная №7",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "8 посадочных мест" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "8",
+        available: false,
+        btnText: 'Недоступно',
+    },
+ {
+        img: simonov8,
+        name: "Переговорная №8",
+        adress: "м. Автозаводская, Ленинская Слобода, 26с5",
+        list: [
+            { icon: houseIcon, title: "17 посадочных мест" },
+            { icon: tableIcon, title: "Общий стол" },
+            { icon: projectorIcon, title: "Samsung Flip — цифровой флипчарт" },
+            { icon: tvIcon, title:  "ТВ-плазма 55» с технологией Airplay и дополнительным устройством для беспроводной передачи изображения", },
+        ],
+        price: "",
+        href: "",
+        places: "17",
+        available: false,
+        btnText: 'Недоступно',
+    },
+];
+
